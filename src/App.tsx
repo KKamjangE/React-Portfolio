@@ -1,7 +1,12 @@
 import { useState } from "react";
+import Nav from "./components/Nav";
 
-function App() {
-  return <div>초기화</div>;
-}
+const App = () => {
+  return (
+    <>
+      <Nav />
+    </>
+  );
+};
 
 export default App;
