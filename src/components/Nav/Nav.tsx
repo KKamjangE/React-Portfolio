@@ -1,11 +1,39 @@
 import styled from "styled-components";
-import profile from "../assets/profile.png";
+import profile from "../../assets/profile.png";
+import MenuBtn from "./MenuBtn";
 
 const Nav = () => {
   const menuList = [
-    { name: "Home" },
-    { name: "Timeline" },
-    { name: "Project" },
+    {
+      key: 1,
+      name: "Home",
+      img: "../../assets/home_img.png",
+      selectedImg: "../../assets/home_selected_img.png",
+    },
+    {
+      key: 2,
+      name: "Timeline",
+      img: "../../assets/timeline_img.png",
+      selectedImg: "../../assets/timeline_selected_img.png",
+    },
+    {
+      key: 3,
+      name: "Project",
+      img: "../../assets/project_img.png",
+      selectedImg: "../../assets/project_selected_img.png",
+    },
+    {
+      key: 4,
+      name: "Blog",
+      img: "../../assets/blog_img.png",
+      selectedImg: "../../assets/blog_selected_img.png",
+    },
+    {
+      key: 5,
+      name: "Github",
+      img: "../../assets/github_img.png",
+      selectedImg: "../../assets/github_selected_img.png",
+    },
   ];
   return (
     <NavStyled>
@@ -15,7 +43,16 @@ const Nav = () => {
           <p className="name">안제민</p>
           <p className="email">ajm980718@gmail.com</p>
         </ProfileStyled>
-        <MenuStyled>{menuList.map((menu) => menu.name)}</MenuStyled>
+        <MenuStyled>
+          {menuList.map((menu) => (
+            <MenuBtn
+              key={menu.key}
+              menuName={menu.name}
+              imgURL={menu.img}
+              selectimgURL={menu.selectedImg}
+            />
+          ))}
+        </MenuStyled>
       </NavContentsStyled>
       <NavBarStyled />
     </NavStyled>
@@ -33,6 +70,7 @@ const NavStyled = styled.div`
 const NavContentsStyled = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 const ProfileStyled = styled.div`
@@ -55,7 +93,7 @@ const MenuStyled = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 244px;
-  margin-top: 100px;
+  margin-top: 40px;
 `;
 
 const NavBarStyled = styled.div`
