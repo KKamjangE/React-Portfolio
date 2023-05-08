@@ -1,11 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-type MenuBtnProps = {
+interface MenuBtnProps {
   menuName: string;
   imgURL: string;
   selectimgURL: string;
-};
+}
 
 const MenuBtn = ({ menuName, imgURL, selectimgURL }: MenuBtnProps) => {
   const [isHover, setIsHover] = useState(false);
