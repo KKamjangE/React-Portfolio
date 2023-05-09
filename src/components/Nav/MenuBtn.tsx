@@ -1,3 +1,4 @@
+import { useMenuStore } from "@/store/store";
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -9,18 +10,28 @@ interface MenuBtnProps {
 
 const MenuBtn = ({ menuName, imgURL, selectimgURL }: MenuBtnProps) => {
   const [isHover, setIsHover] = useState(false);
+  const { setCurrentMenu } = useMenuStore();
   const imgUrl = new URL(imgURL, import.meta.url).href;
   const selectedImgUrl = new URL(selectimgURL, import.meta.url).href;
 
   const onMouseOver = () => {
     setIsHover(true);
   };
+
   const onMouseOut = () => {
     setIsHover(false);
   };
 
+  const onclick = () => {
+    setCurrentMenu(menuName);
+  };
+
   return (
-    <MenuBtnStyled onMouseOver={onMouseOver} onMouseOut={onMouseOut}>
+    <MenuBtnStyled
+      onClick={onclick}
+      onMouseOver={onMouseOver}
+      onMouseOut={onMouseOut}
+    >
       <div>
         {isHover ? (
           <img src={selectedImgUrl} alt="menu_image" />
