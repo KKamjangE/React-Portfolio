@@ -1,4 +1,4 @@
 export interface MenuStoreType {
   currentMenu: string;
-  setCurrentMenu: (state: string) => void;
+  setCurrentMenu: (newState: string) => void;
 }
