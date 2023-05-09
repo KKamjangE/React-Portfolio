@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import profile from "../../assets/profile.png";
-import MenuBtn from "./MenuBtn";
+import profile from "@/assets/profile.png";
+import MenuBtn from "@/components/Nav/MenuBtn";
 
 const Nav = () => {
   const menuList = [
