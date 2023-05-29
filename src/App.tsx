@@ -1,13 +1,5 @@
-import Nav from "@/components/Nav/Nav";
-import ContentSection from "./components/Contents/ContentSection";
-
 const App = () => {
-  return (
-    <>
-      <Nav />
-      <ContentSection />
-    </>
-  );
+  return <></>;
 };
 
 export default App;

@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
         /** 스타일 변수 */
         font-family: 'Noto Sans KR', sans-serif;
         font-size: 24px;
-        background-color: var(--bg-white);
+        background-color: var(--bg-light-gray);
         color: var(--text-black);
     }
 `;
