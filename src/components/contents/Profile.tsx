@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import homeImage from "@/assets/homeImg.png";
+import downDoubleArrow from "@/assets/downDoubleArrow.png";
 
 export default function Profile() {
   return (
@@ -17,6 +18,11 @@ export default function Profile() {
             <br />
             소통의 중요성을 잘 알기에 항상 원활한 소통을 위해 노력합니다.
           </p>
+          <img
+            className="scroll-down-arrow"
+            src={downDoubleArrow}
+            alt="down arrow"
+          />
         </div>
       </div>
     </ProfileStyled>
@@ -24,13 +30,9 @@ export default function Profile() {
 }
 
 const ProfileStyled = styled.div<{ homeImage: string }>`
-  display: flex;
-  padding-left: 20vw;
-  width: 80vw;
-  height: 100vh;
   .home-image {
-    width: 100%;
-    height: 100%;
+    width: 80vw;
+    height: 100vh;
     background-image: url(${(props) => props.homeImage});
     background-size: cover;
     background-attachment: fixed;
@@ -38,6 +40,7 @@ const ProfileStyled = styled.div<{ homeImage: string }>`
     justify-content: center;
     align-items: center;
     .profile-ment {
+      position: relative;
       color: var(--text-white);
       text-align: center;
       .strength {
@@ -48,16 +51,42 @@ const ProfileStyled = styled.div<{ homeImage: string }>`
         font-size: 3rem;
         font-weight: 700;
         margin: 70px 0;
+        span {
+          text-decoration: underline;
+          text-decoration-color: var(--accent-yellow);
+          text-decoration-style: wavy;
+        }
       }
       .my-info {
         font-size: 1.2rem;
         font-weight: 500;
         line-height: 1.8rem;
       }
-      span {
-        text-decoration: underline;
-        text-decoration-color: var(--accent-yellow);
-        text-decoration-style: wavy;
+    }
+    .scroll-down-arrow {
+      display: block;
+      position: absolute;
+      left: 50%;
+      width: 50px;
+      margin-top: 100px;
+      margin-left: -25px;
+
+      animation: bounce 1.5s ease infinite;
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-33px);
+        }
+        60% {
+          transform: translateY(-12px);
+        }
       }
     }
   }
