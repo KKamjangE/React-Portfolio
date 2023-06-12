@@ -17,7 +17,13 @@ const GlobalStyle = createGlobalStyle`
         font-size: 24px;
         background-color: var(--bg-light-gray);
         color: var(--text-black);
+        a{
+            color: var(--text-black);
+            text-decoration: none;
+        }
     }
 `;
 
 export default GlobalStyle;
+
+console.log(reset);
