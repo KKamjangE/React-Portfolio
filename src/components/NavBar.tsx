@@ -1,28 +1,33 @@
 import styled from "styled-components";
+import { FadeInContent } from "@/motions/ContentsMotions";
 
 export default function NavBar() {
   return (
     <NavBarStyled>
-      <div className="menu">
-        <a href="#">
-          Work<span>.</span>
-        </a>
-        <a href="#">
-          Project<span>.</span>
-        </a>
-        <a href="#">
-          Share<span>.</span>
-        </a>
-        <a href="#">
-          Education<span>.</span>
-        </a>
-      </div>
-      <div className="project-info">
-        <a href="mailto:ajm980718@gmail.com" className="email">
-          ajm980718@gmail.com
-        </a>
-        <p className="update-info">Last Update: 2023/06/12</p>
-      </div>
+      <FadeInContent>
+        <div className="menu">
+          <a href="#">
+            Work<span>.</span>
+          </a>
+          <a href="#">
+            Project<span>.</span>
+          </a>
+          <a href="#">
+            Share<span>.</span>
+          </a>
+          <a href="#">
+            Education<span>.</span>
+          </a>
+        </div>
+      </FadeInContent>
+      <FadeInContent>
+        <div className="project-info">
+          <a href="mailto:ajm980718@gmail.com" className="email">
+            ajm980718@gmail.com
+          </a>
+          <p className="update-info">Last Update: 2023/06/12</p>
+        </div>
+      </FadeInContent>
     </NavBarStyled>
   );
 }

@@ -11,12 +11,12 @@ export default function Profile() {
           <FadeInDownContent delayTime={0.5}>
             <p className="strength">기록과 소통을 좋아하는</p>
           </FadeInDownContent>
-          <FadeInDownContent delayTime={1}>
+          <FadeInDownContent delayTime={0.8}>
             <p className="my-name">
               <span>안제민</span>입니다.
             </p>
           </FadeInDownContent>
-          <FadeInDownContent delayTime={2}>
+          <FadeInDownContent delayTime={1.5}>
             <p className="my-info">
               프론트엔드 개발자를 희망하고 있습니다.
               <br />
