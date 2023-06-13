@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FadeInContent } from "@/motions/ContentsMotions";
+import { FadeInContent, HoverLink } from "@/motions";
 
 export default function NavBar() {
   return (
@@ -7,16 +7,16 @@ export default function NavBar() {
       <FadeInContent>
         <div className="menu">
           <a href="#">
-            Work<span>.</span>
+            <HoverLink>Work</HoverLink>
           </a>
           <a href="#">
-            Project<span>.</span>
+            <HoverLink>Project</HoverLink>
           </a>
           <a href="#">
-            Share<span>.</span>
+            <HoverLink>Share</HoverLink>
           </a>
           <a href="#">
-            Education<span>.</span>
+            <HoverLink>Education</HoverLink>
           </a>
         </div>
       </FadeInContent>
@@ -42,16 +42,16 @@ const NavBarStyled = styled.nav`
   height: 100vh;
   background-color: var(--bg-dark-gray);
   .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding-top: 80px;
+    height: 25vh;
     a {
       color: var(--text-white);
       display: block;
-      margin-bottom: 30px;
       font-size: 1.4rem;
       font-weight: bold;
-      span {
-        color: var(--accent-yellow);
-      }
     }
   }
   .project-info {
