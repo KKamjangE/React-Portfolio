@@ -1,8 +1,7 @@
-import NavBar from "@/components/NavBar";
-import { Intro, Work } from "@/components/contents";
+import { Intro, Work, NavBar } from "@/components/contents";
 import { Layout } from "@/components/layout";
-import ProgressBar from "@/components/ProgressBar";
-import Footer from "@/components/Footer";
+import { ProgressBar } from "@/components/motions";
+import Footer from "@/components/contents/Footer";
 
 export default function Home() {
   return (
