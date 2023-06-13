@@ -31,6 +31,18 @@
         "웹 디자인 및 UI/UX 학습",
         "JavaScript, JQuery, HTML, CSS 학습"
       ]
+    },
+    {
+      "id": 4,
+      "classification": "자격증",
+      "name": "웹 디자인 기능사",
+      "period": "2022-06"
+    },
+    {
+      "id": 5,
+      "classification": "자격증",
+      "name": "전자계산기 기능사",
+      "period": "2016-07"
     }
   ]
 }
