@@ -10,5 +10,5 @@ export default function ContentLayout({
 }
 
 const ContentLayoutStyled = styled.div`
-  padding: 100px;
+  padding: 100px 100px 50px 100px;
 `;
