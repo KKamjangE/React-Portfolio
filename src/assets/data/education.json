@@ -1,0 +1,48 @@
+{
+  "title": "Education",
+  "data": [
+    {
+      "id": 1,
+      "classification": "대학교",
+      "name": "연성대학교",
+      "period": "2017-03 ~ 2022-02",
+      "discription": ["정보통신공학 전공 전문 학사 졸업", "학점 3.72/4.5"]
+    },
+    {
+      "id": 2,
+      "classification": "교육",
+      "name": "SW 개발자 양성 프로그램 크래프톤 정글 1기",
+      "period": "2022-10 ~ 2023-03 (5개월)",
+      "discription": [
+        "크래프톤에서 주최",
+        "1 ~ 4주차: 알고리즘 & 자료구조 학습",
+        "5 ~ 7주차: C언어를 이용해 RB Tree, Malloc, Web Server 구현",
+        "8 ~ 13주차: 운영체제 PintOS 프로젝트 진행",
+        "14 ~ 18주차: 나만의 무기 \"인터뷰 메이트\" 프로젝트 진행"
+      ],
+      "URL": "https://torpid-erigeron-ad1.notion.site/eba8178554c44c91a957697107e40459?pvs=4"
+    },
+    {
+      "id": 3,
+      "classification": "교육",
+      "name": "웹 퍼블리셔 과정 국비학원",
+      "period": "2021-12 ~ 2022-05 (5개월)",
+      "discription": [
+        "웹 디자인 및 UI/UX 학습",
+        "JavaScript, JQuery, HTML, CSS 학습"
+      ]
+    },
+    {
+      "id": 4,
+      "classification": "자격증",
+      "name": "웹 디자인 기능사",
+      "period": "2022-06"
+    },
+    {
+      "id": 5,
+      "classification": "자격증",
+      "name": "전자계산기 기능사",
+      "period": "2016-07"
+    }
+  ]
+}
