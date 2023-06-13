@@ -1,0 +1,101 @@
+{
+  "title": "Project",
+  "data": [
+    {
+      "id": 4,
+      "classification": "개인 프로젝트",
+      "projectName": "나만의 포트폴리오 제작 (현재 페이지)",
+      "period": "2023-05 ~ (진행중)",
+      "position": "프론트엔드 개발",
+      "discription": [
+        "나만의 프론트엔드 포트폴리오를 가지기 위해서 개발",
+        "프론트엔드 개발 역량 키우기",
+        "framer-motion을 사용한 애니메이션 구현",
+        "zustand를 사용해 전역 상태관리"
+      ],
+      "URL": {
+        "githubURL": "https://github.com/krafton-jungle-AI-InterviewMate",
+        "videoURL": "https://youtu.be/BgKaJtJb6T4"
+      },
+      "skill": [
+        "react",
+        "typescript",
+        "zustand",
+        "styled-component",
+        "framer-motion",
+        "yarn",
+        "vite"
+      ]
+    },
+    {
+      "id": 3,
+      "classification": "팀 프로젝트",
+      "projectName": "인터뷰 메이트 개발",
+      "period": "2023-02 ~ 2023-03 (약 1개월)",
+      "position": "프론트엔드 개발",
+      "discription": [
+        "취준생들을 위한 AI 화상 면접 연습 서비스",
+        "면접 녹화 영상 업로드 시간 최적화",
+        "Axios를 이용한 RESTful API 연동",
+        "recoil을 사용한 전역 상태관리",
+        "WebRTC를 이용한 유저 간의 면접 기능 구현",
+        "소켓 통신을 사용하여 유저 간의 상태 공유",
+        "React-Query를 사용하여 면접방 리스트 데이터 캐싱",
+        "AWS amplify를 이용한 프론트엔드 배포"
+      ],
+      "URL": {
+        "githubURL": "https://github.com/krafton-jungle-AI-InterviewMate",
+        "videoURL": "https://youtu.be/BgKaJtJb6T4"
+      },
+      "skill": [
+        "react",
+        "typescript",
+        "react-query",
+        "recoil",
+        "emotion",
+        "yarn",
+        "vite",
+        "amplify"
+      ]
+    },
+    {
+      "id": 2,
+      "classification": "팀 프로젝트",
+      "projectName": "코리아메쎄 홈페이지 개발",
+      "period": "2022-07 ~ 2022-08 (약 1개월)",
+      "position": "프론트엔드 개발",
+      "discription": [
+        "GSAP, AOS, SwiperJS를 이용한 애니메이션 구현",
+        "콘텐츠 검색 기능 구현",
+        "모바일 및 태블릿 반응형 디자인 구현",
+        "바닐라 자바스크립트와 제이쿼리만을 사용"
+      ],
+      "URL": {
+        "githubURL": "https://github.com/KKamjangE/KOREA_MESSE",
+        "siteURL": "http://www.koreamesse.kr/main/index"
+      },
+      "skill": ["jquery", "gsap", "aos", "swiperjs"]
+    },
+    {
+      "id": 1,
+      "classification": "개인 프로젝트",
+      "projectName": "웹 퍼블리셔 포트폴리오 개발",
+      "period": "2022-08 (약 1주일)",
+      "position": "프론트엔드 개발",
+      "discription": [
+        "나만의 퍼블리셔 포트폴리오를 가지기 위해서 개발",
+        "SwiperJS를 이용한 슬라이드 구현",
+        "바닐라 자바스크립트와 CSS만을 사용한 애니메이션 구현",
+        "원페이지 스크롤 구현",
+        "모바일 및 태블릿 반응형 디자인 구현",
+        "바닐라 자바스크립트와 제이쿼리만을 사용",
+        "나만의 로고 디자인"
+      ],
+      "URL": {
+        "githubURL": "https://github.com/KKamjangE/first_Portfolio",
+        "siteURL": "https://portfolioajm.netlify.app/index.html"
+      },
+      "skill": ["jquery", "swiperjs"]
+    }
+  ]
+}
