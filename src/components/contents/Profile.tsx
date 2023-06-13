@@ -31,10 +31,10 @@ export default function Profile() {
 
 const ProfileStyled = styled.div<{ homeImage: string }>`
   .home-image {
-    width: 80vw;
     height: 100vh;
     background-image: url(${(props) => props.homeImage});
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
     display: flex;
     justify-content: center;
