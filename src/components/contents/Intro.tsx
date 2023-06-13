@@ -3,9 +3,9 @@ import homeImage from "@/assets/homeImg.png";
 import downDoubleArrow from "@/assets/downDoubleArrow.png";
 import { FadeInDownContent } from "@/components/motions";
 
-export default function Profile() {
+export default function Intro() {
   return (
-    <ProfileStyled homeImage={homeImage}>
+    <IntroStyled homeImage={homeImage}>
       <div className="home-image">
         <div className="profile-ment">
           <FadeInDownContent delayTime={0.5}>
@@ -34,11 +34,11 @@ export default function Profile() {
           </FadeInDownContent>
         </div>
       </div>
-    </ProfileStyled>
+    </IntroStyled>
   );
 }
 
-const ProfileStyled = styled.div<{ homeImage: string }>`
+const IntroStyled = styled.div<{ homeImage: string }>`
   .home-image {
     height: 100vh;
     background-image: url(${(props) => props.homeImage});
