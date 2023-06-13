@@ -1,28 +1,37 @@
 import styled from "styled-components";
 import homeImage from "@/assets/homeImg.png";
 import downDoubleArrow from "@/assets/downDoubleArrow.png";
+import { FadeInDownContent } from "@/motions/ContentsMotions";
 
 export default function Profile() {
   return (
     <ProfileStyled homeImage={homeImage}>
       <div className="home-image">
         <div className="profile-ment">
-          <p className="strength">기록과 소통을 좋아하는</p>
-          <p className="my-name">
-            <span>안제민</span>입니다.
-          </p>
-          <p className="my-info">
-            프론트엔드 개발자를 희망하고 있습니다.
-            <br />
-            배운 모든 것을 기록하고 공유하는 것을 좋아합니다.
-            <br />
-            소통의 중요성을 잘 알기에 항상 원활한 소통을 위해 노력합니다.
-          </p>
-          <img
-            className="scroll-down-arrow"
-            src={downDoubleArrow}
-            alt="down arrow"
-          />
+          <FadeInDownContent delayTime={0.5}>
+            <p className="strength">기록과 소통을 좋아하는</p>
+          </FadeInDownContent>
+          <FadeInDownContent delayTime={1}>
+            <p className="my-name">
+              <span>안제민</span>입니다.
+            </p>
+          </FadeInDownContent>
+          <FadeInDownContent delayTime={2}>
+            <p className="my-info">
+              프론트엔드 개발자를 희망하고 있습니다.
+              <br />
+              배운 모든 것을 기록하고 공유하는 것을 좋아합니다.
+              <br />
+              소통의 중요성을 잘 알기에 항상 원활한 소통을 위해 노력합니다.
+            </p>
+          </FadeInDownContent>
+          <FadeInDownContent delayTime={2}>
+            <img
+              className="scroll-down-arrow"
+              src={downDoubleArrow}
+              alt="down arrow"
+            />
+          </FadeInDownContent>
         </div>
       </div>
     </ProfileStyled>
