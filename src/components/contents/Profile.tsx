@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import homeImage from "@/assets/homeImg.png";
 import downDoubleArrow from "@/assets/downDoubleArrow.png";
-import { FadeInDownContent } from "@/motions";
+import { FadeInDownContent } from "@/components/motions";
 
 export default function Profile() {
   return (
