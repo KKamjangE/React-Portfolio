@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FadeInContent, HoverLink } from "@/components/motions";
+import { FadeInContent, HoverLink } from "@/components/interactive";
 
 export default function NavBar() {
   return (
