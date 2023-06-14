@@ -38,7 +38,7 @@ export default function Intro() {
   );
 }
 
-const IntroStyled = styled.div<{ homeImage: string }>`
+const IntroStyled = styled.section<{ homeImage: string }>`
   .home-image {
     height: 100vh;
     background-image: url(${(props) => props.homeImage});
