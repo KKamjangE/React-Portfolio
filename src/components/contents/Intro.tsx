@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import homeImage from "@/assets/homeImg.png";
-import downDoubleArrow from "@/assets/downDoubleArrow.png";
+import homeImage from "@/assets/home-img.png";
+import downDoubleArrow from "@/assets/down-double-arrow.png";
 import { FadeInDownContent } from "@/components/interactive";
 
 export default function Intro() {
@@ -25,7 +25,7 @@ export default function Intro() {
               소통의 중요성을 잘 알기에 항상 원활한 소통을 위해 노력합니다.
             </p>
           </FadeInDownContent>
-          <FadeInDownContent delayTime={2}>
+          <FadeInDownContent delayTime={2.1}>
             <img
               className="scroll-down-arrow"
               src={downDoubleArrow}

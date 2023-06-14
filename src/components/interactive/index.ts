@@ -4,3 +4,4 @@ export { default as HoverLink } from "./HoverLink";
 export { default as ProgressBar } from "./ProgressBar";
 export { default as YellowPoint } from "./YellowPoint";
 export { default as Loading } from "./Loading";
+export { default as ScrollTopBtn } from "./ScrollTopBtn";
