@@ -19,11 +19,11 @@ export default function Work() {
   }, []);
 
   return (
-    <ContentLayout title={workData?.title}>
+    <>
       {isLoading ? (
         <Loading />
       ) : (
-        <>
+        <ContentLayout title={workData?.title}>
           {workData?.data.map((work) => (
             <WorkStyled key={work.id}>
               <FadeInContent>
@@ -48,9 +48,9 @@ export default function Work() {
               </article>
             </WorkStyled>
           ))}
-        </>
+        </ContentLayout>
       )}
-    </ContentLayout>
+    </>
   );
 }
 
