@@ -5,7 +5,7 @@
       "id": 4,
       "classification": "개인 프로젝트",
       "projectName": "나만의 포트폴리오 제작 (현재 페이지)",
-      "period": "2023-05 ~ (진행중)",
+      "period": "2023년 5월 ~ (진행중)",
       "position": "프론트엔드 개발",
       "discription": [
         "나만의 프론트엔드 포트폴리오를 가지기 위해서 개발",
@@ -31,7 +31,7 @@
       "id": 3,
       "classification": "팀 프로젝트",
       "projectName": "인터뷰 메이트 개발",
-      "period": "2023-02 ~ 2023-03 (약 1개월)",
+      "period": "2023년 2월 ~ 2023년 3월 (약 1개월)",
       "position": "프론트엔드 개발",
       "discription": [
         "취준생들을 위한 AI 화상 면접 연습 서비스",
@@ -62,7 +62,7 @@
       "id": 2,
       "classification": "팀 프로젝트",
       "projectName": "코리아메쎄 홈페이지 개발",
-      "period": "2022-07 ~ 2022-08 (약 1개월)",
+      "period": "2022년 07월 ~ 2022년 08월 (약 1개월)",
       "position": "프론트엔드 개발",
       "discription": [
         "GSAP, AOS, SwiperJS를 이용한 애니메이션 구현",
@@ -80,7 +80,7 @@
       "id": 1,
       "classification": "개인 프로젝트",
       "projectName": "웹 퍼블리셔 포트폴리오 개발",
-      "period": "2022-08 (약 1주일)",
+      "period": "2022년 08월 (약 1주일)",
       "position": "프론트엔드 개발",
       "discription": [
         "나만의 퍼블리셔 포트폴리오를 가지기 위해서 개발",
