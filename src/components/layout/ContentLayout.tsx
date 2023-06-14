@@ -25,11 +25,11 @@ const ContentLayoutStyled = styled.div`
   h1 {
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 30px;
   }
   hr {
     height: 5px;
     border: 0;
     background-color: var(--accent-yellow);
+    margin: 30px 0 50px;
   }
 `;
