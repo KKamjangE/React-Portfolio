@@ -1,7 +1,6 @@
-import { Intro, Work, NavBar } from "@/components/contents";
+import { Intro, Work, NavBar, Footer } from "@/components/contents";
 import { Layout } from "@/components/layout";
-import { ProgressBar } from "@/components/interactive";
-import Footer from "@/components/contents/Footer";
+import { ProgressBar, ScrollTopBtn } from "@/components/interactive";
 
 export default function Home() {
   return (
@@ -11,8 +10,9 @@ export default function Home() {
         <ProgressBar />
         <Intro />
         <Work />
-        <Footer></Footer>
+        <Footer />
       </Layout>
+      <ScrollTopBtn />
     </>
   );
 }
