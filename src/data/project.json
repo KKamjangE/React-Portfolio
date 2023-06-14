@@ -21,7 +21,7 @@
         "react",
         "typescript",
         "zustand",
-        "styled-component",
+        "styledcomponent",
         "framer-motion",
         "yarn",
         "vite"
