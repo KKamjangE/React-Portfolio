@@ -10,22 +10,22 @@ const axiosAPI = axios.create({
   baseURL: "http://localhost:5173/src/assets/data",
 });
 
-export const getWorkData = async () => {
-  const response = await axiosAPI.get("work.json");
+export const getWorkData = async <T = WorkTypes>(): Promise<T> => {
+  const response = await axiosAPI.get<T>("work.json");
   return response.data;
 };
 
-export const getProjectData = async () => {
-  const response = await axiosAPI.get("project.json");
+export const getProjectData = async <T = ProjectTypes>(): Promise<T> => {
+  const response = await axiosAPI.get<T>("project.json");
   return response.data;
 };
 
-export const getShareData = async () => {
-  const response = await axiosAPI.get("share.json");
+export const getShareData = async <T = ShareTypes>(): Promise<T> => {
+  const response = await axiosAPI.get<T>("share.json");
   return response.data;
 };
 
-export const getEducationData = async () => {
-  const response = await axiosAPI.get("education.json");
+export const getEducationData = async <T = EducationTypes>(): Promise<T> => {
+  const response = await axiosAPI.get<T>("education.json");
   return response.data;
 };
