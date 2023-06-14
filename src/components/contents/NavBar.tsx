@@ -46,12 +46,12 @@ const NavBarStyled = styled.nav`
     flex-direction: column;
     justify-content: space-between;
     padding-top: 80px;
-    height: 25vh;
+    height: 30vh;
     a {
       color: var(--text-white);
       display: block;
       font-size: 1.4rem;
-      font-weight: bold;
+      font-weight: 500;
     }
   }
   .project-info {
