@@ -1,10 +1,10 @@
 import styled from "styled-components";
+import YellowPoint from "./YellowPoint";
 
 export default function HoverLink({ children }: { children: React.ReactNode }) {
   return (
     <HoverLinkStyled>
-      {children}
-      <span className="yellow-point">.</span>
+      <YellowPoint>{children}</YellowPoint>
     </HoverLinkStyled>
   );
 }
@@ -22,9 +22,5 @@ const HoverLinkStyled = styled.div`
 
   :hover {
     background-position: -100% 0;
-  }
-
-  span.yellow-point {
-    color: var(--accent-yellow);
   }
 `;
