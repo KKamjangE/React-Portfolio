@@ -1,0 +1,16 @@
+export const skillDescription = {
+  react: ["React"],
+  typescript: ["TypeScript"],
+  zustand: ["Zustand"],
+  styledcomponent: ["Styled-Conponent"],
+  framermotion: ["Framer-Motion"],
+  yarn: ["Yarn"],
+  vite: ["Vite"],
+  reactquery: ["React-Query"],
+  emotion: ["Emotion"],
+  amplify: ["Amplify"],
+  jquery: ["jQuery"],
+  gsap: ["GSAP"],
+  aos: ["AOS"],
+  swiperjs: ["SwiperJS"],
+};
