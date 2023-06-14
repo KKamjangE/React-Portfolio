@@ -7,16 +7,16 @@ export default function NavBar() {
       <FadeInContent>
         <div className="menu">
           <a href="#">
-            <HoverLink>Work</HoverLink>
+            <HoverLink isNav={true}>Work</HoverLink>
           </a>
           <a href="#">
-            <HoverLink>Project</HoverLink>
+            <HoverLink isNav={true}>Project</HoverLink>
           </a>
           <a href="#">
-            <HoverLink>Share</HoverLink>
+            <HoverLink isNav={true}>Share</HoverLink>
           </a>
           <a href="#">
-            <HoverLink>Education</HoverLink>
+            <HoverLink isNav={true}>Education</HoverLink>
           </a>
         </div>
       </FadeInContent>

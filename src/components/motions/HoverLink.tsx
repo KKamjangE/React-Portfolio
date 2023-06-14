@@ -1,16 +1,22 @@
 import styled from "styled-components";
 import YellowPoint from "./YellowPoint";
 
-export default function HoverLink({ children }: { children: React.ReactNode }) {
+export default function HoverLink({
+  children,
+  isNav,
+}: {
+  children: React.ReactNode;
+  isNav?: boolean;
+}) {
   return (
-    <HoverLinkStyled>
+    <HoverLinkStyled isNav={isNav}>
       <YellowPoint>{children}</YellowPoint>
     </HoverLinkStyled>
   );
 }
 
-const HoverLinkStyled = styled.div`
-  padding: 10px;
+const HoverLinkStyled = styled.div<{ isNav?: boolean }>`
+  padding: ${(props) => (props.isNav ? "10px" : "0")};
   background: linear-gradient(
     to right,
     transparent 50%,
