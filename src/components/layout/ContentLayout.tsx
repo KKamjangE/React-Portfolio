@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import YellowPoint from "./../motions/YellowPoint";
+import { FadeInContent, YellowPoint } from "@/components/interactive";
 
 export default function ContentLayout({
   children,
@@ -11,10 +11,14 @@ export default function ContentLayout({
 }) {
   return (
     <ContentLayoutStyled>
-      <h1>
-        <YellowPoint>{title}</YellowPoint>
-      </h1>
-      <hr />
+      <FadeInContent>
+        <h1>
+          <YellowPoint>{title}</YellowPoint>
+        </h1>
+      </FadeInContent>
+      <FadeInContent>
+        <hr />
+      </FadeInContent>
       {children}
     </ContentLayoutStyled>
   );

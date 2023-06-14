@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
+import styled from "styled-components";
 import { ContentLayout } from "@/components/layout";
+import { FadeInContent, Loading, HoverLink } from "@/components/interactive";
 import { getWorkData } from "@/api";
 import type { WorkTypes } from "@/api/types";
-import { Loading } from "../motions";
-import styled from "styled-components";
-import { HoverLink } from "@/components/motions";
 
 export default function Work() {
   const [workData, setWorkData] = useState<WorkTypes>();
@@ -27,16 +26,24 @@ export default function Work() {
         <>
           {workData?.data.map((work) => (
             <WorkStyled key={work.id}>
-              <p className="position">{work.position}</p>
-              <h2 className="company-name">
-                <a href={work.companyURL} target="_blank">
-                  <HoverLink>{work.companyName}</HoverLink>
-                </a>
-              </h2>
-              <p className="period">{work.period}</p>
+              <FadeInContent>
+                <p className="position">{work.position}</p>
+              </FadeInContent>
+              <FadeInContent>
+                <h2 className="company-name">
+                  <a href={work.companyURL} target="_blank">
+                    <HoverLink>{work.companyName}</HoverLink>
+                  </a>
+                </h2>
+              </FadeInContent>
+              <FadeInContent>
+                <p className="period">{work.period}</p>
+              </FadeInContent>
               <article className="discription">
                 {work.discription.map((discription) => (
-                  <p key={work.id}>📌 {discription}</p>
+                  <FadeInContent>
+                    <p key={work.id}>📌 {discription}</p>
+                  </FadeInContent>
                 ))}
               </article>
             </WorkStyled>
@@ -49,7 +56,7 @@ export default function Work() {
 
 const WorkStyled = styled.section`
   display: grid;
-  row-gap: 25px;
+  row-gap: 30px;
   padding-top: 50px;
   h2.company-name {
     font-size: 1.6rem;
