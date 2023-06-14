@@ -14,6 +14,7 @@ export default function ContentLayout({
       <h1>
         <YellowPoint>{title}</YellowPoint>
       </h1>
+      <hr />
       {children}
     </ContentLayoutStyled>
   );
@@ -22,7 +23,13 @@ export default function ContentLayout({
 const ContentLayoutStyled = styled.div`
   padding: 100px 100px 50px 100px;
   h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
+    margin-bottom: 30px;
+  }
+  hr {
+    height: 5px;
+    border: 0;
+    background-color: var(--accent-yellow);
   }
 `;
