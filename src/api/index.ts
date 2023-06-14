@@ -7,7 +7,7 @@ import type {
 } from "./types";
 
 const axiosAPI = axios.create({
-  baseURL: "http://localhost:5173/src/assets/data",
+  baseURL: "http://localhost:5173/src/data",
 });
 
 export const getWorkData = async <T = WorkTypes>(): Promise<T> => {
