@@ -8,7 +8,7 @@ export default function Footer() {
   );
 }
 
-const FooterStyled = styled.div`
+const FooterStyled = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;

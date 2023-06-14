@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import homeImage from "@/assets/homeImg.png";
 import downDoubleArrow from "@/assets/downDoubleArrow.png";
-import { FadeInDownContent } from "@/components/motions";
+import { FadeInDownContent } from "@/components/interactive";
 
 export default function Intro() {
   return (
@@ -38,7 +38,7 @@ export default function Intro() {
   );
 }
 
-const IntroStyled = styled.div<{ homeImage: string }>`
+const IntroStyled = styled.section<{ homeImage: string }>`
   .home-image {
     height: 100vh;
     background-image: url(${(props) => props.homeImage});
