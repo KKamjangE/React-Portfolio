@@ -40,9 +40,9 @@ export default function Work() {
                 <p className="period">{work.period}</p>
               </FadeInContent>
               <article className="discription">
-                {work.discription.map((discription) => (
-                  <FadeInContent>
-                    <p key={work.id}>📌 {discription}</p>
+                {work.discription.map((discription, idx) => (
+                  <FadeInContent key={idx}>
+                    <p>📌 {discription}</p>
                   </FadeInContent>
                 ))}
               </article>
