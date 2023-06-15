@@ -1,4 +1,4 @@
-import { Intro, Work, NavBar, Footer, Project } from "@/components/contents";
+import { Intro, Work, NavBar, Footer } from "@/components/contents";
 import { Layout } from "@/components/layout";
 import { ProgressBar, ScrollTopBtn } from "@/components/interactive";
 
@@ -10,7 +10,6 @@ export default function Home() {
         <ProgressBar />
         <Intro />
         <Work />
-        <Project />
         <Footer />
       </Layout>
       <ScrollTopBtn />
