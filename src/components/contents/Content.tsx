@@ -1,53 +1,45 @@
-import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { ContentLayout } from "@/components/layout";
-import { FadeInContent, Loading, HoverLink } from "@/components/interactive";
-import { getData } from "@/api";
-import type { getDataTypes } from "@/api/types";
+import {
+  FadeInContent,
+  HoverLink,
+  YellowPoint,
+} from "@/components/interactive";
+import type { ContentDataType } from "@/api";
 
-export default function Content() {
-  const [workData, setWorkData] = useState<getDataTypes>();
-  const [isLoading, setIsLoading] = useState(true);
-  console.log(workData);
-
-  useEffect(() => {
-    getData()
-      .then((res) => {
-        setWorkData(res);
-        setIsLoading(false);
-      })
-      .catch((e) => console.log(e));
-  }, []);
-
+export default function Content({ content }: { content?: ContentDataType }) {
   return (
-    <>
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <ContentLayout>
-          <ContentStyled>
-            <FadeInContent>
-              <p className="position">{}</p>
-            </FadeInContent>
-            <FadeInContent>
-              <h2 className="company-name">
-                <a target="_blank">
-                  <HoverLink>{}</HoverLink>
-                </a>
-              </h2>
-            </FadeInContent>
-            <FadeInContent>
-              <p className="period">{}</p>
-            </FadeInContent>
-            <article className="discription">
-              <FadeInContent>
-                <p>📌 {}</p>
-              </FadeInContent>
-            </article>
-          </ContentStyled>
-        </ContentLayout>
+    <ContentStyled>
+      {content?.position && (
+        <FadeInContent>
+          <p className="position">{content.position}</p>
+        </FadeInContent>
       )}
-    </>
+      <FadeInContent>
+        <h2 className="company-name">
+          {content?.URL?.companyURL ? (
+            <a href={content.URL.companyURL} target="_blank">
+              <HoverLink>{content?.title}</HoverLink>
+            </a>
+          ) : (
+            <YellowPoint>{content?.title}</YellowPoint>
+          )}
+        </h2>
+      </FadeInContent>
+      {content?.period && (
+        <FadeInContent>
+          <p className="period">{content.period}</p>
+        </FadeInContent>
+      )}
+      {content?.discription && (
+        <article className="discription">
+          {content.discription.map((discription, idx) => (
+            <FadeInContent key={idx}>
+              <p>📌 {discription}</p>
+            </FadeInContent>
+          ))}
+        </article>
+      )}
+    </ContentStyled>
   );
 }
 
