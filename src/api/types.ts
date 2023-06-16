@@ -24,5 +24,4 @@ interface URLTypes {
   siteURL?: string;
   videoURL?: string;
   wikiURL?: string;
-  companyURL?: string;
 }
