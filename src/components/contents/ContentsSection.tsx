@@ -5,7 +5,11 @@ import type { ResponseData } from "@/api";
 import { ContentLayout } from "@/components/layout";
 import { Loading } from "@/components/interactive";
 
-export default function ContentsSection() {
+interface ContentsSectionProps {
+  elementRef: React.MutableRefObject<HTMLDivElement[]>;
+}
+
+export default function ContentsSection({ elementRef }: ContentsSectionProps) {
   const [contentData, setContentData] = useState<ResponseData>();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -23,12 +27,19 @@ export default function ContentsSection() {
         <Loading />
       ) : (
         <>
-          {contentData?.data.map((common) => (
-            <ContentLayout key={common.id} title={common.title}>
-              {common.data.map((detail) => (
-                <Content key={detail.id} content={detail} />
-              ))}
-            </ContentLayout>
+          {contentData?.data.map((common, idx) => (
+            <div
+              key={common.id}
+              ref={(ref) => {
+                if (ref) elementRef.current[idx] = ref;
+              }}
+            >
+              <ContentLayout title={common.title}>
+                {common.data.map((detail) => (
+                  <Content key={detail.id} content={detail} />
+                ))}
+              </ContentLayout>
+            </div>
           ))}
         </>
       )}

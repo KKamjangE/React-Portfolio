@@ -1,23 +1,35 @@
 import styled from "styled-components";
 import { FadeInContent, HoverLink } from "@/components/interactive";
 
-export default function NavBar() {
+interface NavBarProps {
+  moveToElement: ({
+    elementRef,
+    index,
+  }: {
+    elementRef: React.RefObject<HTMLDivElement[]>;
+    index: number;
+  }) => void;
+  elementRef: React.RefObject<HTMLDivElement[]>;
+}
+
+export default function NavBar({ moveToElement, elementRef }: NavBarProps) {
+  const navList = ["Work", "Project", "Share", "Education"];
   return (
     <NavBarStyled>
       <FadeInContent>
         <div className="menu">
-          <a href="#">
-            <HoverLink isNav={true}>Work</HoverLink>
-          </a>
-          <a href="#">
-            <HoverLink isNav={true}>Project</HoverLink>
-          </a>
-          <a href="#">
-            <HoverLink isNav={true}>Share</HoverLink>
-          </a>
-          <a href="#">
-            <HoverLink isNav={true}>Education</HoverLink>
-          </a>
+          {navList.map((nav, index) => (
+            <a
+              key={index}
+              onClick={() => {
+                if (elementRef.current) {
+                  moveToElement({ elementRef, index });
+                }
+              }}
+            >
+              <HoverLink isNav={true}>{nav}</HoverLink>
+            </a>
+          ))}
         </div>
       </FadeInContent>
       <FadeInContent>
@@ -52,6 +64,7 @@ const NavBarStyled = styled.nav`
       display: block;
       font-size: 1.4rem;
       font-weight: 500;
+      cursor: pointer;
     }
   }
   .project-info {
