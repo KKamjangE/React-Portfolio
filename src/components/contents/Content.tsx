@@ -9,11 +9,9 @@ import type { ContentDataType } from "@/api";
 export default function Content({ content }: { content?: ContentDataType }) {
   return (
     <ContentStyled>
-      {content?.position && (
-        <FadeInContent>
-          <p className="position">{content.position}</p>
-        </FadeInContent>
-      )}
+      <FadeInContent>
+        <p className="classification">{content?.classification}</p>
+      </FadeInContent>
       <FadeInContent>
         <h2 className="company-name">
           {content?.URL?.siteURL ? (
@@ -25,6 +23,11 @@ export default function Content({ content }: { content?: ContentDataType }) {
           )}
         </h2>
       </FadeInContent>
+      {content?.position && (
+        <FadeInContent>
+          <p className="position">{content.position}</p>
+        </FadeInContent>
+      )}
       {content?.period && (
         <FadeInContent>
           <p className="period">{content.period}</p>
@@ -43,10 +46,9 @@ export default function Content({ content }: { content?: ContentDataType }) {
   );
 }
 
-const ContentStyled = styled.section`
+const ContentStyled = styled.article`
   display: grid;
   row-gap: 30px;
-  padding-top: 50px;
   h2.company-name {
     font-size: 1.4rem;
     font-weight: bold;

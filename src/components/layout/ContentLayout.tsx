@@ -19,13 +19,13 @@ export default function ContentLayout({
       <FadeInContent>
         <hr />
       </FadeInContent>
-      {children}
+      <div className="content">{children}</div>
     </ContentLayoutStyled>
   );
 }
 
 const ContentLayoutStyled = styled.div`
-  padding: 100px 100px 50px 100px;
+  padding: 50px 100px 50px;
   h1 {
     font-size: 2rem;
     font-weight: bold;
@@ -34,6 +34,10 @@ const ContentLayoutStyled = styled.div`
     height: 5px;
     border: 0;
     background-color: var(--accent-yellow);
-    margin-top: 30px;
+    margin: 30px 0 50px;
+  }
+  div.content {
+    display: grid;
+    row-gap: 80px;
   }
 `;
