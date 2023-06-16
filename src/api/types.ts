@@ -1,14 +1,14 @@
 export interface getDataTypes {
-  data: Array<dataTitleTypes>;
+  data: Array<CommonDataTypes>;
 }
 
-interface dataTitleTypes {
+export interface CommonDataTypes {
   id: number;
   title: string;
-  data: Array<dataTypes>;
+  data: Array<detailDataTypes>;
 }
 
-interface dataTypes {
+interface detailDataTypes {
   id: number;
   position?: string;
   classification?: string;
