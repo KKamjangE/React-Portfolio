@@ -24,31 +24,27 @@ export default function Content() {
       {isLoading ? (
         <Loading />
       ) : (
-        <ContentLayout title={workData?.title}>
-          {workData?.data.map((work) => (
-            <ContentStyled key={work.id}>
+        <ContentLayout>
+          <ContentStyled>
+            <FadeInContent>
+              <p className="position">{}</p>
+            </FadeInContent>
+            <FadeInContent>
+              <h2 className="company-name">
+                <a target="_blank">
+                  <HoverLink>{}</HoverLink>
+                </a>
+              </h2>
+            </FadeInContent>
+            <FadeInContent>
+              <p className="period">{}</p>
+            </FadeInContent>
+            <article className="discription">
               <FadeInContent>
-                <p className="position">{work.position}</p>
+                <p>📌 {}</p>
               </FadeInContent>
-              <FadeInContent>
-                <h2 className="company-name">
-                  <a href={work.companyURL} target="_blank">
-                    <HoverLink>{work.companyName}</HoverLink>
-                  </a>
-                </h2>
-              </FadeInContent>
-              <FadeInContent>
-                <p className="period">{work.period}</p>
-              </FadeInContent>
-              <article className="discription">
-                {work.discription.map((discription, idx) => (
-                  <FadeInContent key={idx}>
-                    <p>📌 {discription}</p>
-                  </FadeInContent>
-                ))}
-              </article>
-            </ContentStyled>
-          ))}
+            </article>
+          </ContentStyled>
         </ContentLayout>
       )}
     </>
