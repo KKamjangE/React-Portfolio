@@ -16,8 +16,8 @@ export default function Content({ content }: { content?: ContentDataType }) {
       )}
       <FadeInContent>
         <h2 className="company-name">
-          {content?.URL?.companyURL ? (
-            <a href={content.URL.companyURL} target="_blank">
+          {content?.URL?.siteURL ? (
+            <a href={content.URL.siteURL} target="_blank">
               <HoverLink>{content?.title}</HoverLink>
             </a>
           ) : (
@@ -48,7 +48,7 @@ const ContentStyled = styled.section`
   row-gap: 30px;
   padding-top: 50px;
   h2.company-name {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: bold;
     a {
       display: inline-block;
@@ -56,17 +56,17 @@ const ContentStyled = styled.section`
     }
   }
   p.position {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: 500;
   }
   p.period {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 400;
     opacity: 0.7;
   }
   article.discription {
     display: grid;
     row-gap: 12px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 `;

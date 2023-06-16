@@ -9,8 +9,9 @@ export default function FadeInContent({
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+      transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
       whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
     >
       {children}
     </motion.div>

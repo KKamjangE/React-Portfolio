@@ -12,9 +12,9 @@ const FooterStyled = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 0 150px;
+  padding: 150px 0 100px;
   p {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     opacity: 0.4;
   }
 `;
