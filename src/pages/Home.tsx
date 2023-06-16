@@ -7,20 +7,9 @@ import { useRef } from "react";
 export default function Home() {
   const elementRef = useRef<HTMLDivElement[]>([]);
 
-  const moveToElement = ({
-    elementRef,
-    index,
-  }: {
-    elementRef: React.RefObject<HTMLDivElement[]>;
-    index: number;
-  }) => {
-    if (elementRef.current)
-      elementRef.current[index]?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <>
-      <NavBar moveToElement={moveToElement} elementRef={elementRef} />
+      <NavBar elementRef={elementRef} />
       <ProgressBar />
       <Layout>
         <Intro />

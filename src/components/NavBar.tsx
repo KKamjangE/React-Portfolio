@@ -2,18 +2,17 @@ import styled from "styled-components";
 import { FadeInContent, HoverLink } from "@/components/interactive";
 
 interface NavBarProps {
-  moveToElement: ({
-    elementRef,
-    index,
-  }: {
-    elementRef: React.RefObject<HTMLDivElement[]>;
-    index: number;
-  }) => void;
   elementRef: React.RefObject<HTMLDivElement[]>;
 }
 
-export default function NavBar({ moveToElement, elementRef }: NavBarProps) {
+export default function NavBar({ elementRef }: NavBarProps) {
   const navList = ["Work", "Project", "Share", "Education"];
+
+  const moveToElement = ({ index }: { index: number }) => {
+    if (elementRef.current)
+      elementRef.current[index]?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <NavBarStyled>
       <FadeInContent>
@@ -23,7 +22,7 @@ export default function NavBar({ moveToElement, elementRef }: NavBarProps) {
               key={index}
               onClick={() => {
                 if (elementRef.current) {
-                  moveToElement({ elementRef, index });
+                  moveToElement({ index });
                 }
               }}
             >
