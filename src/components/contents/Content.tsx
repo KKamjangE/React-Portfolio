@@ -2,16 +2,17 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { ContentLayout } from "@/components/layout";
 import { FadeInContent, Loading, HoverLink } from "@/components/interactive";
-import { getWorkData } from "@/api";
-import type { WorkTypes } from "@/api/types";
+import { getData } from "@/api";
+import type { getDataTypes } from "@/api/types";
 
-export default function Work() {
-  const [workData, setWorkData] = useState<WorkTypes>();
+export default function Content() {
+  const [workData, setWorkData] = useState<getDataTypes>();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    getWorkData()
+    getData()
       .then((res) => {
+        console.log(res);
         setWorkData(res);
         setIsLoading(false);
       })
@@ -25,7 +26,7 @@ export default function Work() {
       ) : (
         <ContentLayout title={workData?.title}>
           {workData?.data.map((work) => (
-            <WorkStyled key={work.id}>
+            <ContentStyled key={work.id}>
               <FadeInContent>
                 <p className="position">{work.position}</p>
               </FadeInContent>
@@ -46,7 +47,7 @@ export default function Work() {
                   </FadeInContent>
                 ))}
               </article>
-            </WorkStyled>
+            </ContentStyled>
           ))}
         </ContentLayout>
       )}
@@ -54,7 +55,7 @@ export default function Work() {
   );
 }
 
-const WorkStyled = styled.section`
+const ContentStyled = styled.section`
   display: grid;
   row-gap: 30px;
   padding-top: 50px;
