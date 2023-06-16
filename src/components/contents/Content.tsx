@@ -8,11 +8,11 @@ import type { getDataTypes } from "@/api/types";
 export default function Content() {
   const [workData, setWorkData] = useState<getDataTypes>();
   const [isLoading, setIsLoading] = useState(true);
+  console.log(workData);
 
   useEffect(() => {
     getData()
       .then((res) => {
-        console.log(res);
         setWorkData(res);
         setIsLoading(false);
       })
