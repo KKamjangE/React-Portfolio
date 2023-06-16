@@ -1,25 +1,28 @@
-export interface getDataTypes {
-  data: Array<CommonDataTypes>;
+export interface ResponseData {
+  data: DataType[];
 }
 
-export interface CommonDataTypes {
+interface DataType {
   id: number;
   title: string;
-  data: Array<detailDataTypes>;
+  data: ContentDataType[];
 }
 
-interface detailDataTypes {
+export interface ContentDataType {
   id: number;
   position?: string;
   classification?: string;
   title: string;
   period?: string;
-  discription: Array<string>;
-  URL?: {
-    githubURL?: string;
-    siteURL?: string;
-    videoURL?: string;
-    wikiURL?: string;
-  };
-  skill?: Array<string>;
+  discription: string[];
+  URL?: URLTypes;
+  skill?: string[];
+}
+
+interface URLTypes {
+  githubURL?: string;
+  siteURL?: string;
+  videoURL?: string;
+  wikiURL?: string;
+  companyURL?: string;
 }
