@@ -6,5 +6,4 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
 const LayoutStyled = styled.div`
   padding-left: 20vw;
-  height: 100vh;
 `;
