@@ -10,7 +10,7 @@ export default function NavBar({ elementRef }: NavBarProps) {
 
   const moveToElement = ({ index }: { index: number }) => {
     if (elementRef.current)
-      elementRef.current[index]?.scrollIntoView({ behavior: "smooth" });
+      elementRef.current[index].scrollIntoView({ behavior: "smooth" });
   };
 
   return (
