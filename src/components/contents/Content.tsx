@@ -5,7 +5,7 @@ import {
   YellowPoint,
 } from "@/components/interactive";
 import type { ContentDataType } from "@/api";
-import { ContentUrl } from "@/components/contents";
+import { ContentUrl, ContentDiscription } from "@/components/contents";
 
 export default function Content({ content }: { content: ContentDataType }) {
   return (
@@ -35,13 +35,7 @@ export default function Content({ content }: { content: ContentDataType }) {
         </FadeInContent>
       )}
       {content.discription && (
-        <article className="discription">
-          {content.discription.map((discription, idx) => (
-            <FadeInContent key={idx}>
-              <p>📌 {discription}</p>
-            </FadeInContent>
-          ))}
-        </article>
+        <ContentDiscription discription={content.discription} />
       )}
       {content.URL && <ContentUrl urls={content.URL} />}
     </ContentStyled>
@@ -63,12 +57,5 @@ const ContentStyled = styled.article`
     font-size: 0.7rem;
     font-weight: 400;
     opacity: 0.7;
-  }
-  article.discription {
-    display: grid;
-    row-gap: 12px;
-    font-size: 0.8rem;
-  }
-  article.url-section {
   }
 `;
