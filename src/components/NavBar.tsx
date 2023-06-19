@@ -6,7 +6,7 @@ interface NavBarProps {
 }
 
 export default function NavBar({ elementRef }: NavBarProps) {
-  const navList = ["Work", "Project", "Share", "Education"];
+  const navList = ["Project", "Work", "Share", "Education"];
 
   const moveToElement = ({ index }: { index: number }) => {
     if (elementRef.current)
@@ -36,7 +36,7 @@ export default function NavBar({ elementRef }: NavBarProps) {
           <a href="mailto:ajm980718@gmail.com" className="email">
             ajm980718@gmail.com
           </a>
-          <p className="update-info">Last Update: 2023/06/16</p>
+          <p className="update-info">Last Update: 2023/06/19</p>
         </div>
       </FadeInContent>
     </NavBarStyled>

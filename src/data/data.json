@@ -3,25 +3,6 @@
     "data": [
       {
         "id": 0,
-        "title": "Work",
-        "data": [
-          {
-            "id": 0,
-            "position": "Web Publisher",
-            "title": "(주)제이에스씨텍",
-            "period": "2022년 6월 ~ 2022년 10월 (약 5개월)",
-            "discription": [
-              "웹개발 팀 소속",
-              "웹 퍼블리셔 직무 수행",
-              "자사 홈페이지 제작",
-              "코리아메쎄 홈페이지 제작 프로젝트 참여"
-            ],
-            "URL": { "siteURL": "http://jsct.co.kr/" }
-          }
-        ]
-      },
-      {
-        "id": 1,
         "title": "Project",
         "data": [
           {
@@ -123,6 +104,25 @@
               "siteURL": "https://portfolioajm.netlify.app/index.html"
             },
             "skill": ["jquery", "swiperjs"]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "title": "Work",
+        "data": [
+          {
+            "id": 0,
+            "position": "Web Publisher",
+            "title": "(주)제이에스씨텍",
+            "period": "2022년 6월 ~ 2022년 10월 (약 5개월)",
+            "discription": [
+              "웹개발 팀 소속",
+              "웹 퍼블리셔 직무 수행",
+              "자사 홈페이지 제작",
+              "코리아메쎄 홈페이지 제작 프로젝트 참여"
+            ],
+            "URL": { "siteURL": "http://jsct.co.kr/" }
           }
         ]
       },
