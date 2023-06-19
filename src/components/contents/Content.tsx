@@ -17,10 +17,10 @@ export default function Content({ content }: { content: ContentDataType }) {
         <h2 className="company-name">
           {content.titleURL ? (
             <a href={content.titleURL} target="_blank">
-              <HoverLink>{content?.title}</HoverLink>
+              <HoverLink>{content.title}</HoverLink>
             </a>
           ) : (
-            <YellowPoint>{content?.title}</YellowPoint>
+            <YellowPoint>{content.title}</YellowPoint>
           )}
         </h2>
       </FadeInContent>
