@@ -5,8 +5,9 @@ import {
   YellowPoint,
 } from "@/components/interactive";
 import type { ContentDataType } from "@/api";
+import { ContentUrl } from "@/components/contents";
 
-export default function Content({ content }: { content?: ContentDataType }) {
+export default function Content({ content }: { content: ContentDataType }) {
   return (
     <ContentStyled>
       <FadeInContent>
@@ -14,8 +15,8 @@ export default function Content({ content }: { content?: ContentDataType }) {
       </FadeInContent>
       <FadeInContent>
         <h2 className="company-name">
-          {content?.URL?.siteURL ? (
-            <a href={content.URL.siteURL} target="_blank">
+          {content.titleURL ? (
+            <a href={content.titleURL} target="_blank">
               <HoverLink>{content?.title}</HoverLink>
             </a>
           ) : (
@@ -23,17 +24,17 @@ export default function Content({ content }: { content?: ContentDataType }) {
           )}
         </h2>
       </FadeInContent>
-      {content?.position && (
+      {content.position && (
         <FadeInContent>
           <p className="position">{content.position}</p>
         </FadeInContent>
       )}
-      {content?.period && (
+      {content.period && (
         <FadeInContent>
           <p className="period">{content.period}</p>
         </FadeInContent>
       )}
-      {content?.discription && (
+      {content.discription && (
         <article className="discription">
           {content.discription.map((discription, idx) => (
             <FadeInContent key={idx}>
@@ -42,6 +43,7 @@ export default function Content({ content }: { content?: ContentDataType }) {
           ))}
         </article>
       )}
+      {content.URL && <ContentUrl urls={content.URL} />}
     </ContentStyled>
   );
 }
@@ -52,10 +54,6 @@ const ContentStyled = styled.article`
   h2.company-name {
     font-size: 1.4rem;
     font-weight: bold;
-    a {
-      display: inline-block;
-      text-decoration: underline;
-    }
   }
   p.position {
     font-size: 0.9rem;
@@ -70,5 +68,7 @@ const ContentStyled = styled.article`
     display: grid;
     row-gap: 12px;
     font-size: 0.8rem;
+  }
+  article.url-section {
   }
 `;

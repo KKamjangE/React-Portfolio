@@ -16,11 +16,11 @@ export interface ContentDataType {
   titleURL?: string;
   period?: string;
   discription?: string[];
-  URL?: URLTypes;
+  URL?: URLType;
   skill?: string[];
 }
 
-interface URLTypes {
+export interface URLType {
   githubURL?: string;
   videoURL?: string;
   wikiURL?: string;
