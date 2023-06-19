@@ -9,6 +9,7 @@
             "id": 3,
             "classification": "개인 프로젝트",
             "title": "나만의 포트폴리오 제작 (현재 페이지)",
+            "titleURL": "https://react-portfolio-snowy-ten.vercel.app/",
             "period": "2023년 5월 ~ (진행중)",
             "position": "프론트엔드 개발",
             "discription": [
@@ -20,7 +21,6 @@
             ],
             "URL": {
               "githubURL": "https://github.com/KKamjangE/React-Portfolio",
-              "siteURL": "https://react-portfolio-snowy-ten.vercel.app/",
               "wikiURL": "https://torpid-erigeron-ad1.notion.site/dc779779d36e437abd5502a088002c53?v=cfdbcd0463ba4117b57d125aefc906f9&pvs=4"
             },
             "skill": [
@@ -70,6 +70,7 @@
             "id": 1,
             "classification": "팀 프로젝트",
             "title": "코리아메쎄 홈페이지 제작",
+            "titleURL": "http://www.koreamesse.kr/main/index",
             "period": "2022년 07월 ~ 2022년 08월 (약 1개월)",
             "position": "프론트엔드 개발",
             "discription": [
@@ -79,8 +80,7 @@
               "바닐라 자바스크립트와 제이쿼리만을 사용"
             ],
             "URL": {
-              "githubURL": "https://github.com/KKamjangE/KOREA_MESSE",
-              "siteURL": "http://www.koreamesse.kr/main/index"
+              "githubURL": "https://github.com/KKamjangE/KOREA_MESSE"
             },
             "skill": ["jquery", "gsap", "aos", "swiperjs"]
           },
@@ -88,6 +88,7 @@
             "id": 0,
             "classification": "개인 프로젝트",
             "title": "웹 퍼블리셔 포트폴리오 제작",
+            "titleURL": "https://portfolioajm.netlify.app/index.html",
             "period": "2022년 08월 (약 1주일)",
             "position": "프론트엔드 개발",
             "discription": [
@@ -100,8 +101,7 @@
               "나만의 로고 디자인"
             ],
             "URL": {
-              "githubURL": "https://github.com/KKamjangE/first_Portfolio",
-              "siteURL": "https://portfolioajm.netlify.app/index.html"
+              "githubURL": "https://github.com/KKamjangE/first_Portfolio"
             },
             "skill": ["jquery", "swiperjs"]
           }
@@ -115,14 +115,14 @@
             "id": 0,
             "position": "Web Publisher",
             "title": "(주)제이에스씨텍",
+            "titleURL": "http://jsct.co.kr/",
             "period": "2022년 6월 ~ 2022년 10월 (약 5개월)",
             "discription": [
               "웹개발 팀 소속",
               "웹 퍼블리셔 직무 수행",
               "자사 홈페이지 제작",
               "코리아메쎄 홈페이지 제작 프로젝트 참여"
-            ],
-            "URL": { "siteURL": "http://jsct.co.kr/" }
+            ]
           }
         ]
       },
@@ -134,21 +134,17 @@
             "id": 1,
             "classification": "블로그",
             "title": "벨로그",
+            "titleURL": "https://velog.io/@ajm0718",
             "discription": [
               "알고리즘, CS지식 공부 내용, 회고록, 트러블 슈팅 등등 정리"
-            ],
-            "URL": {
-              "siteURL": "https://velog.io/@ajm0718"
-            }
+            ]
           },
           {
             "id": 0,
             "classification": "Github",
             "title": "Github",
-            "discription": ["프로젝트 관리", "꾸준한 잔디 심기"],
-            "URL": {
-              "siteURL": "https://github.com/KKamjangE"
-            }
+            "titleURL": "https://github.com/KKamjangE",
+            "discription": ["프로젝트 관리", "꾸준한 잔디 심기"]
           }
         ]
       },

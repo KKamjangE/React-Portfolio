@@ -13,6 +13,7 @@ export interface ContentDataType {
   position?: string;
   classification?: string;
   title: string;
+  titleURL?: string;
   period?: string;
   discription?: string[];
   URL?: URLTypes;
@@ -21,7 +22,6 @@ export interface ContentDataType {
 
 interface URLTypes {
   githubURL?: string;
-  siteURL?: string;
   videoURL?: string;
   wikiURL?: string;
 }
