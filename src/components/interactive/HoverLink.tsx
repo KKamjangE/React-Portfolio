@@ -25,7 +25,8 @@ const HoverLinkStyled = styled.div<{ isNav?: boolean }>`
   background-position: 0, 0;
   background-size: 200%;
   transition: 0.25s ease;
-
+  text-decoration: ${(props) => (props.isNav ? "" : "underline")};
+  display: ${(props) => (props.isNav ? "" : "inline-block")};
   :hover {
     background-position: -100% 0;
   }
