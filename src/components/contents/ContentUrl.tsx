@@ -1,7 +1,5 @@
 import type { URLType } from "@/api";
 import { FadeInContent, HoverLink } from "@/components/interactive";
-import { AiFillGithub, AiFillYoutube } from "react-icons/ai";
-import { RxNotionLogo } from "react-icons/rx";
 import styled from "styled-components";
 
 export default function ContentUrl({ urls }: { urls: URLType }) {
@@ -14,24 +12,21 @@ export default function ContentUrl({ urls }: { urls: URLType }) {
         {urls.githubURL && (
           <FadeInContent>
             <a href={urls.githubURL} target="_blank">
-              <AiFillGithub />
-              <HoverLink>Github</HoverLink>
+              💾<HoverLink>Github</HoverLink>
             </a>
           </FadeInContent>
         )}
         {urls.videoURL && (
           <FadeInContent>
             <a href={urls.videoURL} target="_blank">
-              <AiFillYoutube />
-              <HoverLink>Video</HoverLink>
+              🎬<HoverLink>Video</HoverLink>
             </a>
           </FadeInContent>
         )}
         {urls.wikiURL && (
           <FadeInContent>
             <a href={urls.wikiURL} target="_blank">
-              <RxNotionLogo />
-              <HoverLink>Notion 정리</HoverLink>
+              📚<HoverLink>Notion 정리</HoverLink>
             </a>
           </FadeInContent>
         )}
@@ -49,11 +44,10 @@ const ContentUrlStyeld = styled.article`
     display: grid;
     row-gap: 10px;
     a {
-      font-weight: 500;
-      display: flex;
-      svg {
-        margin-right: 10px;
-        font-size: 30px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      div {
+        margin-left: 5px;
       }
     }
   }
