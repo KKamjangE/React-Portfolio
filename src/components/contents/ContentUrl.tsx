@@ -46,8 +46,8 @@ const ContentUrlStyeld = styled.article`
     a {
       font-size: 0.8rem;
       font-weight: 700;
-      div {
-        margin-left: 5px;
+      > div {
+        margin-left: 10px;
       }
     }
   }
