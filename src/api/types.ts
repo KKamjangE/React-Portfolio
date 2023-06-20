@@ -28,7 +28,7 @@ export interface URLType {
 
 export interface skillsType {
   data: {
-    react: string;
+    [react: string]: string;
     typescript: string;
     styledcomponent: string;
     framermotion: string;
