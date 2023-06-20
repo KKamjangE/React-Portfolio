@@ -1,24 +1,29 @@
 import { useEffect, useState } from "react";
 import { Content } from "@/components/contents";
-import { getData } from "@/api";
+import { getContentsData, getSkillsData } from "@/api";
 import type { ResponseData } from "@/api";
 import { ContentLayout } from "@/components/layout";
 import { Loading } from "@/components/interactive";
+import { useSkillsStore } from "@/store/store";
 
 interface ContentsSectionProps {
   elementRef: React.MutableRefObject<HTMLDivElement[]>;
 }
 
 export default function ContentsSection({ elementRef }: ContentsSectionProps) {
-  const [contentData, setContentData] = useState<ResponseData>();
   const [isLoading, setIsLoading] = useState(true);
+  const [contentData, setContentData] = useState<ResponseData>();
+  const { setSkills } = useSkillsStore();
 
   useEffect(() => {
-    getData("/data.json")
+    getContentsData()
       .then((res) => {
         setContentData(res);
         setIsLoading(false);
       })
+      .catch((e) => console.log(e));
+    getSkillsData()
+      .then((res) => setSkills(res))
       .catch((e) => console.log(e));
   }, []);
   return (
