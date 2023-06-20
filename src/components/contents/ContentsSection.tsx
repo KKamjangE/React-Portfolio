@@ -14,7 +14,7 @@ export default function ContentsSection({ elementRef }: ContentsSectionProps) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    getData()
+    getData("/data.json")
       .then((res) => {
         setContentData(res);
         setIsLoading(false);
