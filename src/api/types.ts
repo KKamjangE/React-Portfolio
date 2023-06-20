@@ -25,3 +25,28 @@ export interface URLType {
   videoURL?: string;
   wikiURL?: string;
 }
+
+export interface skillsStoreType {
+  skills: skillsType | null;
+  setSkills: (newSkills: skillsType) => void;
+}
+
+interface skillsType {
+  react: string;
+  typescript: string;
+  styledcomponent: string;
+  framermotion: string;
+  axios: string;
+  yarn: string;
+  vite: string;
+  vercel: string;
+  reactquery: string;
+  recoil: string;
+  zustand: string;
+  emotion: string;
+  amplify: string;
+  jquery: string;
+  gsap: string;
+  aos: string;
+  swiperjs: string;
+}
