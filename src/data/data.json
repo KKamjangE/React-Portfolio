@@ -12,7 +12,7 @@
             "titleURL": "https://react-portfolio-snowy-ten.vercel.app/",
             "period": "2023년 5월 ~ (진행중)",
             "position": "프론트엔드 개발",
-            "discription": [
+            "description": [
               "나만의 프론트엔드 포트폴리오를 가지기 위해서 개발",
               "framer-motion을 사용한 애니메이션 효과 구현",
               "Axios를 이용한 RESTful API 연동",
@@ -41,7 +41,7 @@
             "title": "인터뷰 메이트",
             "period": "2023년 2월 ~ 2023년 3월 (약 1개월)",
             "position": "프론트엔드 개발",
-            "discription": [
+            "description": [
               "취준생들을 위한 AI 화상 면접 연습 서비스",
               "면접 녹화 영상 업로드 시간 최적화",
               "Axios를 이용한 RESTful API 연동",
@@ -74,7 +74,7 @@
             "titleURL": "http://www.koreamesse.kr/main/index",
             "period": "2022년 07월 ~ 2022년 08월 (약 1개월)",
             "position": "프론트엔드 개발",
-            "discription": [
+            "description": [
               "GSAP, AOS, SwiperJS를 이용한 애니메이션 구현",
               "콘텐츠 검색 기능 구현",
               "모바일 및 태블릿 반응형 디자인 구현",
@@ -92,7 +92,7 @@
             "titleURL": "https://portfolioajm.netlify.app/index.html",
             "period": "2022년 08월 (약 1주일)",
             "position": "프론트엔드 개발",
-            "discription": [
+            "description": [
               "나만의 퍼블리셔 포트폴리오를 가지기 위해서 개발",
               "SwiperJS를 이용한 슬라이드 구현",
               "바닐라 자바스크립트와 CSS만을 사용한 애니메이션 구현",
@@ -118,7 +118,7 @@
             "title": "(주)제이에스씨텍",
             "titleURL": "http://jsct.co.kr/",
             "period": "2022년 6월 ~ 2022년 10월 (약 5개월)",
-            "discription": [
+            "description": [
               "웹개발 팀 소속",
               "웹 퍼블리셔 직무 수행",
               "자사 홈페이지 제작",
@@ -136,7 +136,7 @@
             "classification": "블로그",
             "title": "벨로그",
             "titleURL": "https://velog.io/@ajm0718",
-            "discription": [
+            "description": [
               "알고리즘, CS지식 공부 내용, 회고록, 트러블 슈팅 등등 정리"
             ]
           },
@@ -145,7 +145,7 @@
             "classification": "Github",
             "title": "Github",
             "titleURL": "https://github.com/KKamjangE",
-            "discription": ["프로젝트 관리", "꾸준한 잔디 심기"]
+            "description": ["프로젝트 관리", "꾸준한 잔디 심기"]
           }
         ]
       },
@@ -158,7 +158,7 @@
             "classification": "교육",
             "title": "SW 개발자 양성 프로그램 크래프톤 정글 1기",
             "period": "2022년 10월 ~ 2023년 3월 (5개월)",
-            "discription": [
+            "description": [
               "크래프톤에서 주최",
               "1 ~ 4주차: 알고리즘 & 자료구조 학습",
               "5 ~ 7주차: C언어를 이용해 RB Tree, Malloc, Web Server 구현",
@@ -174,7 +174,7 @@
             "classification": "교육",
             "title": "웹 퍼블리셔 과정 국비학원",
             "period": "2021년 12월 ~ 2022년 5월 (5개월)",
-            "discription": [
+            "description": [
               "웹 디자인 및 UI/UX 학습",
               "JavaScript, JQuery, HTML, CSS 학습"
             ]
@@ -184,21 +184,21 @@
             "classification": "대학교",
             "title": "연성대학교",
             "period": "2017년 3월 ~ 2022년 2월",
-            "discription": ["정보통신공학 전공 전문 학사 졸업", "학점 3.72/4.5"]
+            "description": ["정보통신공학 전공 전문 학사 졸업", "학점 3.72/4.5"]
           },
           {
             "id": 1,
             "classification": "자격증",
             "title": "웹 디자인 기능사",
             "period": "2022년 6월",
-            "discription": ["한국산업인력공단"]
+            "description": ["한국산업인력공단"]
           },
           {
             "id": 0,
             "classification": "자격증",
             "title": "전자계산기 기능사",
             "period": "2016년 7월",
-            "discription": ["한국산업인력공단"]
+            "description": ["한국산업인력공단"]
           }
         ]
       }

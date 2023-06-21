@@ -15,7 +15,7 @@ export interface ContentDataType {
   title: string;
   titleURL?: string;
   period?: string;
-  discription?: string[];
+  description?: string[];
   URL?: URLType;
   skill?: string[];
 }
