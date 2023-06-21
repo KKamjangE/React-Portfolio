@@ -12,21 +12,21 @@ export default function ContentUrl({ urls }: { urls: URLType }) {
         {urls.githubURL && (
           <FadeInContent>
             <a href={urls.githubURL} target="_blank">
-              💾<HoverLink>Github</HoverLink>
+              📌<HoverLink>Github</HoverLink>
             </a>
           </FadeInContent>
         )}
         {urls.videoURL && (
           <FadeInContent>
             <a href={urls.videoURL} target="_blank">
-              🎬<HoverLink>Video</HoverLink>
+              📌<HoverLink>Video</HoverLink>
             </a>
           </FadeInContent>
         )}
         {urls.wikiURL && (
           <FadeInContent>
             <a href={urls.wikiURL} target="_blank">
-              📚<HoverLink>Notion 정리</HoverLink>
+              📌<HoverLink>Notion 정리</HoverLink>
             </a>
           </FadeInContent>
         )}
@@ -47,7 +47,7 @@ const ContentUrlStyeld = styled.article`
       font-size: 0.8rem;
       font-weight: 700;
       > div {
-        margin-left: 10px;
+        margin-left: 7px;
       }
     }
   }

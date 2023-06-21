@@ -8,7 +8,7 @@ import type { ContentDataType } from "@/api";
 import {
   ContentUrl,
   ContentDescription,
-  // ContentSkill,
+  ContentSkill,
 } from "@/components/contents";
 
 export default function Content({ content }: { content: ContentDataType }) {
@@ -42,7 +42,7 @@ export default function Content({ content }: { content: ContentDataType }) {
         <ContentDescription description={content.description} />
       )}
       {content.URL && <ContentUrl urls={content.URL} />}
-      {/* {content.skill && <ContentSkill skill={content.skill} />} */}
+      {content.skill && <ContentSkill skill={content.skill} />}
     </ContentStyled>
   );
 }
