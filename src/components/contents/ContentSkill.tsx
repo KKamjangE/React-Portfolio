@@ -1,5 +1,5 @@
-import { SkillDescription } from "@/components/contents";
 import styled from "styled-components";
+import { SkillDescription } from "@/components";
 
 export default function ContentSkill({ skill }: { skill: string[] }) {
   return (

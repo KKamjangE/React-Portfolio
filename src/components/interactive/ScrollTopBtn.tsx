@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import upArrow from "@/assets/up-arrow.svg";
-import { FadeInContent } from "@/components/interactive";
+import { FadeInContent } from "@/components";
 import { motion } from "framer-motion";
 
 export default function ScrollTopBtn() {

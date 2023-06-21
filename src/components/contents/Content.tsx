@@ -3,13 +3,11 @@ import {
   FadeInContent,
   TextHoverMotion,
   YellowPoint,
-} from "@/components/interactive";
-import type { ContentDataType } from "@/api";
-import {
   ContentUrl,
   ContentDescription,
   ContentSkill,
-} from "@/components/contents";
+} from "@/components";
+import type { ContentDataType } from "@/api";
 
 export default function Content({ content }: { content: ContentDataType }) {
   return (

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FadeInContent, TextHoverMotion } from "@/components/interactive";
+import { FadeInContent, TextHoverMotion } from "@/components";
 
 interface NavBarProps {
   elementRef: React.RefObject<HTMLDivElement[]>;
@@ -16,9 +16,9 @@ export default function NavBar({ elementRef }: NavBarProps) {
   return (
     <NavBarStyled>
       <FadeInContent>
-        <div className="menu">
+        <ul>
           {navList.map((nav, index) => (
-            <a
+            <li
               key={index}
               onClick={() => {
                 if (elementRef.current) {
@@ -27,9 +27,9 @@ export default function NavBar({ elementRef }: NavBarProps) {
               }}
             >
               <TextHoverMotion isNav={true}>{nav}</TextHoverMotion>
-            </a>
+            </li>
           ))}
-        </div>
+        </ul>
       </FadeInContent>
       <FadeInContent>
         <div className="project-info">
@@ -52,13 +52,13 @@ const NavBarStyled = styled.nav`
   width: 20vw;
   height: 100vh;
   background-color: var(--bg-dark-gray);
-  .menu {
+  ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-top: 80px;
     height: 30vh;
-    a {
+    li {
       color: var(--text-white);
       display: block;
       font-size: 1.4rem;
@@ -75,10 +75,10 @@ const NavBarStyled = styled.nav`
       color: var(--text-white);
       margin-bottom: 15px;
       transition: 0.2s;
-    }
-    .email:hover {
-      cursor: pointer;
-      color: var(--accent-yellow);
+      :hover {
+        cursor: pointer;
+        color: var(--accent-yellow);
+      }
     }
     .update-info {
       opacity: 0.6;

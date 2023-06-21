@@ -1,7 +1,12 @@
-import { NavBar, Intro, Footer } from "@/components";
-import { ContentsSection } from "@/components/contents";
-import { Layout } from "@/components/layout";
-import { ProgressBar, ScrollTopBtn } from "@/components/interactive";
+import {
+  ContentsContainer,
+  ProgressBar,
+  ScrollTopBtn,
+  NavBar,
+  Intro,
+  Footer,
+  Layout,
+} from "@/components";
 import { useRef } from "react";
 
 export default function Home() {
@@ -13,7 +18,7 @@ export default function Home() {
       <ProgressBar />
       <Layout>
         <Intro />
-        <ContentsSection elementRef={elementRef} />
+        <ContentsContainer elementRef={elementRef} />
         <Footer />
       </Layout>
       <ScrollTopBtn />

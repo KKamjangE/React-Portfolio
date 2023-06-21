@@ -1,6 +1,6 @@
-import type { URLType } from "@/api";
-import { FadeInContent, TextHoverMotion } from "@/components/interactive";
 import styled from "styled-components";
+import type { URLType } from "@/api";
+import { FadeInContent, TextHoverMotion } from "@/components";
 
 export default function ContentUrl({ urls }: { urls: URLType }) {
   return (

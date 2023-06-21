@@ -1,5 +1,5 @@
-import { motion, useScroll } from "framer-motion";
 import styled from "styled-components";
+import { motion, useScroll } from "framer-motion";
 
 export default function ProgressBar() {
   const { scrollYProgress } = useScroll();

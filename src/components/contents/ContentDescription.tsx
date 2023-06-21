@@ -1,4 +1,4 @@
-import { FadeInContent } from "@/components/interactive";
+import { FadeInContent } from "@/components";
 import styled from "styled-components";
 
 export default function ContentDescription({

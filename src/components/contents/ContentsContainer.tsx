@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
-import { Content } from "@/components/contents";
+import { Content, ContentLayout, Loading } from "@/components";
 import { getContentsData, getSkillsData } from "@/api";
 import type { ResponseData } from "@/api";
-import { ContentLayout } from "@/components/layout";
-import { Loading } from "@/components/interactive";
 import { useSkillsStore } from "@/store/store";
 
-interface ContentsSectionProps {
+interface ContentsContainerProps {
   elementRef: React.MutableRefObject<HTMLDivElement[]>;
 }
 
-export default function ContentsSection({ elementRef }: ContentsSectionProps) {
+export default function ContentsContainer({
+  elementRef,
+}: ContentsContainerProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [contentData, setContentData] = useState<ResponseData>();
   const { setSkills } = useSkillsStore();

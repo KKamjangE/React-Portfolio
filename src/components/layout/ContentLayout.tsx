@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FadeInContent, YellowPoint } from "@/components/interactive";
+import { FadeInContent, YellowPoint } from "@/components";
 
 export default function ContentLayout({
   children,
