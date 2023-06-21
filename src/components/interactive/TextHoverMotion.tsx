@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import YellowPoint from "./YellowPoint";
 
-export default function HoverLink({
+export default function TextHoverMotion({
   children,
   isNav,
 }: {
@@ -9,14 +9,16 @@ export default function HoverLink({
   isNav?: boolean;
 }) {
   return (
-    <HoverLinkStyled isNav={isNav}>
+    <TextHoverMotionStyled isNav={isNav}>
       <YellowPoint>{children}</YellowPoint>
-    </HoverLinkStyled>
+    </TextHoverMotionStyled>
   );
 }
 
-const HoverLinkStyled = styled.div<{ isNav?: boolean }>`
+const TextHoverMotionStyled = styled.div<{ isNav?: boolean }>`
   padding: ${(props) => (props.isNav ? "10px" : "0")};
+  text-decoration: ${(props) => (props.isNav ? "" : "underline")};
+  display: ${(props) => (props.isNav ? "" : "inline-block")};
   background: linear-gradient(
     to right,
     transparent 50%,
@@ -25,8 +27,6 @@ const HoverLinkStyled = styled.div<{ isNav?: boolean }>`
   background-position: 0, 0;
   background-size: 200%;
   transition: 0.25s ease;
-  text-decoration: ${(props) => (props.isNav ? "" : "underline")};
-  display: ${(props) => (props.isNav ? "" : "inline-block")};
   :hover {
     background-position: -100% 0;
   }

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FadeInContent, HoverLink } from "@/components/interactive";
+import { FadeInContent, TextHoverMotion } from "@/components/interactive";
 
 interface NavBarProps {
   elementRef: React.RefObject<HTMLDivElement[]>;
@@ -26,7 +26,7 @@ export default function NavBar({ elementRef }: NavBarProps) {
                 }
               }}
             >
-              <HoverLink isNav={true}>{nav}</HoverLink>
+              <TextHoverMotion isNav={true}>{nav}</TextHoverMotion>
             </a>
           ))}
         </div>

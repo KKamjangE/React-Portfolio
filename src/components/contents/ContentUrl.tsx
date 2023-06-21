@@ -1,32 +1,32 @@
 import type { URLType } from "@/api";
-import { FadeInContent, HoverLink } from "@/components/interactive";
+import { FadeInContent, TextHoverMotion } from "@/components/interactive";
 import styled from "styled-components";
 
 export default function ContentUrl({ urls }: { urls: URLType }) {
   return (
     <ContentUrlStyeld>
       <FadeInContent>
-        <p>🔗 관련링크들</p>
+        <p className="title">🔗 관련링크들</p>
       </FadeInContent>
       <div className="urls">
         {urls.githubURL && (
           <FadeInContent>
             <a href={urls.githubURL} target="_blank">
-              📌<HoverLink>Github</HoverLink>
+              📌<TextHoverMotion>Github</TextHoverMotion>
             </a>
           </FadeInContent>
         )}
         {urls.videoURL && (
           <FadeInContent>
             <a href={urls.videoURL} target="_blank">
-              📌<HoverLink>Video</HoverLink>
+              📌<TextHoverMotion>Video</TextHoverMotion>
             </a>
           </FadeInContent>
         )}
         {urls.wikiURL && (
           <FadeInContent>
             <a href={urls.wikiURL} target="_blank">
-              📌<HoverLink>Notion 정리</HoverLink>
+              📌<TextHoverMotion>Notion 정리</TextHoverMotion>
             </a>
           </FadeInContent>
         )}
@@ -36,7 +36,7 @@ export default function ContentUrl({ urls }: { urls: URLType }) {
 }
 
 const ContentUrlStyeld = styled.article`
-  p {
+  p.title {
     font-weight: bold;
     margin-bottom: 30px;
   }
