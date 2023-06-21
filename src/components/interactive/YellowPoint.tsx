@@ -13,7 +13,7 @@ export default function YellowPoint({
   );
 }
 
-const YellowPointStyled = styled.div`
+const YellowPointStyled = styled.p`
   span.yellow-point {
     color: var(--accent-yellow);
   }
