@@ -5,7 +5,11 @@ import {
   YellowPoint,
 } from "@/components/interactive";
 import type { ContentDataType } from "@/api";
-import { ContentUrl, ContentDiscription } from "@/components/contents";
+import {
+  ContentUrl,
+  ContentDescription,
+  // ContentSkill,
+} from "@/components/contents";
 
 export default function Content({ content }: { content: ContentDataType }) {
   return (
@@ -34,10 +38,11 @@ export default function Content({ content }: { content: ContentDataType }) {
           <p className="period">{content.period}</p>
         </FadeInContent>
       )}
-      {content.discription && (
-        <ContentDiscription discription={content.discription} />
+      {content.description && (
+        <ContentDescription description={content.description} />
       )}
       {content.URL && <ContentUrl urls={content.URL} />}
+      {/* {content.skill && <ContentSkill skill={content.skill} />} */}
     </ContentStyled>
   );
 }
