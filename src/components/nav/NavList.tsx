@@ -35,7 +35,6 @@ const NavListStyled = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 80px;
   height: 30vh;
   li {
     color: var(--text-white);

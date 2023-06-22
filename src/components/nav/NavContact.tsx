@@ -12,13 +12,13 @@ export default function NavContact() {
 }
 
 const NavContactStyled = styled.div`
+  display: grid;
+  row-gap: 15px;
   font-size: 0.6rem;
-  padding-bottom: 80px;
   color: var(--text-white);
   a.email {
     display: block;
     color: var(--text-white);
-    margin-bottom: 15px;
     transition: 0.2s;
     :hover {
       cursor: pointer;

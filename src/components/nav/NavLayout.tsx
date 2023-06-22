@@ -11,6 +11,7 @@ const NavLayoutStyled = styled.nav`
   justify-content: space-between;
   align-items: center;
   width: 20vw;
-  height: 100vh;
+  height: 80vh;
+  padding: 10vh 0;
   background-color: var(--bg-dark-gray);
 `;
