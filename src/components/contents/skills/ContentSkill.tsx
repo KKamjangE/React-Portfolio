@@ -6,11 +6,7 @@ export default function ContentSkill({ skill }: { skill: string[] }) {
     <ContentSkillSytled>
       <p className="title">💡 사용기술들</p>
       {skill.map((skillName, idx) => {
-        return (
-          <div key={idx}>
-            <SkillDetail skillName={skillName} />
-          </div>
-        );
+        return <SkillDetail skillName={skillName} key={idx} />;
       })}
     </ContentSkillSytled>
   );
