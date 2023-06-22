@@ -7,7 +7,7 @@ export default function Intro() {
   return (
     <IntroStyled homeImage={homeImage}>
       <div className="home-image">
-        <div className="profile-ment">
+        <article>
           <FadeInDownContent delayTime={0.5}>
             <p className="strength">기록과 소통을 좋아하는</p>
           </FadeInDownContent>
@@ -17,7 +17,7 @@ export default function Intro() {
             </p>
           </FadeInDownContent>
           <FadeInDownContent delayTime={1.5}>
-            <p className="my-info">
+            <p className="my-intro">
               프론트엔드 개발자를 희망하고 있습니다.
               <br />
               배운 모든 것을 기록하고 공유하는 것을 좋아합니다.
@@ -32,7 +32,7 @@ export default function Intro() {
               alt="down arrow"
             />
           </FadeInDownContent>
-        </div>
+        </article>
       </div>
     </IntroStyled>
   );
@@ -48,7 +48,7 @@ const IntroStyled = styled.section<{ homeImage: string }>`
     display: flex;
     justify-content: center;
     align-items: center;
-    .profile-ment {
+    article {
       position: relative;
       color: var(--text-white);
       text-align: center;
@@ -66,7 +66,7 @@ const IntroStyled = styled.section<{ homeImage: string }>`
           text-decoration-style: wavy;
         }
       }
-      .my-info {
+      .my-intro {
         font-size: 1.2rem;
         font-weight: 500;
         line-height: 1.8rem;

@@ -9,7 +9,6 @@ export default function SkillDescription({ skillName }: { skillName: string }) {
 
   const handleClick = () => {
     setDisable((prev) => !prev);
-    console.log(disable);
   };
   return (
     <SkillDescriptionStyled disable={disable}>

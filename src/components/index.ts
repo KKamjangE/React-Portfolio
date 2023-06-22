@@ -17,5 +17,5 @@ export { default as ContentUrl } from "@/components/contents/ContentUrl";
 export { default as ContentDescription } from "@/components/contents/ContentDescription";
 export { default as ContentSkill } from "@/components/contents/ContentSkill";
 export { default as SkillDescription } from "@/components/contents/SkillDescription";
+export { default as ContentLayout } from "@/components/contents/ContentLayout";
 export { default as Layout } from "@/components/layout/Layout";
-export { default as ContentLayout } from "@/components/layout/ContentLayout";
