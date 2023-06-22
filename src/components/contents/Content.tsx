@@ -17,8 +17,8 @@ export default function Content({ content }: { content: ContentDataType }) {
       </FadeInContent>
       <FadeInContent>
         <h2 className="content-title">
-          {content.titleURL ? (
-            <a href={content.titleURL} target="_blank">
+          {content.titleurl ? (
+            <a href={content.titleurl} target="_blank">
               <TextHoverMotion>{content.title}</TextHoverMotion>
             </a>
           ) : (
@@ -39,7 +39,7 @@ export default function Content({ content }: { content: ContentDataType }) {
       {content.description && (
         <ContentDescription description={content.description} />
       )}
-      {content.URL && <ContentUrl urls={content.URL} />}
+      {content.url && <ContentUrl urls={content.url} />}
       {content.skill && <ContentSkill skill={content.skill} />}
     </ContentStyled>
   );
