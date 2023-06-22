@@ -9,7 +9,7 @@
             "id": 3,
             "classification": "개인 프로젝트",
             "title": "나만의 포트폴리오 제작 (현재 페이지)",
-            "titleURL": "https://react-portfolio-snowy-ten.vercel.app/",
+            "titleurl": "https://react-portfolio-snowy-ten.vercel.app/",
             "period": "2023년 5월 ~ (진행중)",
             "position": "프론트엔드 개발",
             "description": [
@@ -19,9 +19,9 @@
               "Vercel 배포",
               "firebase의 실시간 데이터베이스 사용"
             ],
-            "URL": {
-              "githubURL": "https://github.com/KKamjangE/React-Portfolio",
-              "wikiURL": "https://torpid-erigeron-ad1.notion.site/dc779779d36e437abd5502a088002c53?v=cfdbcd0463ba4117b57d125aefc906f9&pvs=4"
+            "url": {
+              "github": "https://github.com/KKamjangE/React-Portfolio",
+              "notion": "https://torpid-erigeron-ad1.notion.site/dc779779d36e437abd5502a088002c53?v=cfdbcd0463ba4117b57d125aefc906f9&pvs=4"
             },
             "skill": [
               "React",
@@ -51,9 +51,9 @@
               "React-Query를 사용하여 면접방 리스트 데이터 캐싱",
               "AWS amplify를 이용한 프론트엔드 배포"
             ],
-            "URL": {
-              "githubURL": "https://github.com/krafton-jungle-AI-InterviewMate",
-              "videoURL": "https://youtu.be/BgKaJtJb6T4"
+            "url": {
+              "github": "https://github.com/krafton-jungle-AI-InterviewMate",
+              "video": "https://www.youtube.com/watch?v=BgKaJtJb6T4"
             },
             "skill": [
               "React",
@@ -71,7 +71,7 @@
             "id": 1,
             "classification": "팀 프로젝트",
             "title": "코리아메쎄 홈페이지 제작",
-            "titleURL": "http://www.koreamesse.kr/main/index",
+            "titleurl": "http://www.koreamesse.kr/main/index",
             "period": "2022년 07월 ~ 2022년 08월 (약 1개월)",
             "position": "프론트엔드 개발",
             "description": [
@@ -80,8 +80,8 @@
               "모바일 및 태블릿 반응형 디자인 구현",
               "바닐라 자바스크립트와 제이쿼리만을 사용"
             ],
-            "URL": {
-              "githubURL": "https://github.com/KKamjangE/KOREA_MESSE"
+            "url": {
+              "github": "https://github.com/KKamjangE/KOREA_MESSE"
             },
             "skill": ["jQuery", "GSAP", "AOS", "SwiperJS"]
           },
@@ -89,7 +89,7 @@
             "id": 0,
             "classification": "개인 프로젝트",
             "title": "웹 퍼블리셔 포트폴리오 제작",
-            "titleURL": "https://portfolioajm.netlify.app/index.html",
+            "titleurl": "https://portfolioajm.netlify.app/index.html",
             "period": "2022년 08월 (약 1주일)",
             "position": "프론트엔드 개발",
             "description": [
@@ -101,8 +101,8 @@
               "바닐라 자바스크립트와 제이쿼리만을 사용",
               "나만의 로고 디자인"
             ],
-            "URL": {
-              "githubURL": "https://github.com/KKamjangE/first_Portfolio"
+            "url": {
+              "github": "https://github.com/KKamjangE/first_Portfolio"
             },
             "skill": ["jQuery", "SwiperJS"]
           }
@@ -116,7 +116,7 @@
             "id": 0,
             "position": "Web Publisher",
             "title": "(주)제이에스씨텍",
-            "titleURL": "http://jsct.co.kr/",
+            "titleurl": "http://jsct.co.kr/",
             "period": "2022년 6월 ~ 2022년 10월 (약 5개월)",
             "description": [
               "웹개발 팀 소속",
@@ -135,7 +135,7 @@
             "id": 1,
             "classification": "블로그",
             "title": "벨로그",
-            "titleURL": "https://velog.io/@ajm0718",
+            "titleurl": "https://velog.io/@ajm0718",
             "description": [
               "알고리즘, CS지식 공부 내용, 회고록, 트러블 슈팅 등등 정리"
             ]
@@ -144,7 +144,7 @@
             "id": 0,
             "classification": "Github",
             "title": "Github",
-            "titleURL": "https://github.com/KKamjangE",
+            "titleurl": "https://github.com/KKamjangE",
             "description": ["프로젝트 관리", "꾸준한 잔디 심기"]
           }
         ]
@@ -165,8 +165,8 @@
               "8 ~ 13주차: 운영체제 PintOS 프로젝트 진행",
               "14 ~ 18주차: 나만의 무기 \"인터뷰 메이트\" 프로젝트 진행"
             ],
-            "URL": {
-              "wikiURL": "https://torpid-erigeron-ad1.notion.site/eba8178554c44c91a957697107e40459?pvs=4"
+            "url": {
+              "notion": "https://torpid-erigeron-ad1.notion.site/eba8178554c44c91a957697107e40459?pvs=4"
             }
           },
           {

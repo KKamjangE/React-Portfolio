@@ -13,17 +13,17 @@ export interface ContentDataType {
   position?: string;
   classification?: string;
   title: string;
-  titleURL?: string;
+  titleurl?: string;
   period?: string;
   description?: string[];
-  URL?: URLType;
+  url?: UrlType;
   skill?: string[];
 }
 
-export interface URLType {
-  githubURL?: string;
-  videoURL?: string;
-  wikiURL?: string;
+export interface UrlType {
+  github?: string;
+  video?: string;
+  notion?: string;
 }
 
 export interface skillsType {
