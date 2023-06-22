@@ -9,15 +9,17 @@ export default function ContentDescription({
   return (
     <ContentDescriptionStyled>
       {description.map((description, idx) => (
-        <FadeInContent key={idx}>
-          <p>📌 {description}</p>
-        </FadeInContent>
+        <li key={idx}>
+          <FadeInContent>
+            <p>📌 {description}</p>
+          </FadeInContent>
+        </li>
       ))}
     </ContentDescriptionStyled>
   );
 }
 
-const ContentDescriptionStyled = styled.article`
+const ContentDescriptionStyled = styled.ul`
   display: grid;
   row-gap: 12px;
   font-size: 0.8rem;
