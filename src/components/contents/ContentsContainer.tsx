@@ -10,7 +10,7 @@ export default function ContentsContainer() {
 
   const { setSkills } = useSkillsStore();
 
-  const elementRef = useRef<HTMLDivElement[]>([]);
+  const elementRef = useRef<HTMLElement[]>([]);
   const { setContentsRefs } = useContentsRefStore();
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function ContentsContainer() {
       ) : (
         <>
           {contentData?.data.map((common, idx) => (
-            <div
+            <section
               key={common.id}
               ref={(ref) => {
                 if (ref) elementRef.current[idx] = ref;
@@ -43,7 +43,7 @@ export default function ContentsContainer() {
                   <Content key={detail.id} content={detail} />
                 ))}
               </ContentLayout>
-            </div>
+            </section>
           ))}
         </>
       )}

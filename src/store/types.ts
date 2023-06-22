@@ -7,8 +7,6 @@ export interface skillsStoreType {
 }
 
 export interface ContentsStoreType {
-  contentsRefs: MutableRefObject<HTMLDivElement[]> | null;
-  setContentsRefs: (
-    newContentsRefs: MutableRefObject<HTMLDivElement[]>
-  ) => void;
+  contentsRefs: MutableRefObject<HTMLElement[]> | null;
+  setContentsRefs: (newContentsRefs: MutableRefObject<HTMLElement[]>) => void;
 }

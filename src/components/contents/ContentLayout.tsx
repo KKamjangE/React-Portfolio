@@ -25,7 +25,7 @@ export default function ContentLayout({
 }
 
 const ContentLayoutStyled = styled.div`
-  padding: 50px 100px 50px;
+  padding: 50px 100px;
   h1 {
     font-size: 2rem;
     font-weight: bold;
