@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SkillDescription } from "@/components";
+import { SkillDetail } from "@/components";
 
 export default function ContentSkill({ skill }: { skill: string[] }) {
   return (
@@ -8,7 +8,7 @@ export default function ContentSkill({ skill }: { skill: string[] }) {
       {skill.map((skillName, idx) => {
         return (
           <div key={idx}>
-            <SkillDescription skillName={skillName} />
+            <SkillDetail skillName={skillName} />
           </div>
         );
       })}

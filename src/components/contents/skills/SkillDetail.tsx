@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { useSkillsStore } from "@/store/store";
 
-export default function SkillDescription({ skillName }: { skillName: string }) {
+export default function SkillDetail({ skillName }: { skillName: string }) {
   const { skills } = useSkillsStore();
   const [disable, setDisable] = useState(false);
   const skillKey = skillName.split(" ").join("").toLowerCase();
@@ -11,16 +11,16 @@ export default function SkillDescription({ skillName }: { skillName: string }) {
     setDisable((prev) => !prev);
   };
   return (
-    <SkillDescriptionStyled disable={disable}>
+    <SkillDetailStyled disable={disable}>
       <p className="skill-title" onClick={handleClick}>
         {skillName}
       </p>
-      <p className="discription">{skills?.data[skillKey]}</p>
-    </SkillDescriptionStyled>
+      <p className="detail">{skills?.data[skillKey]}</p>
+    </SkillDetailStyled>
   );
 }
 
-const SkillDescriptionStyled = styled.div<{ disable: boolean }>`
+const SkillDetailStyled = styled.div<{ disable: boolean }>`
   p {
     background-color: var(--bg-white);
     padding: 15px;
@@ -31,7 +31,7 @@ const SkillDescriptionStyled = styled.div<{ disable: boolean }>`
     justify-content: space-between;
     cursor: pointer;
   }
-  .discription {
+  .detail {
     display: none;
   }
 `;

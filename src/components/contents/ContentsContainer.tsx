@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { Content, ContentLayout, Loading } from "@/components";
 import { getContentsData, getSkillsData } from "@/api";
 import type { ResponseData } from "@/api";
 import { useContentsRefStore, useSkillsStore } from "@/store/store";
+import { Content, ContentLayout, Loading } from "@/components";
 
 export default function ContentsContainer() {
   const [isLoading, setIsLoading] = useState(true);
-  const [contentData, setContentData] = useState<ResponseData>();
+  const [contentsData, setContentsData] = useState<ResponseData>();
 
   const { setSkills } = useSkillsStore();
 
@@ -16,7 +16,7 @@ export default function ContentsContainer() {
   useEffect(() => {
     getContentsData()
       .then((res) => {
-        setContentData(res);
+        setContentsData(res);
         setIsLoading(false);
         setContentsRefs(elementRef);
       })
@@ -31,16 +31,16 @@ export default function ContentsContainer() {
         <Loading />
       ) : (
         <>
-          {contentData?.data.map((common, idx) => (
+          {contentsData?.data.map((contents, idx) => (
             <section
-              key={common.id}
+              key={contents.id}
               ref={(ref) => {
                 if (ref) elementRef.current[idx] = ref;
               }}
             >
-              <ContentLayout title={common.title}>
-                {common.data.map((detail) => (
-                  <Content key={detail.id} content={detail} />
+              <ContentLayout title={contents.title}>
+                {contents.data.map((content) => (
+                  <Content key={content.id} content={content} />
                 ))}
               </ContentLayout>
             </section>
