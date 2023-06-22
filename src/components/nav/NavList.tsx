@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { TextHoverMotion } from "@/components";
 
 type NavType = {
-  contentsRefs: MutableRefObject<HTMLDivElement[]> | null;
+  contentsRefs: MutableRefObject<HTMLElement[]> | null;
   navList: string[];
 };
 
