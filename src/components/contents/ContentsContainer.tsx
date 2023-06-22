@@ -1,25 +1,24 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Content, ContentLayout, Loading } from "@/components";
 import { getContentsData, getSkillsData } from "@/api";
 import type { ResponseData } from "@/api";
-import { useSkillsStore } from "@/store/store";
+import { useContentsRefStore, useSkillsStore } from "@/store/store";
 
-interface ContentsContainerProps {
-  elementRef: React.MutableRefObject<HTMLDivElement[]>;
-}
-
-export default function ContentsContainer({
-  elementRef,
-}: ContentsContainerProps) {
+export default function ContentsContainer() {
   const [isLoading, setIsLoading] = useState(true);
   const [contentData, setContentData] = useState<ResponseData>();
+
   const { setSkills } = useSkillsStore();
+
+  const elementRef = useRef<HTMLDivElement[]>([]);
+  const { setContentsRefs } = useContentsRefStore();
 
   useEffect(() => {
     getContentsData()
       .then((res) => {
         setContentData(res);
         setIsLoading(false);
+        setContentsRefs(elementRef);
       })
       .catch((e) => console.log(e));
     getSkillsData()
@@ -27,7 +26,7 @@ export default function ContentsContainer({
       .catch((e) => console.log(e));
   }, []);
   return (
-    <section>
+    <>
       {isLoading ? (
         <Loading />
       ) : (
@@ -48,6 +47,6 @@ export default function ContentsContainer({
           ))}
         </>
       )}
-    </section>
+    </>
   );
 }

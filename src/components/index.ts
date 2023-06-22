@@ -1,5 +1,8 @@
 export { default as Footer } from "@/components/Footer";
-export { default as NavBar } from "@/components/nav/NavBar";
+export { default as NavContainer } from "@/components/nav/NavContainer";
+export { default as NavList } from "@/components/nav/NavList";
+export { default as NavLayout } from "@/components/nav/NavLayout";
+export { default as NavContact } from "@/components/nav/NavContact";
 export { default as Intro } from "@/components/intro/Intro";
 export { default as FadeInDownContent } from "@/components/intro/FadeInDownContent";
 export { default as FadeInContent } from "@/components/interactive/FadeInContent";

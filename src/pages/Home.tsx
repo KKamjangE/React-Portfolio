@@ -2,23 +2,20 @@ import {
   ContentsContainer,
   ProgressBar,
   ScrollTopBtn,
-  NavBar,
+  NavContainer,
   Intro,
   Footer,
   Layout,
 } from "@/components";
-import { useRef } from "react";
 
 export default function Home() {
-  const elementRef = useRef<HTMLDivElement[]>([]);
-
   return (
     <>
-      <NavBar elementRef={elementRef} />
+      <NavContainer />
       <ProgressBar />
       <Layout>
         <Intro />
-        <ContentsContainer elementRef={elementRef} />
+        <ContentsContainer />
         <Footer />
       </Layout>
       <ScrollTopBtn />
