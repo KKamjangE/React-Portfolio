@@ -63,7 +63,7 @@ const IntroStyled = styled.section<{ homeImage: string }>`
         span {
           text-decoration: underline;
           text-decoration-color: var(--accent-yellow);
-          text-decoration-style: wavy;
+          text-underline-offset: 10px;
         }
       }
       .my-intro {
