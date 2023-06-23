@@ -5,9 +5,10 @@ import { TextHoverMotion } from "@/components";
 type NavType = {
   contentsRefs: MutableRefObject<HTMLElement[]> | null;
   navList: string[];
+  viewIndex: number | null;
 };
 
-export default function Nav({ contentsRefs, navList }: NavType) {
+export default function Nav({ contentsRefs, navList, viewIndex }: NavType) {
   const moveToElement = ({ index }: { index: number }) => {
     if (contentsRefs) {
       contentsRefs.current[index].scrollIntoView({ behavior: "smooth" });
@@ -18,6 +19,7 @@ export default function Nav({ contentsRefs, navList }: NavType) {
       {navList.map((nav, index) => (
         <li
           key={index}
+          data-view={index === viewIndex}
           onClick={() => {
             if (contentsRefs) {
               moveToElement({ index });
@@ -42,5 +44,8 @@ const NavListStyled = styled.ul`
     font-size: 1.4rem;
     font-weight: 500;
     cursor: pointer;
+  }
+  li[data-view="true"] {
+    color: rgba(255, 255, 255, 0.5);
   }
 `;
