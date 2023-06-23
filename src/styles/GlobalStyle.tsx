@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
         --bg-light-gray:#f5f5f5;
 
         /** 스타일 변수 */
-        font-family: 'Noto Sans KR', sans-serif;
+        font-family: 'Roboto','Noto Sans KR', sans-serif;
         font-size: 24px;
         background-color: var(--bg-light-gray);
         color: var(--text-black);
