@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { useSkillsStore } from "@/store/store";
 import { motion, AnimatePresence } from "framer-motion";
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function SkillDetail({ skillName }: { skillName: string }) {
   const { skills } = useSkillsStore();
@@ -11,7 +12,7 @@ export default function SkillDetail({ skillName }: { skillName: string }) {
   return (
     <SkillDetailStyled>
       <p className="skill-title" onClick={() => setIsOpen(!isOpen)}>
-        {skillName}
+        {skillName} <IoIosArrowDown data-open={isOpen} />
       </p>
       <AnimatePresence initial={false}>
         {isOpen && (
@@ -28,7 +29,7 @@ export default function SkillDetail({ skillName }: { skillName: string }) {
               },
               close: { height: 0, paddingTop: 0, paddingBottom: 0 },
             }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 0.3 }}
             style={{ overflow: "hidden" }}
             className="detail"
           >
@@ -43,6 +44,15 @@ export default function SkillDetail({ skillName }: { skillName: string }) {
 const SkillDetailStyled = styled.div`
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  svg {
+    transition: 0.3s;
+  }
+  svg[data-open="true"] {
+    transform: rotate(180deg);
+  }
+  svg[data-open="false"] {
+    transform: rotate(0deg);
+  }
   p {
     font-size: 0.7rem;
     font-weight: 300;
