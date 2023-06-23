@@ -29,7 +29,7 @@ export default function SkillDetail({ skillName }: { skillName: string }) {
               },
               close: { height: 0, paddingTop: 0, paddingBottom: 0 },
             }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.2 }}
             style={{ overflow: "hidden" }}
             className="detail"
           >
@@ -45,7 +45,7 @@ const SkillDetailStyled = styled.div`
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.1);
   svg {
-    transition: 0.3s;
+    transition: 0.2s;
   }
   svg[data-open="true"] {
     transform: rotate(180deg);
