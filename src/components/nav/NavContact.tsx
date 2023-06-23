@@ -6,7 +6,7 @@ export default function NavContact() {
       <a href="mailto:ajm980718@gmail.com" className="email">
         ajm980718@gmail.com
       </a>
-      <p className="update-info">Last Update: 2023/06/19</p>
+      <p className="update-info">Last Update: 2023/06/23</p>
     </NavContactStyled>
   );
 }
