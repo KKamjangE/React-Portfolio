@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { useSkillsStore } from "@/store/store";
+import { useSkillsStore } from "@/store";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 import { FadeInContent } from "@/components";

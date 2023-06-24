@@ -1,5 +1,5 @@
 import { FadeInContent, NavLayout, NavList, NavContact } from "@/components";
-import { useContentsRefStore } from "@/store/store";
+import { useContentsRefStore } from "@/store";
 import { useState, useEffect } from "react";
 
 export default function NavContainer() {

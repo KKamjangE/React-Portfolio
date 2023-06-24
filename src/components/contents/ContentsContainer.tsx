@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { getContentsData, getSkillsData } from "@/api";
 import type { ResponseData } from "@/api";
-import { useContentsRefStore, useSkillsStore } from "@/store/store";
+import { useContentsRefStore, useSkillsStore } from "@/store";
 import { Content, ContentLayout, Loading } from "@/components";
 
 export default function ContentsContainer() {
