@@ -2,11 +2,9 @@
 
 > 2023년 5월 ~ (진행중)
 
-[웹 링크](https://anjemin-portfolio.vercel.app/)
-
 # 기록
 
-[개발 위키](https://torpid-erigeron-ad1.notion.site/dc779779d36e437abd5502a088002c53?v=cfdbcd0463ba4117b57d125aefc906f9&pvs=4)
+## [개발 위키](https://torpid-erigeron-ad1.notion.site/dc779779d36e437abd5502a088002c53?v=cfdbcd0463ba4117b57d125aefc906f9&pvs=4)
 
 # 구현
 
@@ -22,7 +20,7 @@
 
 <div align="center">
 
-## 프론트엔드
+## Development
 
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=white"/>
 <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white"/>
@@ -30,8 +28,16 @@
 <img src="https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white"/>
 <img src="https://img.shields.io/badge/Styled-DB7093?style=flat&logo=styledcomponents&logoColor=white"/>
 <img src="https://img.shields.io/badge/Framer-0055FF?style=flat&logo=framer&logoColor=white"/>
-
-## 백엔드
-
 <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=white"/>
+
+## Config
+
+<img src="https://img.shields.io/badge/Yarn-2C8EBB?style=flat&logo=Yarn&logoColor=white"/>
+
+## Deploy
+
+<img src="https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white"/>
+
+## [Site link](https://anjemin-portfolio.vercel.app/)
+
 </div>
