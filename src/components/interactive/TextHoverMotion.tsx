@@ -30,4 +30,7 @@ const TextHoverMotionStyled = styled.div<{ isNav?: boolean }>`
   :hover {
     background-position: -100% 0;
   }
+  @media screen and (max-width: 1024px) {
+    background: none;
+  }
 `;
