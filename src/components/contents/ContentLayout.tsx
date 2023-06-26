@@ -44,6 +44,6 @@ const ContentLayoutStyled = styled.div`
     padding: 50px;
   }
   @media screen and (max-width: 768px) {
-    padding: 10px;
+    padding: 50px 10px;
   }
 `;
