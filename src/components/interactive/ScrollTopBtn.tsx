@@ -55,4 +55,16 @@ const TopBtnStyled = styled.div`
       border-radius: 20px;
     }
   }
+  @media screen and (max-width: 768px) {
+    bottom: 10px;
+    right: 10px;
+    button {
+      width: 40px;
+      height: 40px;
+      border-radius: 16px;
+      img {
+        width: 20px;
+      }
+    }
+  }
 `;
