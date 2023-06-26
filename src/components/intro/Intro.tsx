@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import homeImage from "@/assets/home-img.png";
+import homeImage from "@/assets/home-img.webp";
 import downDoubleArrow from "@/assets/down-double-arrow.png";
 import { FadeInDownContent } from "@/components";
 
