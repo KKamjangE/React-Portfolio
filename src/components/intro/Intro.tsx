@@ -98,5 +98,12 @@ const IntroStyled = styled.section<{ homeImage: string }>`
         }
       }
     }
+    @media screen and (max-width: 1024px) {
+      article {
+        .my-intro {
+          font-size: 0.9rem;
+        }
+      }
+    }
   }
 `;
