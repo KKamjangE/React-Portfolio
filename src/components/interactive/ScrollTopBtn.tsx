@@ -47,6 +47,8 @@ const TopBtnStyled = styled.div`
     }
   }
   @media screen and (max-width: 1024px) {
+    bottom: 15px;
+    right: 15px;
     button {
       width: 50px;
       height: 50px;
