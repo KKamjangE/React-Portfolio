@@ -40,4 +40,10 @@ const ContentLayoutStyled = styled.div`
     display: grid;
     row-gap: 80px;
   }
+  @media screen and (max-width: 1024px) {
+    padding: 50px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+  }
 `;

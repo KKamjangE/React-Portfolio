@@ -46,4 +46,11 @@ const TopBtnStyled = styled.div`
       cursor: pointer;
     }
   }
+  @media screen and (max-width: 1024px) {
+    button {
+      width: 50px;
+      height: 50px;
+      border-radius: 20px;
+    }
+  }
 `;

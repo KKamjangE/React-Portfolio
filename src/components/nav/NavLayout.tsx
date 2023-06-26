@@ -14,4 +14,10 @@ const NavLayoutStyled = styled.nav`
   height: 80vh;
   padding: 10vh 0;
   background-color: var(--bg-dark-gray);
+  @media screen and (max-width: 1024px) {
+    position: static;
+    width: 100vw;
+    height: 40vh;
+    padding: 5vh 0;
+  }
 `;

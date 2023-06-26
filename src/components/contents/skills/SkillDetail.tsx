@@ -45,7 +45,6 @@ export default function SkillDetail({ skillName }: { skillName: string }) {
 }
 
 const SkillDetailStyled = styled.div`
-  /* border: 1px solid rgba(0, 0, 0, 0.1); */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   svg {
     transition: 0.2s;

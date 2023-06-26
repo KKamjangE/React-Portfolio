@@ -21,4 +21,7 @@ const ContentSkillSytled = styled.article`
     font-weight: bold;
     margin-bottom: 30px;
   }
+  @media screen and (max-width: 1024px) {
+    width: auto;
+  }
 `;

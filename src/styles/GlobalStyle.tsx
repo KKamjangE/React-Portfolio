@@ -21,6 +21,12 @@ const GlobalStyle = createGlobalStyle`
             color: var(--text-black);
             text-decoration: none;
         }
+        @media screen and (max-width: 1024px){
+            font-size: 20px;
+        }
+        @media screen and (max-width: 768px){
+            font-size: 16px;
+        }
     }
 `;
 

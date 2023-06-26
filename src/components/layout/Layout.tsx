@@ -6,4 +6,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
 const LayoutStyled = styled.div`
   padding-left: 20vw;
+  @media screen and (max-width: 1024px) {
+    padding-left: 0;
+  }
 `;
