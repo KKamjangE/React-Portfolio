@@ -26,6 +26,7 @@ export default function ContentsContainer() {
       {contentsData && (
         <>
           {contentsData?.data.map((contents, idx) => (
+            // 콘텐츠 대분류
             <section
               key={contents.id}
               ref={(ref) => {
@@ -34,6 +35,7 @@ export default function ContentsContainer() {
             >
               <ContentLayout title={contents.title}>
                 {contents.data.map((content) => (
+                  // 콘텐츠 소분류
                   <Content key={content.id} content={content} />
                 ))}
               </ContentLayout>
