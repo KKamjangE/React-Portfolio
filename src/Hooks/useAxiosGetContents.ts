@@ -1,22 +1,20 @@
-import { ResponseData, getContentsData } from "@/api";
-import { AxiosError } from "axios";
-import { useState } from "react";
+import { getContentsData } from "@/api";
+import { useAppDispatch } from "@/store";
+import { contentsStateAction } from "@/store/contentsStateSlice";
+import { useEffect } from "react";
 
 export const useAxiosGetContents = () => {
-  // contents 데이터 get 요청하는 훅
-  // 데이터, 에러, 로딩 반환
-  const [contentsData, setData] = useState<ResponseData | null>(null);
-  const [contentsError, setContentsError] = useState<AxiosError | null>(null);
-  const [isContentsLoading, setIsContentsLoading] = useState<boolean>(true);
-  getContentsData()
-    .then((res) => {
-      setData(res);
-    })
-    .catch((e) => {
-      setContentsError(e);
-    })
-    .finally(() => setIsContentsLoading(false));
-  return { contentsData, isContentsLoading, contentsError };
+  // contents 데이터 get 요청해서 store에 저장하는 훅
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(contentsStateAction.setIsLoading(true));
+    dispatch(contentsStateAction.setError(null));
+
+    getContentsData()
+      .then((res) => dispatch(contentsStateAction.setContents(res)))
+      .catch((e) => dispatch(contentsStateAction.setError(e.message)))
+      .finally(() => dispatch(contentsStateAction.setIsLoading(false)));
+  }, [dispatch]);
 };
 
 export default useAxiosGetContents;
