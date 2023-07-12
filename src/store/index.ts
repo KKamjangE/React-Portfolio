@@ -1,16 +1,18 @@
-import { create } from "zustand";
-import type { skillsStoreType, ContentsStoreType } from "./types";
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { RefTopStateReducer } from "@/store/RefTopStateSlice";
+import { useDispatch, useSelector, TypedUseSelectorHook } from "react-redux";
 
-export const useContentsRefStore = create<ContentsStoreType>((set) => ({
-  contentsRefs: null,
-  setContentsRefs: (newContentsRefs) => {
-    set(() => ({ contentsRefs: newContentsRefs }));
-  },
-}));
+const rootReducer = combineReducers({
+  RefTopStateReducer,
+});
 
-export const useSkillsStore = create<skillsStoreType>((set) => ({
-  skills: null,
-  setSkills: (newSkills) => {
-    set(() => ({ skills: newSkills }));
-  },
-}));
+// 스토어
+export const store = configureStore({
+  reducer: rootReducer,
+});
+
+export type rootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+
+export const useAppDispatch: () => AppDispatch = useDispatch;
+export const useAppSelector: TypedUseSelectorHook<rootState> = useSelector;
