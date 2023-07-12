@@ -29,6 +29,6 @@ const skillDescStateSlice = createSlice({
   },
 });
 
-export const skillDescAction = skillDescStateSlice.actions;
-export const skillDesc = skillDescStateSlice.name;
+export const skillDescStateAction = skillDescStateSlice.actions;
+export const skillDescState = skillDescStateSlice.name;
 export const skillDescStateReducer = skillDescStateSlice.reducer;
