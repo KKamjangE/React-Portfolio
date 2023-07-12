@@ -15,8 +15,8 @@ export const store = configureStore({
   reducer: rootReducer,
 });
 
-export type rootState = ReturnType<typeof store.getState>;
+export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 
-export const useAppDispatch: () => AppDispatch = useDispatch;
-export const useAppSelector: TypedUseSelectorHook<rootState> = useSelector;
+export const useAppDispatch: () => AppDispatch = useDispatch; // useDispatch 타입 정의
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector; // useSelector 타입 정의

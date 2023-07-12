@@ -1,9 +1,9 @@
-import { rootState, useAppSelector } from "@/store";
+import { RootState, useAppSelector } from "@/store";
 
 export const useGetSkillDesc = () => {
   // store에 저장된 skillDesc를 가져오는 훅
   const { skillDesc, isLoading, error } = useAppSelector(
-    (state: rootState) => state.skillDescStateReducer
+    (state: RootState) => state.skillDescStateReducer
   );
   return {
     skillDescData: skillDesc,
