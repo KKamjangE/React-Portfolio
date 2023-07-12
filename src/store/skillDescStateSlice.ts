@@ -1,8 +1,8 @@
-import { skillDescType } from "@/api";
+import { SkillDescType } from "@/api";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 interface SkillDescStateType {
-  skillDesc: skillDescType | null;
+  skillDesc: SkillDescType | null;
   isLoading: boolean;
   error: string | null;
 }
@@ -17,7 +17,7 @@ const skillDescStateSlice = createSlice({
   name: "skillDescState",
   initialState,
   reducers: {
-    setSkillDesc: (state, action: PayloadAction<skillDescType>) => {
+    setSkillDesc: (state, action: PayloadAction<SkillDescType>) => {
       state.skillDesc = action.payload;
     },
     setIsLoading: (state, action: PayloadAction<boolean>) => {

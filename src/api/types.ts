@@ -26,7 +26,7 @@ export interface UrlType {
   notion?: string;
 }
 
-export interface skillsType {
+export interface SkillDescType {
   data: {
     [react: string]: string;
     typescript: string;
