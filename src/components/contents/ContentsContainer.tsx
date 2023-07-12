@@ -1,41 +1,34 @@
-import { useEffect, useRef, useState } from "react";
-import { getContentsData, getSkillsData } from "@/api";
-import type { ResponseData } from "@/api";
-import { useContentsRefStore, useSkillsStore } from "@/store";
+import { useEffect, useRef } from "react";
 import { Content, ContentLayout, Loading } from "@/components";
+import useSetRefTopArray from "@/Hooks/useSetRefTop";
+import useAxiosGetContents from "@/Hooks/useAxiosGetContents";
+import useRefsAtOffsetTops from "@/Hooks/useRefsAtOffsetTops";
 
 export default function ContentsContainer() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [contentsData, setContentsData] = useState<ResponseData>();
+  const { contentsData, contentsError, isContentsLoading } =
+    useAxiosGetContents();
 
-  const { setSkills } = useSkillsStore();
-
-  const elementRef = useRef<HTMLElement[]>([]);
-  const { setContentsRefs } = useContentsRefStore();
+  const elementRefs = useRef<HTMLElement[]>([]);
+  const setRefTop = useSetRefTopArray(); // RefTop배열을 저장하는 dispatch
+  const getRefTops = useRefsAtOffsetTops(); // Ref의 offsetTop 가져오기
 
   useEffect(() => {
-    getContentsData()
-      .then((res) => {
-        setContentsData(res);
-        setIsLoading(false);
-        setContentsRefs(elementRef);
-      })
-      .catch((e) => console.log(e));
-    getSkillsData()
-      .then((res) => setSkills(res))
-      .catch((e) => console.log(e));
-  }, []);
+    // 콘텐츠 데이터 로드가 완료되면
+    // 렌더링된 콘텐츠의 Ref 배열을 offsetTop 배열로 변환
+    const RefTops = getRefTops(elementRefs);
+    // offsetTop 배열을 저장하는 dispatch 호출
+    setRefTop(RefTops);
+  }, [isContentsLoading]);
   return (
     <>
-      {isLoading ? (
-        <Loading />
-      ) : (
+      {isContentsLoading && <Loading />}
+      {contentsData && (
         <>
           {contentsData?.data.map((contents, idx) => (
             <section
               key={contents.id}
               ref={(ref) => {
-                if (ref) elementRef.current[idx] = ref;
+                if (ref) elementRefs.current[idx] = ref;
               }}
             >
               <ContentLayout title={contents.title}>
