@@ -1,9 +1,11 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { RefTopStateReducer } from "@/store/RefTopStateSlice";
 import { useDispatch, useSelector, TypedUseSelectorHook } from "react-redux";
+import { contentsStateReducer } from "./contentsStateSlice";
 
 const rootReducer = combineReducers({
   RefTopStateReducer,
+  contentsStateReducer,
 });
 
 // 스토어

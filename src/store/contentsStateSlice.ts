@@ -31,4 +31,4 @@ const contentsStateSlice = createSlice({
 
 export const contentsStateAction = contentsStateSlice.actions;
 export const contentsState = contentsStateSlice.name;
-export const contentsStateSliceReducer = contentsStateSlice.reducer;
+export const contentsStateReducer = contentsStateSlice.reducer;
