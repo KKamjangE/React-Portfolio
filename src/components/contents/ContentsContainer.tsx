@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 import { Content, ContentLayout, Loading } from "@/components";
-import useSetRefTopArray from "@/Hooks/useSetRefTop";
+import useSetRefOffsetList from "@/Hooks/useSetRefOffsetList";
 import useAxiosGetContents from "@/Hooks/useAxiosGetContents";
-import useRefsAtOffsetTops from "@/Hooks/useRefsAtOffsetTops";
+import useRefsAtOffsets from "@/Hooks/useRefsAtOffsets";
 import useGetContents from "@/Hooks/useGetContents";
 import useAxiosGetSkillDesc from "@/Hooks/useAxiosGetSkillDesc";
 
@@ -12,13 +12,13 @@ export default function ContentsContainer() {
   const { contentsData, isContentsLoading } = useGetContents();
 
   const elementRefs = useRef<HTMLElement[]>([]);
-  const setRefTop = useSetRefTopArray(); // RefTop배열을 저장하는 dispatch
-  const getRefTops = useRefsAtOffsetTops(); // Ref의 offsetTop 가져오기
+  const setRefTop = useSetRefOffsetList(); // RefTop배열을 저장하는 dispatch
+  const getRefOffsetList = useRefsAtOffsets(); // Ref의 offsetTop 가져오기
 
   useEffect(() => {
     // 콘텐츠 데이터 로드가 완료되면
     // 렌더링된 콘텐츠의 Ref 배열을 offsetTop 배열로 변환
-    const RefTops = getRefTops(elementRefs);
+    const RefTops = getRefOffsetList(elementRefs);
     // offsetTop 배열을 저장하는 dispatch 호출
     setRefTop(RefTops);
   }, [isContentsLoading]);

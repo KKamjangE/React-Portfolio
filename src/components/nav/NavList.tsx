@@ -1,30 +1,28 @@
-import { MutableRefObject } from "react";
 import styled from "styled-components";
 import { TextHoverMotion } from "@/components";
+import { RefOffsetList } from "@/store/RefTopStateSlice";
 
 type NavType = {
-  contentsRefs: MutableRefObject<HTMLElement[]> | null;
   navList: string[];
-  viewIndex: number | null;
+  RefOffsetList: RefOffsetList[];
+  currViewContentNumber: number | null;
 };
 
-export default function Nav({ contentsRefs, navList, viewIndex }: NavType) {
+export default function Nav({
+  navList,
+  RefOffsetList,
+  currViewContentNumber,
+}: NavType) {
   const moveToElement = ({ index }: { index: number }) => {
-    if (contentsRefs) {
-      contentsRefs.current[index].scrollIntoView({ behavior: "smooth" });
-    }
+    window.scrollTo({ top: RefOffsetList[index].top, behavior: "smooth" });
   };
   return (
     <NavListStyled>
       {navList.map((nav, index) => (
         <li
           key={index}
-          data-view={index === viewIndex}
-          onClick={() => {
-            if (contentsRefs) {
-              moveToElement({ index });
-            }
-          }}
+          data-view={index === currViewContentNumber}
+          onClick={() => moveToElement({ index })}
         >
           <TextHoverMotion isNav={true}>{nav}</TextHoverMotion>
         </li>
