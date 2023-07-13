@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import homeImage from "@/assets/home-img.webp";
-import downDoubleArrow from "@/assets/down-double-arrow.png";
+import downDoubleArrow from "@/assets/down-double-arrow.webp";
 import { FadeInDownContent } from "@/components";
 
 export default function Intro() {
