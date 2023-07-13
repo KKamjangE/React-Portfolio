@@ -1,11 +1,11 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { useDispatch, useSelector, TypedUseSelectorHook } from "react-redux";
-import { RefTopStateReducer } from "@/store/RefTopStateSlice";
+import { RefOffsetListStateReducer } from "@/store/RefTopStateSlice";
 import { contentsStateReducer } from "./contentsStateSlice";
 import { skillDescStateReducer } from "./skillDescStateSlice";
 
 const rootReducer = combineReducers({
-  RefTopStateReducer,
+  RefOffsetListStateReducer,
   contentsStateReducer,
   skillDescStateReducer,
 });

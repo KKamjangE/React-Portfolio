@@ -1,23 +1,28 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
+export interface RefOffsetList {
+  top: number;
+  height: number;
+}
+
 interface RefTopStateType {
-  RefTopArray: number[];
+  refOffsetList: RefOffsetList[];
 }
 
 const initialState: RefTopStateType = {
-  RefTopArray: [],
+  refOffsetList: [],
 };
 
-const RefTopStateSlice = createSlice({
+const RefOffsetListStateSlice = createSlice({
   name: "RefTopState",
   initialState,
   reducers: {
-    setRefTopList: (state, action: PayloadAction<number[]>) => {
-      state.RefTopArray = action.payload;
+    setRefOffsetList: (state, action: PayloadAction<RefOffsetList[]>) => {
+      state.refOffsetList = action.payload;
     },
   },
 });
 
-export const RefTopStateAction = RefTopStateSlice.actions;
-export const RefTopState = RefTopStateSlice.name;
-export const RefTopStateReducer = RefTopStateSlice.reducer;
+export const RefOffsetListStateAction = RefOffsetListStateSlice.actions;
+export const RefOffsetListState = RefOffsetListStateSlice.name;
+export const RefOffsetListStateReducer = RefOffsetListStateSlice.reducer;
