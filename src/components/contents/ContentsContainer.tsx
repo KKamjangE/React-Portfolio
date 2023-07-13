@@ -4,10 +4,12 @@ import useSetRefTopArray from "@/Hooks/useSetRefTop";
 import useAxiosGetContents from "@/Hooks/useAxiosGetContents";
 import useRefsAtOffsetTops from "@/Hooks/useRefsAtOffsetTops";
 import useGetContents from "@/Hooks/useGetContents";
+import useAxiosGetSkillDesc from "@/Hooks/useAxiosGetSkillDesc";
 
 export default function ContentsContainer() {
-  useAxiosGetContents(); // 콘텐츠 get 요청
-  const { contentsData, contentsError, isContentsLoading } = useGetContents();
+  useAxiosGetContents(); // contents get 요청
+  useAxiosGetSkillDesc(); // skillDesc get 요청
+  const { contentsData, isContentsLoading } = useGetContents();
 
   const elementRefs = useRef<HTMLElement[]>([]);
   const setRefTop = useSetRefTopArray(); // RefTop배열을 저장하는 dispatch
