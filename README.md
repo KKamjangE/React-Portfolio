@@ -10,11 +10,14 @@
 
 - framer-motion을 사용한 애니메이션 효과 구현
 - Axios를 이용해 firebase와 RESTful API 연동
-- useRef로 스크롤 스파이, 스크롤링 기능 구현
-- Vercel로 프로젝트 배포
+- Vercel을 사용한 CI/CD 및 배포
 - firebase의 실시간 데이터베이스 사용
-- 이미지 로드 최적화(WIP)
+- 이미지 로드 최적화에 대한 고민
 - 모바일, 태블릿 반응형 구현 예정
+- 상태관리 Zustand에서 Redux로 변경
+- Redux Toolkit으로 콘텐츠 데이터 관리
+- Custom Hook으로 비즈니스 로직, 비동기 API 호출 처리
+- 반응형 웹 디자인
 
 # 기술 스택
 
@@ -25,9 +28,10 @@
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=white"/>
 <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white"/>
 <img src="https://img.shields.io/badge/Axios-5A29E4?style=flat&logo=axios&logoColor=white"/>
-<img src="https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white"/>
+<img src="https://img.shields.io/badge/Redux-764ABC?style=flat&logo=Redux&logoColor=white"/>
 <img src="https://img.shields.io/badge/Styled-DB7093?style=flat&logo=styledcomponents&logoColor=white"/>
 <img src="https://img.shields.io/badge/Framer-0055FF?style=flat&logo=framer&logoColor=white"/>
+<img src="https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white"/>
 <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=white"/>
 
 ## Config
