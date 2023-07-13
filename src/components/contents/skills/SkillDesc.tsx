@@ -1,18 +1,18 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { useSkillsStore } from "@/store";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 import { FadeInContent } from "@/components";
+import useGetSkillDesc from "@/Hooks/useGetSkillDesc";
 
-export default function SkillDetail({ skillName }: { skillName: string }) {
-  const { skills } = useSkillsStore();
+export default function SkillDesc({ skillName }: { skillName: string }) {
+  const { skillDescData } = useGetSkillDesc(); // store에서 skillDesc 데이터 가져오기
   const [isOpen, setIsOpen] = useState(false);
   const skillKey = skillName.split(" ").join("").toLowerCase();
 
   return (
     <FadeInContent>
-      <SkillDetailStyled>
+      <SkillDescStyled>
         <p className="skill-title" onClick={() => setIsOpen(!isOpen)}>
           {skillName} <IoIosArrowDown data-open={isOpen} />
         </p>
@@ -35,16 +35,17 @@ export default function SkillDetail({ skillName }: { skillName: string }) {
               style={{ overflow: "hidden" }}
               className="detail"
             >
-              {skills?.data[skillKey]}
+              {skillDescData?.data[skillKey]}
             </motion.p>
           )}
         </AnimatePresence>
-      </SkillDetailStyled>
+      </SkillDescStyled>
     </FadeInContent>
   );
 }
 
-const SkillDetailStyled = styled.div`
+const SkillDescStyled = styled.div`
+  width: 60vw;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   svg {
     transition: 0.2s;
@@ -70,5 +71,8 @@ const SkillDetailStyled = styled.div`
     padding: 0 15px;
     line-height: 1.2rem;
     font-weight: 300;
+  }
+  @media screen and (max-width: 1024px) {
+    width: auto;
   }
 `;
