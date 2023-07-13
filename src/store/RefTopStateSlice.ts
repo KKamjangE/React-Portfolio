@@ -12,7 +12,7 @@ const RefTopStateSlice = createSlice({
   name: "RefTopState",
   initialState,
   reducers: {
-    setRefTop: (state, action: PayloadAction<number[]>) => {
+    setRefTopList: (state, action: PayloadAction<number[]>) => {
       state.RefTopArray = action.payload;
     },
   },

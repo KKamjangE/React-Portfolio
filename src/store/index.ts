@@ -1,6 +1,6 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
-import { RefTopStateReducer } from "@/store/RefTopStateSlice";
 import { useDispatch, useSelector, TypedUseSelectorHook } from "react-redux";
+import { RefTopStateReducer } from "@/store/RefTopStateSlice";
 import { contentsStateReducer } from "./contentsStateSlice";
 import { skillDescStateReducer } from "./skillDescStateSlice";
 
