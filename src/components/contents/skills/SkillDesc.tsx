@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 import { FadeInContent } from "@/components";
-import useGetSkillDesc from "@/Hooks/useGetSkillDesc";
+import useGetSkillDesc from "@/hooks/useGetSkillDesc";
 
 export default function SkillDesc({ skillName }: { skillName: string }) {
   const { skillDescData } = useGetSkillDesc(); // store에서 skillDesc 데이터 가져오기
