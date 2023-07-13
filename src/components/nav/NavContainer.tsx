@@ -1,5 +1,4 @@
-import useCurrViewContNum from "@/hooks/useCurrViewContNum";
-import useGetRefOffsetList from "@/hooks/useGetRefOffsetList";
+import { useCurrViewContNum, useGetRefOffsetList } from "@/hooks";
 import { FadeInContent, NavLayout, NavList, NavContact } from "@/components";
 
 export default function NavContainer() {

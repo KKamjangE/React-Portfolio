@@ -1,10 +1,12 @@
 import { useEffect, useRef } from "react";
 import { Content, ContentLayout, Loading } from "@/components";
-import useSetRefOffsetList from "@/hooks/useSetRefOffsetList";
-import useAxiosGetContents from "@/hooks/useAxiosGetContents";
-import useRefsAtOffsets from "@/hooks/useRefsAtOffsets";
-import useGetContents from "@/hooks/useGetContents";
-import useAxiosGetSkillDesc from "@/hooks/useAxiosGetSkillDesc";
+import {
+  useSetRefOffsetList,
+  useAxiosGetContents,
+  useRefsAtOffsets,
+  useGetContents,
+  useAxiosGetSkillDesc,
+} from "@/hooks";
 
 export default function ContentsContainer() {
   useAxiosGetContents(); // contents get 요청
