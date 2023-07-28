@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function FadeInContent({
+export default function FadeInMotion({
   children,
 }: {
   children: React.ReactNode;

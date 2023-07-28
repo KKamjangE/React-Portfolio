@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { useGetRefOffsetList } from "@/hooks";
 
-export const useCurrViewContNum = () => {
+export const useCurrViewContentNum = () => {
   // 현재 스크롤이 어느 콘텐츠에 있나 확인하는 훅
   // 현재 스크롤이 위치한 콘텐츠의 인덱스 반환
-  const [currViewContNum, setCurrViewContNum] = useState<number | null>(null);
+  const [currViewContentNum, setCurrViewContNum] = useState<number | null>(
+    null
+  );
   const RefOffsetList = useGetRefOffsetList();
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +28,7 @@ export const useCurrViewContNum = () => {
     };
   }, [RefOffsetList]);
 
-  return { currViewContNum };
+  return { currViewContentNum };
 };
 
-export default useCurrViewContNum;
+export default useCurrViewContentNum;

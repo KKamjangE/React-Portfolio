@@ -1,19 +1,19 @@
 import styled from "styled-components";
 
-export default function YellowPoint({
+export default function YellowPointLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <YellowPointStyled>
+    <YellowPointLayoutStyled>
       {children}
       <span className="yellow-point">.</span>
-    </YellowPointStyled>
+    </YellowPointLayoutStyled>
   );
 }
 
-const YellowPointStyled = styled.p`
+const YellowPointLayoutStyled = styled.p`
   span.yellow-point {
     color: var(--accent-yellow);
   }

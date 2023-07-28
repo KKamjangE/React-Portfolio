@@ -2,7 +2,7 @@ import styled from "styled-components";
 import type { ContentDataType } from "@/api";
 import {
   FadeInContent,
-  TextHoverMotion,
+  HoverMotion,
   YellowPoint,
   ContentUrl,
   ContentDescription,
@@ -19,7 +19,7 @@ export default function Content({ content }: { content: ContentDataType }) {
         <h2 className="content-title">
           {content.titleurl ? (
             <a href={content.titleurl} target="_blank">
-              <TextHoverMotion>{content.title}</TextHoverMotion>
+              <HoverMotion>{content.title}</HoverMotion>
             </a>
           ) : (
             <YellowPoint>{content.title}</YellowPoint>

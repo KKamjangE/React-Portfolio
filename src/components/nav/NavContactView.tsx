@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
-export default function NavContact() {
+export default function NavContactView() {
   return (
-    <NavContactStyled>
+    <NavContactViewStyled>
       <a href="mailto:ajm980718@gmail.com" className="email">
         ajm980718@gmail.com
       </a>
-      <p className="update-info">Last Update: 2023/07/13</p>
-    </NavContactStyled>
+      <p className="update-info">Last Update: 2023/07/28</p>
+    </NavContactViewStyled>
   );
 }
 
-const NavContactStyled = styled.div`
+const NavContactViewStyled = styled.div`
   display: grid;
   row-gap: 15px;
   font-size: 0.6rem;
