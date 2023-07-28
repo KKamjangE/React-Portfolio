@@ -3,7 +3,6 @@ import { Content, ContentLayout, Loading } from "@/components";
 import {
   useSetRefOffsetList,
   useAxiosGetContents,
-  useRefsAtOffsets,
   useGetContents,
   useAxiosGetSkillDesc,
 } from "@/hooks";
@@ -14,15 +13,12 @@ export default function ContentsContainer() {
   const { contentsData, isContentsLoading } = useGetContents();
 
   const elementRefs = useRef<HTMLElement[]>([]);
-  const setRefTop = useSetRefOffsetList(); // RefTop배열을 저장하는 dispatch
-  const getRefOffsetList = useRefsAtOffsets(); // Ref의 offsetTop 가져오기
+  const { setRefOffsetList } = useSetRefOffsetList(); // RefTop 배열을 변환해서 저장하는 훅
 
   useEffect(() => {
     // 콘텐츠 데이터 로드가 완료되면
-    // 렌더링된 콘텐츠의 Ref 배열을 offsetTop 배열로 변환
-    const RefTops = getRefOffsetList(elementRefs);
-    // offsetTop 배열을 저장하는 dispatch 호출
-    setRefTop(RefTops);
+    // offset 배열로 변환해서 store에 저장
+    setRefOffsetList(elementRefs);
   }, [isContentsLoading]);
   return (
     <>

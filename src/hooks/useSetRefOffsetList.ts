@@ -1,18 +1,28 @@
 import { useAppDispatch } from "@/store";
-import { useCallback } from "react";
+import { MutableRefObject } from "react";
 import {
-  RefOffsetList,
+  RefOffsetListType,
   RefOffsetListStateAction,
 } from "@/store/RefTopStateSlice";
 
 export const useSetRefOffsetList = () => {
-  // offset 배열 저장하는 dispatch 훅
+  // Ref 배열 받아서 offset 배열로 변환해 store에 저장하는 훅
   const dispatch = useAppDispatch();
-  return useCallback(
-    (RefOffsetList: RefOffsetList[]) =>
-      dispatch(RefOffsetListStateAction.setRefOffsetList(RefOffsetList)),
-    [dispatch]
-  );
+
+  const setRefOffsetList = (elementRefs: MutableRefObject<HTMLElement[]>) => {
+    // Ref 배열을 받아서 offset 배열로 변환해주는 함수
+    const RefOffsetList = elementRefs.current.reduce<RefOffsetListType[]>(
+      (result, item) => {
+        result.push({ top: item.offsetTop, height: item.offsetHeight });
+        return result;
+      },
+      []
+    );
+
+    dispatch(RefOffsetListStateAction.setRefOffsetList(RefOffsetList));
+  };
+
+  return { setRefOffsetList };
 };
 
 export default useSetRefOffsetList;
