@@ -1,5 +1,5 @@
 import { FadeInContent } from "@/components";
-import { TextHoverMotion } from "@/components";
+import { HoverMotion } from "@/components";
 import styled from "styled-components";
 
 interface LinkTextType {
@@ -13,7 +13,7 @@ export default function LinkText({ urlName, url }: LinkTextType) {
     <UrlListStyled>
       <FadeInContent>
         <a href={url} target="_blank">
-          📌<TextHoverMotion>{newUrlName}</TextHoverMotion>
+          📌<HoverMotion>{newUrlName}</HoverMotion>
         </a>
       </FadeInContent>
     </UrlListStyled>

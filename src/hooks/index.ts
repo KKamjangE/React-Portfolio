@@ -4,5 +4,4 @@ export { default as useCurrViewContentNum } from "@/hooks/useCurrViewContNum";
 export { default as useGetContents } from "@/hooks/useGetContents";
 export { default as useGetRefOffsetList } from "@/hooks/useGetRefOffsetList";
 export { default as useGetSkillDesc } from "@/hooks/useGetSkillDesc";
-export { default as useRefsAtOffsets } from "@/hooks/useRefsAtOffsets";
 export { default as useSetRefOffsetList } from "@/hooks/useSetRefOffsetList";
