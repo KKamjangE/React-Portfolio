@@ -70,7 +70,7 @@ const SkillDescStyled = styled.div`
   p.detail {
     padding: 0 15px;
     line-height: 1.2rem;
-    font-weight: 300;
+    font-weight: 400;
   }
   @media screen and (max-width: 1024px) {
     width: auto;
