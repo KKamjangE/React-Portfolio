@@ -8,7 +8,7 @@ export default function NavContainer() {
 
   const moveToElement = (index: number) => {
     // index에 맞는 콘텐츠로 스크롤 이동하는 함수
-    window.scrollTo({ top: refOffsetList[index].top, behavior: "smooth" });
+    window.scrollTo({ top: refOffsetList[index].top + 1, behavior: "smooth" });
   };
 
   return (
