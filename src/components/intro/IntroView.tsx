@@ -4,6 +4,10 @@ import downDoubleArrow from '@/assets/down-double-arrow.webp'
 import { FadeInDownContent } from '@/components'
 
 export default function IntroView() {
+    const startDate = new Date('2023-09')
+    const today = new Date()
+    let years = today.getFullYear() - startDate.getFullYear()
+    if (startDate.getMonth() <= today.getMonth()) years++
     return (
         <IntroViewStyled homeImage={homeImage}>
             <div className="home-image">
@@ -18,11 +22,11 @@ export default function IntroView() {
                     </FadeInDownContent>
                     <FadeInDownContent delayTime={1.5}>
                         <p className="my-intro">
-                            {new Date().getFullYear() - 2023}년차 프론트엔드 개발자입니다.
+                            {years}년차 프론트엔드 개발자입니다.
                             <br />
-                            배운 모든 것을 기록하고 공유하는 것을 좋아합니다.
+                            경험을 기록하고 공유하는 것을 좋아합니다.
                             <br />
-                            소통의 중요성을 잘 알기에 항상 원활한 소통을 위해 노력합니다.
+                            항상 원활한 커뮤니케이션을 위해 노력합니다.
                         </p>
                     </FadeInDownContent>
                     <FadeInDownContent delayTime={2.1}>
