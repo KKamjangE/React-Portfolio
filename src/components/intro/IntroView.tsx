@@ -18,7 +18,7 @@ export default function IntroView() {
           </FadeInDownContent>
           <FadeInDownContent delayTime={1.5}>
             <p className="my-intro">
-              프론트엔드 개발자를 희망하고 있습니다.
+              {new Date().getFullYear() - 2023}년차 프론트엔드 개발자입니다.
               <br />
               배운 모든 것을 기록하고 공유하는 것을 좋아합니다.
               <br />
