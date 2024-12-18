@@ -1,4 +1,4 @@
-import { FadeInContent } from '@/components'
+import { FadeIn } from '@/components'
 import { HoverMotion } from '@/components'
 import styled from 'styled-components'
 
@@ -11,11 +11,11 @@ export default function LinkText({ urlName, url }: LinkTextType) {
     const newUrlName = urlName[0].toUpperCase() + urlName.slice(1)
     return (
         <UrlListStyled>
-            <FadeInContent>
+            <FadeIn>
                 <a href={url} target="_blank">
                     📌<HoverMotion>{newUrlName}</HoverMotion>
                 </a>
-            </FadeInContent>
+            </FadeIn>
         </UrlListStyled>
     )
 }

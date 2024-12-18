@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import type { ContentDataType } from '@/api'
 import {
-    FadeInContent,
+    FadeIn,
     HoverMotion,
     YellowPoint,
     ContentUrl,
@@ -12,10 +12,10 @@ import {
 export default function Content({ content }: { content: ContentDataType }) {
     return (
         <ContentStyled>
-            <FadeInContent>
+            <FadeIn>
                 <p className="classification">{content?.classification}</p>
-            </FadeInContent>
-            <FadeInContent>
+            </FadeIn>
+            <FadeIn>
                 <h2 className="content-title">
                     {content.titleurl ? (
                         <a href={content.titleurl} target="_blank">
@@ -25,16 +25,16 @@ export default function Content({ content }: { content: ContentDataType }) {
                         <YellowPoint>{content.title}</YellowPoint>
                     )}
                 </h2>
-            </FadeInContent>
+            </FadeIn>
             {content.position && (
-                <FadeInContent>
+                <FadeIn>
                     <p className="content-position">{content.position}</p>
-                </FadeInContent>
+                </FadeIn>
             )}
             {content.period && (
-                <FadeInContent>
+                <FadeIn>
                     <p className="content-period">{content.period}</p>
-                </FadeInContent>
+                </FadeIn>
             )}
             {content.description && <ContentDescription description={content.description} />}
             {content.url && <ContentUrl urls={content.url} />}

@@ -1,4 +1,4 @@
-import { FadeInContent } from '@/components'
+import { FadeIn } from '@/components'
 import styled from 'styled-components'
 
 export default function ContentDescription({ description }: { description: string[] }) {
@@ -6,9 +6,9 @@ export default function ContentDescription({ description }: { description: strin
         <ContentDescriptionStyled>
             {description.map((description, idx) => (
                 <li key={idx}>
-                    <FadeInContent>
+                    <FadeIn>
                         <p>📌 {description}</p>
-                    </FadeInContent>
+                    </FadeIn>
                 </li>
             ))}
         </ContentDescriptionStyled>

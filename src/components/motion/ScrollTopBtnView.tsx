@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import upArrow from '@/assets/up-arrow.svg'
-import { FadeInContent } from '@/components'
+import { FadeIn } from '@/components'
 import { motion } from 'framer-motion'
 
 interface ScrollTopBtnViewType {
@@ -10,7 +10,7 @@ interface ScrollTopBtnViewType {
 export default function ScrollTopBtnView({ scrollToTop }: ScrollTopBtnViewType) {
     return (
         <TopBtnViewStyled>
-            <FadeInContent>
+            <FadeIn>
                 <motion.button
                     onClick={scrollToTop}
                     whileHover={{ backgroundColor: '#ffffff', scale: 1.1 }}
@@ -23,7 +23,7 @@ export default function ScrollTopBtnView({ scrollToTop }: ScrollTopBtnViewType) 
                 >
                     <img src={upArrow} alt="위쪽 화살표" />
                 </motion.button>
-            </FadeInContent>
+            </FadeIn>
         </TopBtnViewStyled>
     )
 }

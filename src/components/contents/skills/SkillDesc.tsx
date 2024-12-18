@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
 import { IoIosArrowDown } from 'react-icons/io'
-import { FadeInContent } from '@/components'
+import { FadeIn } from '@/components'
 import { useGetSkillDesc } from '@/hooks'
 
 export default function SkillDesc({ skillName }: { skillName: string }) {
@@ -11,7 +11,7 @@ export default function SkillDesc({ skillName }: { skillName: string }) {
     const skillKey = skillName.split(' ').join('').toLowerCase()
 
     return (
-        <FadeInContent>
+        <FadeIn>
             <SkillDescStyled>
                 <p className="skill-title" onClick={() => setIsOpen(!isOpen)}>
                     {skillName} <IoIosArrowDown data-open={isOpen} />
@@ -40,7 +40,7 @@ export default function SkillDesc({ skillName }: { skillName: string }) {
                     )}
                 </AnimatePresence>
             </SkillDescStyled>
-        </FadeInContent>
+        </FadeIn>
     )
 }
 

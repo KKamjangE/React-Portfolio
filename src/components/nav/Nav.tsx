@@ -1,5 +1,5 @@
 import { useCurrViewContentNum, useGetRefOffsetList } from '@/hooks'
-import { FadeInContent, NavLayout, NavList, NavContact } from '@/components'
+import { FadeIn, NavLayout, NavList, NavContact } from '@/components'
 
 export default function NavContainer() {
     const navList = ['Project', 'Work', 'Share', 'Education']
@@ -13,17 +13,17 @@ export default function NavContainer() {
 
     return (
         <NavLayout>
-            <FadeInContent>
+            <FadeIn>
                 <NavList
                     navList={navList}
                     refOffsetList={refOffsetList}
                     currViewContentNum={currViewContentNum}
                     moveToElement={moveToElement}
                 />
-            </FadeInContent>
-            <FadeInContent>
+            </FadeIn>
+            <FadeIn>
                 <NavContact />
-            </FadeInContent>
+            </FadeIn>
         </NavLayout>
     )
 }

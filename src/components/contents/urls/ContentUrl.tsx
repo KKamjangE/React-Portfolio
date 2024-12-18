@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 import type { UrlType } from '@/api'
-import { FadeInContent, UrlList } from '@/components'
+import { FadeIn, UrlList } from '@/components'
 
 export default function ContentUrl({ urls }: { urls: UrlType }) {
     return (
         <ContentUrlStyeld>
-            <FadeInContent>
+            <FadeIn>
                 <p className="title">🔗 관련링크들</p>
-            </FadeInContent>
+            </FadeIn>
             <ul>
                 {Object.entries(urls).map(([urlName, url], idx) => (
                     <UrlList urlName={urlName} url={url} key={idx} />

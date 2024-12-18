@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 import { SkillDesc } from '@/components'
-import { FadeInContent } from '@/components'
+import { FadeIn } from '@/components'
 
 export default function ContentSkill({ skill }: { skill: string[] }) {
     return (
         <ContentSkillSytled>
-            <FadeInContent>
+            <FadeIn>
                 <p className="title">💡 사용기술들</p>
-            </FadeInContent>
+            </FadeIn>
             {skill.map((skillName, idx) => {
                 return <SkillDesc skillName={skillName} key={idx} />
             })}
