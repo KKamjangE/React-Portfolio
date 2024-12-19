@@ -22,7 +22,7 @@ export default function NavListView({
                     data-view={index === currViewContentNum}
                     onClick={() => moveToElement(index)}
                 >
-                    <HoverMotion isNav={true}>{nav}</HoverMotion>
+                    <HoverMotion isNav={'nav'}>{nav}</HoverMotion>
                 </li>
             ))}
         </NavListViewStyled>

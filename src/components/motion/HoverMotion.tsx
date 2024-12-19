@@ -6,19 +6,19 @@ export default function HoverMotion({
     isNav,
 }: {
     children: React.ReactNode
-    isNav?: boolean
+    isNav?: string
 }) {
     return (
-        <HoverMotionStyled isNav={isNav}>
+        <HoverMotionStyled $isnav={isNav}>
             <YellowPointLayout>{children}</YellowPointLayout>
         </HoverMotionStyled>
     )
 }
 
-const HoverMotionStyled = styled.div<{ isNav?: boolean }>`
-    padding: ${(props) => (props.isNav ? '10px' : '0')};
-    text-decoration: ${(props) => (props.isNav ? 'none' : 'underline')};
-    display: ${(props) => (props.isNav ? 'block' : 'inline-block')};
+const HoverMotionStyled = styled.div<{ $isnav?: string }>`
+    padding: ${(props) => (props.$isnav === 'nav' ? '10px' : '0')};
+    text-decoration: ${(props) => (props.$isnav === 'nav' ? 'none' : 'underline')};
+    display: ${(props) => (props.$isnav === 'nav' ? 'block' : 'inline-block')};
     background: linear-gradient(to right, transparent 50%, var(--accent-yellow) 50%);
     background-position: 0, 0;
     background-size: 200%;
