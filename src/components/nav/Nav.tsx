@@ -3,7 +3,7 @@ import { FadeIn, HoverMotion } from '@/components'
 import styled from 'styled-components'
 
 export default function Nav() {
-    const navList = ['Career', 'Project', 'Share', 'Education']
+    const navList = ['Career', 'Project', 'Education']
     const refOffsetList = useGetRefOffsetList()
     const { currViewContentNum } = useCurrViewContentNum()
 
