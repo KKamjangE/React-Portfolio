@@ -1,9 +1,9 @@
 import { useCurrViewContentNum, useGetRefOffsetList } from '@/hooks'
-import { FadeIn, NavList } from '@/components'
+import { FadeIn, HoverMotion } from '@/components'
 import styled from 'styled-components'
 
-export default function NavContainer() {
-    const navList = ['Project', 'Work', 'Share', 'Education']
+export default function Nav() {
+    const navList = ['Career', 'Project', 'Share', 'Education']
     const refOffsetList = useGetRefOffsetList()
     const { currViewContentNum } = useCurrViewContentNum()
 
@@ -15,12 +15,17 @@ export default function NavContainer() {
     return (
         <NavLayout>
             <FadeIn>
-                <NavList
-                    navList={navList}
-                    refOffsetList={refOffsetList}
-                    currViewContentNum={currViewContentNum}
-                    moveToElement={moveToElement}
-                />
+                <ul className="nav-list">
+                    {navList.map((nav, index) => (
+                        <li
+                            key={index}
+                            data-view={index === currViewContentNum}
+                            onClick={() => moveToElement(index)}
+                        >
+                            <HoverMotion isNav={'nav'}>{nav}</HoverMotion>
+                        </li>
+                    ))}
+                </ul>
             </FadeIn>
             <FadeIn>
                 <div className="contact">
@@ -49,6 +54,22 @@ const NavLayout = styled.nav`
         width: auto;
         height: 40vh;
         padding: 5vh 0;
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 30vh;
+        li {
+            color: var(--text-white);
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        li[data-view='true'] {
+            color: rgba(255, 255, 255, 0.5);
+        }
     }
     .contact {
         display: grid;
