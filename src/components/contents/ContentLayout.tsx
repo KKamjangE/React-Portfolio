@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FadeInContent, YellowPoint } from '@/components'
+import { FadeIn, YellowPoint } from '@/components'
 
 export default function ContentLayout({
     children,
@@ -11,14 +11,14 @@ export default function ContentLayout({
 }) {
     return (
         <ContentLayoutStyled>
-            <FadeInContent>
+            <FadeIn>
                 <h1>
                     <YellowPoint>{title}</YellowPoint>
                 </h1>
-            </FadeInContent>
-            <FadeInContent>
+            </FadeIn>
+            <FadeIn>
                 <hr />
-            </FadeInContent>
+            </FadeIn>
             <div className="content">{children}</div>
         </ContentLayoutStyled>
     )

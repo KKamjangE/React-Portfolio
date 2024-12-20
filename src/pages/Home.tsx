@@ -2,7 +2,7 @@ import {
     ContentsContainer,
     ProgressBar,
     ScrollTopBtn,
-    NavContainer,
+    Nav,
     Intro,
     FooterView,
     Layout,
@@ -11,7 +11,7 @@ import {
 export default function Home() {
     return (
         <>
-            <NavContainer />
+            <Nav />
             <ProgressBar />
             <Layout>
                 <Intro />

@@ -9,7 +9,7 @@ export default function IntroView() {
     let years = today.getFullYear() - startDate.getFullYear()
     if (startDate.getMonth() <= today.getMonth()) years++
     return (
-        <IntroViewStyled homeImage={homeImage}>
+        <IntroViewStyled $homeimage={homeImage}>
             <div className="home-image">
                 <article>
                     <FadeInDownContent delayTime={0.5}>
@@ -38,10 +38,10 @@ export default function IntroView() {
     )
 }
 
-const IntroViewStyled = styled.section<{ homeImage: string }>`
+const IntroViewStyled = styled.section<{ $homeimage: string }>`
     .home-image {
         height: 100vh;
-        background-image: url(${(props) => props.homeImage});
+        background-image: url(${(props) => props.$homeimage});
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
