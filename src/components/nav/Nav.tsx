@@ -29,6 +29,12 @@ export default function Nav() {
             </FadeIn>
             <FadeIn>
                 <div className="contact">
+                    <a href="https://velog.io/@ajm0718/posts" target="_blank">
+                        Velog
+                    </a>
+                    <a href="https://github.com/KKamjangE" target="_blank">
+                        Github
+                    </a>
                     <a href="mailto:ajm980718@gmail.com" className="email">
                         ajm980718@gmail.com
                     </a>
@@ -74,14 +80,14 @@ const NavLayout = styled.nav`
     .contact {
         display: grid;
         row-gap: 15px;
-        font-size: 0.6rem;
-        color: var(--text-white);
-        a.email {
-            display: block;
+        font-size: 0.7rem;
+        & > * {
             color: var(--text-white);
+        }
+        & > a {
+            display: block;
             transition: 0.2s;
-            :hover {
-                cursor: pointer;
+            &:hover {
                 color: var(--accent-yellow);
             }
         }
