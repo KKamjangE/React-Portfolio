@@ -17,10 +17,7 @@ const getTextColor = (bgColor: string): string => {
 }
 
 export const Badge = styled.span<{ text: string }>`
-    background-color: ${({ text }) => {
-        console.log(stringToHslColor(text))
-        return stringToHslColor(text)
-    }};
+    background-color: ${({ text }) => stringToHslColor(text)};
     border-radius: 12px;
     padding: 6px 10px;
     font-size: 0.7rem;
