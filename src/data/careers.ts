@@ -1,6 +1,6 @@
 export default [
     {
-        company: '（주）아크로퓨처',
+        company: '(주)아크로퓨처',
         position: '프론트엔드 개발자',
         team: 'IT 서비스 사업팀',
         employType: '정규직',
