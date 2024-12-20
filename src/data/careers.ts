@@ -14,7 +14,7 @@ export default [
             'TypeScript',
             'React',
             'MUI',
-            'tanstack/react-query',
+            'react-query',
             'zustand',
             'Jotai',
             'Sass',
