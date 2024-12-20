@@ -4,7 +4,7 @@ import {
     ScrollTopBtn,
     Nav,
     Intro,
-    FooterView,
+    Footer,
     Layout,
 } from '@/components'
 
@@ -16,7 +16,7 @@ export default function Home() {
             <Layout>
                 <Intro />
                 <ContentsContainer />
-                <FooterView />
+                <Footer />
             </Layout>
             <ScrollTopBtn />
         </>
