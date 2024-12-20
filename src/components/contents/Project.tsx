@@ -21,10 +21,10 @@ export default function Project() {
                     </FadeIn>
                     <div className="contribute">
                         <FadeIn>
-                            <span className="contributor">{project.contributor}</span>
+                            <span>{project.contributor}</span>
                         </FadeIn>
                         <FadeIn>
-                            <span className="period">{project.period}</span>
+                            <span>{project.period}</span>
                         </FadeIn>
                     </div>
                     <div className="summary">
@@ -89,7 +89,6 @@ const ProjectLayout = styled.div`
     }
     .summary {
         font-size: 0.9rem;
-        /* display: flex; */
         & > * {
             margin: 12px 0;
         }
@@ -108,16 +107,9 @@ const ProjectLayout = styled.div`
         display: flex;
         flex-direction: column;
         gap: 8px;
-        .contributor {
-            font-size: 0.8rem;
-            font-weight: 500;
-            opacity: 0.6;
-        }
-        .period {
-            font-size: 0.8rem;
-            font-weight: 500;
-            opacity: 0.6;
-        }
+        font-size: 0.8rem;
+        font-weight: 500;
+        opacity: 0.6;
     }
     .skills {
         display: flex;
