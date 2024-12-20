@@ -1,8 +1,6 @@
 export { default as Layout } from '@/components/layout/Layout'
 export { default as NavContainer } from '@/components/nav/Nav'
 export { default as NavList } from '@/components/nav/NavListView'
-export { default as NavLayout } from '@/components/nav/NavLayout'
-export { default as NavContact } from '@/components/nav/NavContactView'
 export { default as FooterView } from '@/components/FooterView'
 export { default as Intro } from '@/components/intro/IntroView'
 export { default as FadeInDownContent } from '@/components/motion/FadeInDownMotion'

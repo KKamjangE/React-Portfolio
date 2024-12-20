@@ -1,5 +1,6 @@
 import { useCurrViewContentNum, useGetRefOffsetList } from '@/hooks'
-import { FadeIn, NavLayout, NavList, NavContact } from '@/components'
+import { FadeIn, NavList } from '@/components'
+import styled from 'styled-components'
 
 export default function NavContainer() {
     const navList = ['Project', 'Work', 'Share', 'Education']
@@ -22,8 +23,49 @@ export default function NavContainer() {
                 />
             </FadeIn>
             <FadeIn>
-                <NavContact />
+                <div className="contact">
+                    <a href="mailto:ajm980718@gmail.com" className="email">
+                        ajm980718@gmail.com
+                    </a>
+                    <p className="update-info">Last Update: 2024/12</p>
+                </div>
             </FadeIn>
         </NavLayout>
     )
 }
+
+const NavLayout = styled.nav`
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 20vw;
+    height: 80vh;
+    padding: 10vh 0;
+    background-color: var(--bg-dark-gray);
+    @media screen and (max-width: 1024px) {
+        position: static;
+        width: auto;
+        height: 40vh;
+        padding: 5vh 0;
+    }
+    .contact {
+        display: grid;
+        row-gap: 15px;
+        font-size: 0.6rem;
+        color: var(--text-white);
+        a.email {
+            display: block;
+            color: var(--text-white);
+            transition: 0.2s;
+            :hover {
+                cursor: pointer;
+                color: var(--accent-yellow);
+            }
+        }
+        p.update-info {
+            opacity: 0.6;
+        }
+    }
+`
