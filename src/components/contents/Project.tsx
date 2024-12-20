@@ -1,13 +1,14 @@
-import { FadeIn, YellowPoint } from '@/components'
+import { FadeIn, HoverMotion, YellowPoint } from '@/components'
 import ContentLayout from '@/components/contents/ContentLayout'
+import { Badge } from '@/components/ui/Badge.styeld'
 import projects from '@/data/projects'
 import styled from 'styled-components'
 
 export default function Project() {
     return (
         <ContentLayout title="Project">
-            {projects.map((project) => (
-                <ProjectLayout>
+            {projects.map((project, idx) => (
+                <ProjectLayout key={idx}>
                     <FadeIn>
                         <div className="title">
                             <h2>
@@ -18,23 +19,52 @@ export default function Project() {
                             </YellowPoint>
                         </div>
                     </FadeIn>
-                    <FadeIn>{project.period}</FadeIn>
-                    {project.summary.map((item, index) => (
-                        <p key={index}>{item}</p>
-                    ))}
-                    <p>구현 기능</p>
-                    {project.features.map((feature, index) => (
-                        <FadeIn key={index}>{feature}</FadeIn>
-                    ))}
-                    {project.skills.map((skill, index) => (
-                        <FadeIn key={index}>{skill}</FadeIn>
-                    ))}
-                    <FadeIn>{project.contributor}</FadeIn>
-                    {project.urls.map(({ name, url }, index) => (
-                        <a href={url} key={index}>
-                            <FadeIn>🔗{name}</FadeIn>
-                        </a>
-                    ))}
+                    <div className="contribute">
+                        <FadeIn>
+                            <span className="contributor">{project.contributor}</span>
+                        </FadeIn>
+                        <FadeIn>
+                            <span className="period">{project.period}</span>
+                        </FadeIn>
+                    </div>
+                    <div className="summary">
+                        {project.summary.map((item, index) => (
+                            <FadeIn key={index}>
+                                <span>{item}</span>
+                            </FadeIn>
+                        ))}
+                    </div>
+                    <FadeIn>
+                        <span className="feature-title">구현 기능</span>
+                    </FadeIn>
+                    <div className="features">
+                        {project.features.map((feature, index) => (
+                            <FadeIn key={index}>📌{feature}</FadeIn>
+                        ))}
+                    </div>
+                    <div className="urls">
+                        {project.urls.map(({ name, url }, index) => (
+                            <FadeIn key={index}>
+                                🔗
+                                <HoverMotion>
+                                    <a href={url} target="_blank">
+                                        {name}
+                                    </a>
+                                </HoverMotion>
+                            </FadeIn>
+                        ))}
+                    </div>
+                    <FadeIn>
+                        <div className="skills">
+                            🔥
+                            {project.skills.map((skill, index) => (
+                                <Badge key={index} text={skill}>
+                                    {skill}
+                                </Badge>
+                            ))}
+                            🔥
+                        </div>
+                    </FadeIn>
                 </ProjectLayout>
             ))}
         </ContentLayout>
@@ -52,6 +82,53 @@ const ProjectLayout = styled.div`
         h2 {
             font-size: 1.4rem;
             font-weight: bold;
+        }
+    }
+    .summary {
+        font-size: 0.9rem;
+        /* display: flex; */
+        & > * {
+            margin: 12px 0;
+        }
+    }
+    .feature-title {
+        font-weight: bold;
+    }
+    .features {
+        font-size: 0.9rem;
+        & > * {
+            margin: 14px 0;
+            font-weight: 500;
+        }
+    }
+    .contribute {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .contributor {
+            font-size: 0.8rem;
+            font-weight: 500;
+            opacity: 0.6;
+        }
+        .period {
+            font-size: 0.8rem;
+            font-weight: 500;
+            opacity: 0.6;
+        }
+    }
+    .skills {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .urls {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        p {
+            padding: 4px;
         }
     }
 `
