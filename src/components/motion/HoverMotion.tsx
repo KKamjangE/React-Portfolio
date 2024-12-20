@@ -23,7 +23,7 @@ const HoverMotionStyled = styled.div<{ $isnav?: string }>`
     background-position: 0, 0;
     background-size: 200%;
     transition: 0.25s ease;
-    :hover {
+    &:hover {
         background-position: -100% 0;
     }
 `
