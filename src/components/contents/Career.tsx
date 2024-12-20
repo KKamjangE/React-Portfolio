@@ -36,7 +36,7 @@ export default function Career() {
                         {career.projects.map((project, index) => (
                             <div key={index}>
                                 <FadeIn>
-                                    <h3>{project.title}</h3>
+                                    <h3>🌐{project.title}</h3>
                                 </FadeIn>
                                 {project.summary.map((sum, sumIndex) => (
                                     <FadeIn key={sumIndex}>
