@@ -42,27 +42,27 @@ export default function Project() {
                             <FadeIn key={index}>📌{feature}</FadeIn>
                         ))}
                     </div>
-                    <div className="urls">
-                        {project.urls.map(({ name, url }, index) => (
-                            <FadeIn key={index}>
-                                🔗
-                                <HoverMotion>
-                                    <a href={url} target="_blank">
-                                        {name}
-                                    </a>
-                                </HoverMotion>
-                            </FadeIn>
-                        ))}
-                    </div>
+                    {project.urls.length > 0 ? (
+                        <div className="urls">
+                            {project.urls.map(({ name, url }, index) => (
+                                <FadeIn key={index}>
+                                    🔗
+                                    <HoverMotion>
+                                        <a href={url} target="_blank">
+                                            {name}
+                                        </a>
+                                    </HoverMotion>
+                                </FadeIn>
+                            ))}
+                        </div>
+                    ) : null}
                     <FadeIn>
                         <div className="skills">
-                            🔥
                             {project.skills.map((skill, index) => (
                                 <Badge key={index} text={skill}>
                                     {skill}
                                 </Badge>
                             ))}
-                            🔥
                         </div>
                     </FadeIn>
                 </ProjectLayout>
