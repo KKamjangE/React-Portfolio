@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import upArrow from '@/assets/up-arrow.svg'
-import { FadeIn } from '@/components'
 import { motion } from 'framer-motion'
+import FadeIn from '@/components/ui/FadeIn.motion'
 
 export default function ScrollTopBtn() {
     const scrollToTop = () => {

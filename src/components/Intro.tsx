@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import homeImage from '@/assets/home-img.webp'
 import downDoubleArrow from '@/assets/down-double-arrow.webp'
-import { FadeInDownContent } from '@/components'
+import FadeInDownContent from '@/components/ui/FadeInDown.motion'
 
 export default function Intro() {
     const startDate = new Date('2023-09')

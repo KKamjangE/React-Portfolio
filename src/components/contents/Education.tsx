@@ -1,5 +1,6 @@
-import { FadeIn, YellowPoint } from '@/components'
 import ContentLayout from '@/components/contents/ContentLayout'
+import FadeIn from '@/components/ui/FadeIn.motion'
+import YellowPoint from '@/components/ui/YellowPoint'
 import educations from '@/data/educations'
 import styled from 'styled-components'
 
