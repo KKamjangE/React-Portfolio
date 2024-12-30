@@ -16,12 +16,12 @@ const getTextColor = (bgColor: string): string => {
     return l > 60 ? '#000' : '#fff'
 }
 
-export const Badge = styled.span<{ text: string }>`
+export const Badge = styled.span<{ $text: string }>`
     white-space: nowrap;
-    background-color: ${({ text }) => stringToHslColor(text)};
+    background-color: ${({ $text }) => stringToHslColor($text)};
     border-radius: 12px;
     padding: 6px 10px;
     font-size: 0.7rem;
     font-weight: bold;
-    color: ${({ text }) => getTextColor(stringToHslColor(text))};
+    color: ${({ $text }) => getTextColor(stringToHslColor($text))};
 `

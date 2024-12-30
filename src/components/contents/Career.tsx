@@ -50,7 +50,7 @@ export default function Career() {
                     <FadeIn>
                         <div className="skills">
                             {career.skills.map((skill, index) => (
-                                <Badge key={index} text={skill}>
+                                <Badge key={index} $text={skill}>
                                     {skill}
                                 </Badge>
                             ))}

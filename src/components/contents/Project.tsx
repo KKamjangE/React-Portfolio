@@ -61,7 +61,7 @@ export default function Project() {
                     <FadeIn>
                         <div className="skills">
                             {project.skills.map((skill, index) => (
-                                <Badge key={index} text={skill}>
+                                <Badge key={index} $text={skill}>
                                     {skill}
                                 </Badge>
                             ))}
