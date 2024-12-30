@@ -2,7 +2,7 @@ import { useAppDispatch } from '@/store'
 import { MutableRefObject } from 'react'
 import { RefOffsetListType, RefOffsetListStateAction } from '@/store/RefTopStateSlice'
 
-export const useSetRefOffsetList = () => {
+export default function useSetRefOffsetList() {
     // Ref 배열 받아서 offset 배열로 변환해 store에 저장하는 훅
     const dispatch = useAppDispatch()
 
@@ -18,5 +18,3 @@ export const useSetRefOffsetList = () => {
 
     return { setRefOffsetList }
 }
-
-export default useSetRefOffsetList
