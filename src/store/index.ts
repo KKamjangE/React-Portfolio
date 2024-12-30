@@ -1,14 +1,10 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux'
 import { RefOffsetListStateReducer } from '@/store/RefTopStateSlice'
-import { contentsStateReducer } from '@/store/contentsStateSlice'
-import { skillDescStateReducer } from '@/store/skillDescStateSlice'
 
 // 루트 리듀서
 const rootReducer = combineReducers({
     RefOffsetListStateReducer,
-    contentsStateReducer,
-    skillDescStateReducer,
 })
 
 // 스토어
