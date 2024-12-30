@@ -1,6 +1,7 @@
-import { FadeIn, YellowPoint } from '@/components'
 import ContentLayout from '@/components/contents/ContentLayout'
+import FadeIn from '@/components/ui/FadeIn.motion'
 import { Badge } from '@/components/ui/Badge.styeld'
+import YellowPoint from '@/components/ui/YellowPoint'
 import careers from '@/data/careers'
 import styled from 'styled-components'
 

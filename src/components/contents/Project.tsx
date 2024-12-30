@@ -1,8 +1,10 @@
-import { FadeIn, HoverMotion, YellowPoint } from '@/components'
 import ContentLayout from '@/components/contents/ContentLayout'
+import HoverMotion from '@/components/ui/HoverMotion'
 import { Badge } from '@/components/ui/Badge.styeld'
+import YellowPoint from '@/components/ui/YellowPoint'
 import projects from '@/data/projects'
 import styled from 'styled-components'
+import FadeIn from '@/components/ui/FadeIn.motion'
 
 export default function Project() {
     return (

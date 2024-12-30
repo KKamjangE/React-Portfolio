@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FadeIn, YellowPoint } from '@/components'
+import YellowPoint from '@/components/ui/YellowPoint'
+import FadeIn from '@/components/ui/FadeIn.motion'
 
 export default function ContentLayout({
     children,
