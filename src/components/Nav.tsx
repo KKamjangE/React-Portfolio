@@ -1,6 +1,7 @@
 import FadeIn from '@/components/ui/FadeIn.motion'
 import HoverMotion from '@/components/ui/HoverMotion'
-import { useCurrViewContentNum, useGetRefOffsetList } from '@/hooks'
+import useCurrViewContentNum from '@/hooks/useCurrViewContNum'
+import useGetRefOffsetList from '@/hooks/useGetRefOffsetList'
 import styled from 'styled-components'
 
 export default function Nav() {

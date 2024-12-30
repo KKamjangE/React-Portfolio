@@ -1,5 +1,5 @@
+import useGetRefOffsetList from '@/hooks/useGetRefOffsetList'
 import { useState, useEffect } from 'react'
-import { useGetRefOffsetList } from '@/hooks'
 
 export const useCurrViewContentNum = () => {
     // 현재 스크롤이 어느 콘텐츠에 있나 확인하는 훅

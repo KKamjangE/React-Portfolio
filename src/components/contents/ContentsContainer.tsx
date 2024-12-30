@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
-import { useSetRefOffsetList } from '@/hooks'
 import Project from '@/components/contents/Project'
 import Career from '@/components/contents/Career'
 import Education from '@/components/contents/Education'
+import useSetRefOffsetList from '@/hooks/useSetRefOffsetList'
 
 export default function ContentsContainer() {
     const elementRefs = useRef<HTMLElement[]>([])
