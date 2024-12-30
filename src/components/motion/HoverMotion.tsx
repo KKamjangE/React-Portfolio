@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import YellowPointLayout from '../layout/YellowPointLayout'
+import YellowPoint from '../ui/YellowPoint'
 
 export default function HoverMotion({
     children,
@@ -10,7 +10,7 @@ export default function HoverMotion({
 }) {
     return (
         <HoverMotionStyled $isnav={isNav}>
-            <YellowPointLayout>{children}</YellowPointLayout>
+            <YellowPoint>{children}</YellowPoint>
         </HoverMotionStyled>
     )
 }
