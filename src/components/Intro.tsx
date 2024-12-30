@@ -3,13 +3,13 @@ import homeImage from '@/assets/home-img.webp'
 import downDoubleArrow from '@/assets/down-double-arrow.webp'
 import { FadeInDownContent } from '@/components'
 
-export default function IntroView() {
+export default function Intro() {
     const startDate = new Date('2023-09')
     const today = new Date()
     let years = today.getFullYear() - startDate.getFullYear()
     if (startDate.getMonth() <= today.getMonth()) years++
     return (
-        <IntroViewStyled $homeimage={homeImage}>
+        <IntroStyled $homeimage={homeImage}>
             <div className="home-image">
                 <article>
                     <FadeInDownContent delayTime={0.5}>
@@ -34,11 +34,11 @@ export default function IntroView() {
                     </FadeInDownContent>
                 </article>
             </div>
-        </IntroViewStyled>
+        </IntroStyled>
     )
 }
 
-const IntroViewStyled = styled.section<{ $homeimage: string }>`
+const IntroStyled = styled.section<{ $homeimage: string }>`
     .home-image {
         height: 100vh;
         background-image: url(${(props) => props.$homeimage});
