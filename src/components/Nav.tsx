@@ -2,47 +2,65 @@ import FadeIn from '@/components/ui/FadeIn.motion'
 import HoverMotion from '@/components/ui/HoverMotion'
 import useCurrViewContentNum from '@/hooks/useCurrViewContNum'
 import useGetRefOffsetList from '@/hooks/useGetRefOffsetList'
+import useMediaQuery from '@/hooks/useMediaQuery'
+import { motion } from 'motion/react'
+import { useState } from 'react'
 import styled from 'styled-components'
 
+const navList = ['Career', 'Project', 'Education']
+
 export default function Nav() {
-    const navList = ['Career', 'Project', 'Education']
+    const [isOpen, setIsOpen] = useState(false)
     const refOffsetList = useGetRefOffsetList()
     const { currViewContentNum } = useCurrViewContentNum()
+    const isTablet = useMediaQuery('(max-width: 1024px)')
+    console.log(isTablet)
+
+    const onClickToggle = () => {
+        setIsOpen((prev) => !prev)
+    }
 
     const moveToElement = (index: number) => {
         window.scrollTo({ top: refOffsetList[index].top + 1, behavior: 'smooth' })
+        setIsOpen(false)
     }
 
     return (
-        <NavLayout>
-            <FadeIn>
-                <ul className="nav-list">
-                    {navList.map((nav, index) => (
-                        <li
-                            key={index}
-                            data-view={index === currViewContentNum}
-                            onClick={() => moveToElement(index)}
-                        >
-                            <HoverMotion isNav={'nav'}>{nav}</HoverMotion>
-                        </li>
-                    ))}
-                </ul>
-            </FadeIn>
-            <FadeIn>
-                <div className="contact">
-                    <a href="https://velog.io/@ajm0718/posts" target="_blank">
-                        Velog
-                    </a>
-                    <a href="https://github.com/KKamjangE" target="_blank">
-                        Github
-                    </a>
-                    <a href="mailto:ajm980718@gmail.com" className="email">
-                        ajm980718@gmail.com
-                    </a>
-                    <p className="update-info">Last Update: 2024/12</p>
-                </div>
-            </FadeIn>
-        </NavLayout>
+        <motion.div
+            initial={isTablet ? { x: '-100%' } : false}
+            animate={isTablet ? (isOpen ? { x: 0 } : { x: '-100%' }) : false}
+            transition={{ duration: 0.5 }}
+        >
+            <NavLayout>
+                <FadeIn>
+                    <ul className="nav-list">
+                        {navList.map((nav, index) => (
+                            <li
+                                key={index}
+                                data-view={index === currViewContentNum}
+                                onClick={() => moveToElement(index)}
+                            >
+                                <HoverMotion isNav={'nav'}>{nav}</HoverMotion>
+                            </li>
+                        ))}
+                    </ul>
+                </FadeIn>
+                <FadeIn>
+                    <div className="contact">
+                        <a href="https://velog.io/@ajm0718/posts" target="_blank">
+                            Velog
+                        </a>
+                        <a href="https://github.com/KKamjangE" target="_blank">
+                            Github
+                        </a>
+                        <a href="mailto:ajm980718@gmail.com" className="email">
+                            ajm980718@gmail.com
+                        </a>
+                        <p className="update-info">Last Update: 2024/12</p>
+                    </div>
+                </FadeIn>
+            </NavLayout>
+        </motion.div>
     )
 }
 
@@ -63,6 +81,7 @@ const NavLayout = styled.nav`
         height: 90vh;
         padding: 5vh 0;
         backdrop-filter: blur(10px);
+        background-color: var(--bg-dark-gray-tablet);
     }
     .nav-list {
         display: flex;
