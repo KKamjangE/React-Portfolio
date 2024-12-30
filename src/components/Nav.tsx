@@ -57,10 +57,12 @@ const NavLayout = styled.nav`
     padding: 10vh 0;
     background-color: var(--bg-dark-gray);
     @media screen and (max-width: 1024px) {
-        position: static;
-        width: auto;
-        height: 40vh;
+        position: fixed;
+        z-index: 300;
+        width: 100%;
+        height: 90vh;
         padding: 5vh 0;
+        backdrop-filter: blur(10px);
     }
     .nav-list {
         display: flex;

@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
         --text-black:#000000;
         --text-white:#ffffff;
         --bg-white:#ffffff;
-        --bg-dark-gray:#202224;
+        --bg-dark-gray:#202224d5;
         --bg-light-gray:#f5f5f5;
 
         /** 스타일 변수 */
