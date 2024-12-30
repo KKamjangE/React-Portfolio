@@ -25,7 +25,7 @@ export default function ContentLayout({
 }
 
 const ContentLayoutStyled = styled.div`
-    padding: 50px 100px;
+    margin: 50px 100px;
     h1 {
         font-size: 2rem;
         font-weight: bold;
@@ -41,9 +41,12 @@ const ContentLayoutStyled = styled.div`
         row-gap: 80px;
     }
     @media screen and (max-width: 1024px) {
-        padding: 50px;
+        margin: 50px;
+        div.content {
+            row-gap: 40px;
+        }
     }
     @media screen and (max-width: 768px) {
-        padding: 50px 10px;
+        margin: 40px 10px;
     }
 `

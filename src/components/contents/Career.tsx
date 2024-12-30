@@ -91,6 +91,7 @@ const CareerLayout = styled.div`
     }
     .summary {
         font-size: 0.9rem;
+        white-space: normal;
         & > * {
             margin: 12px 0;
         }
@@ -116,6 +117,10 @@ const CareerLayout = styled.div`
     .skills {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         gap: 8px;
+    }
+    @media screen and (max-width: 1024px) {
+        gap: 12px;
     }
 `

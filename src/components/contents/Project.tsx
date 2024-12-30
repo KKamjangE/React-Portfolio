@@ -114,6 +114,7 @@ const ProjectLayout = styled.div`
     .skills {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         gap: 8px;
     }
     .urls {
@@ -124,6 +125,18 @@ const ProjectLayout = styled.div`
         font-weight: 500;
         p {
             padding: 4px;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        gap: 12px;
+        .title {
+            flex-direction: column;
+            align-items: baseline;
+            gap: 8px;
+            flex-wrap: warp;
+            h2 {
+                white-space: normal;
+            }
         }
     }
 `
