@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import YellowPoint from '../ui/YellowPoint'
+import YellowPoint from './YellowPoint'
 
 export default function HoverMotion({
     children,

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-export default function FadeInDownMotion({
+export default function FadeInDown({
     children,
     delayTime,
 }: {

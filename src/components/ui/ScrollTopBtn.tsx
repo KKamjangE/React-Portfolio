@@ -3,13 +3,13 @@ import upArrow from '@/assets/up-arrow.svg'
 import { FadeIn } from '@/components'
 import { motion } from 'framer-motion'
 
-interface ScrollTopBtnViewType {
-    scrollToTop: () => void
-}
+export default function ScrollTopBtn() {
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
 
-export default function ScrollTopBtnView({ scrollToTop }: ScrollTopBtnViewType) {
     return (
-        <TopBtnViewStyled>
+        <ScrollTopBtnStyled>
             <FadeIn>
                 <motion.button
                     onClick={scrollToTop}
@@ -24,11 +24,11 @@ export default function ScrollTopBtnView({ scrollToTop }: ScrollTopBtnViewType) 
                     <img src={upArrow} alt="위쪽 화살표" />
                 </motion.button>
             </FadeIn>
-        </TopBtnViewStyled>
+        </ScrollTopBtnStyled>
     )
 }
 
-const TopBtnViewStyled = styled.div`
+const ScrollTopBtnStyled = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
