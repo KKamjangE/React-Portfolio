@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import upArrow from '@/assets/up-arrow.svg'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import FadeIn from '@/components/ui/FadeIn.motion'
 
 export default function ScrollTopBtn() {
