@@ -1,4 +1,3 @@
-import ContentLayout from '@/components/contents/ContentLayout'
 import FadeIn from '@/components/ui/FadeIn.motion'
 import { Badge } from '@/components/ui/Badge.styeld'
 import YellowPoint from '@/components/ui/YellowPoint'
@@ -7,7 +6,7 @@ import styled from 'styled-components'
 
 export default function Career() {
     return (
-        <ContentLayout title="Career">
+        <>
             {careers.map((career, idx) => (
                 <CareerLayout key={idx}>
                     <FadeIn>
@@ -47,16 +46,18 @@ export default function Career() {
                             </div>
                         ))}
                     </div>
-                    <div className="skills">
-                        {career.skills.map((skill, index) => (
-                            <FadeIn key={index}>
-                                <Badge $text={skill}>{skill}</Badge>
-                            </FadeIn>
-                        ))}
-                    </div>
+                    <FadeIn>
+                        <div className="skills">
+                            {career.skills.map((skill, index) => (
+                                <Badge key={index} $text={skill}>
+                                    {skill}
+                                </Badge>
+                            ))}
+                        </div>
+                    </FadeIn>
                 </CareerLayout>
             ))}
-        </ContentLayout>
+        </>
     )
 }
 

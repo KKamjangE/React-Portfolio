@@ -18,7 +18,8 @@ const GlobalStyle = createGlobalStyle`
         font-size: 24px;
         background-color: var(--bg-light-gray);
         color: var(--text-black);
-        a{
+        box-sizing: border-box;
+        a {
             color: var(--text-black);
             text-decoration: none;
         }

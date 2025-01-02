@@ -1,4 +1,3 @@
-import ContentLayout from '@/components/contents/ContentLayout'
 import FadeIn from '@/components/ui/FadeIn.motion'
 import YellowPoint from '@/components/ui/YellowPoint'
 import educations from '@/data/educations'
@@ -6,7 +5,7 @@ import styled from 'styled-components'
 
 export default function Education() {
     return (
-        <ContentLayout title="Education">
+        <>
             {educations.map((education, idx) => (
                 <EducationLayout key={idx}>
                     <FadeIn>
@@ -17,16 +16,16 @@ export default function Education() {
                     <FadeIn>
                         <span className="period">{education.period}</span>
                     </FadeIn>
-                    <div className="summary">
-                        {education.summary.map((sum, index) => (
-                            <FadeIn key={index}>
-                                <span>{sum}</span>
-                            </FadeIn>
-                        ))}
-                    </div>
+                    <FadeIn>
+                        <div className="summary">
+                            {education.summary.map((sum, index) => (
+                                <span key={index}>{sum}</span>
+                            ))}
+                        </div>
+                    </FadeIn>
                 </EducationLayout>
             ))}
-        </ContentLayout>
+        </>
     )
 }
 

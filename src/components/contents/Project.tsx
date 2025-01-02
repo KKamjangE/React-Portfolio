@@ -1,4 +1,3 @@
-import ContentLayout from '@/components/contents/ContentLayout'
 import HoverMotion from '@/components/ui/HoverMotion'
 import { Badge } from '@/components/ui/Badge.styeld'
 import YellowPoint from '@/components/ui/YellowPoint'
@@ -8,7 +7,7 @@ import FadeIn from '@/components/ui/FadeIn.motion'
 
 export default function Project() {
     return (
-        <ContentLayout title="Project">
+        <>
             {projects.map((project, idx) => (
                 <ProjectLayout key={idx}>
                     <FadeIn>
@@ -58,23 +57,22 @@ export default function Project() {
                             ))}
                         </div>
                     ) : null}
-                    <div className="skills">
-                        {project.skills.map((skill, index) => (
-                            <FadeIn key={index}>
-                                <Badge $text={skill}>{skill}</Badge>
-                            </FadeIn>
-                        ))}
-                    </div>
+                    <FadeIn>
+                        <div className="skills">
+                            {project.skills.map((skill, index) => (
+                                <Badge key={index} $text={skill}>
+                                    {skill}
+                                </Badge>
+                            ))}
+                        </div>
+                    </FadeIn>
                 </ProjectLayout>
             ))}
-        </ContentLayout>
+        </>
     )
 }
 
 const ProjectLayout = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
     .title {
         display: flex;
         justify-content: space-between;
