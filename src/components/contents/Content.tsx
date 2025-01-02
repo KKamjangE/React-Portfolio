@@ -7,6 +7,7 @@ import React from 'react'
 import YellowPoint from '@/components/ui/YellowPoint'
 import FadeIn from '@/components/ui/FadeIn.motion'
 import styled from 'styled-components'
+import { debounce } from 'es-toolkit'
 
 export default function Content() {
     const elementRefs = useRef<HTMLElement[]>([])
@@ -14,7 +15,16 @@ export default function Content() {
 
     useEffect(() => {
         setRefOffsetList(elementRefs)
-    }, [])
+
+        const onResize = debounce(() => setRefOffsetList(elementRefs), 500)
+
+        window.addEventListener('resize', onResize)
+
+        return () => {
+            window.removeEventListener('resize', onResize)
+            onResize.cancel()
+        }
+    }, [setRefOffsetList])
 
     return (
         <>
@@ -59,7 +69,7 @@ function ContentLayout({ children, title }: { children: React.ReactNode; title: 
 }
 
 const SectionStyled = styled.section`
-    margin: 50px 100px;
+    padding: 50px 100px;
     h1 {
         font-size: 2rem;
         font-weight: bold;
@@ -80,7 +90,7 @@ const SectionStyled = styled.section`
         }
     }
     @media screen and (max-width: 1024px) {
-        margin: 50px;
+        padding: 50px;
         div.content {
             row-gap: 40px;
             & > div {
@@ -89,6 +99,6 @@ const SectionStyled = styled.section`
         }
     }
     @media screen and (max-width: 768px) {
-        margin: 40px 10px;
+        padding: 40px 10px;
     }
 `

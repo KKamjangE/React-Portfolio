@@ -21,7 +21,7 @@ export default function Nav({ isOpen, onCloseToggle }: NavProps) {
         onCloseToggle()
         requestAnimationFrame(() => {
             window.scrollTo({
-                top: refOffsetList[index].top + 1 - (isTablet ? 60 : 0),
+                top: refOffsetList[index].top + 1,
                 behavior: isTablet ? 'auto' : 'smooth',
             })
         })
