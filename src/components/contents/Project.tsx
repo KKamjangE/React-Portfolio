@@ -83,6 +83,7 @@ const ProjectLayout = styled.div`
         }
         span {
             font-weight: 500;
+            white-space: nowrap;
         }
     }
     .summary {
