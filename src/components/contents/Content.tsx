@@ -68,7 +68,7 @@ const SectionStyled = styled.section`
     div.content {
         display: grid;
         row-gap: 80px;
-        &div {
+        & > div {
             display: flex;
             flex-direction: column;
             gap: 24px;
@@ -78,6 +78,9 @@ const SectionStyled = styled.section`
         margin: 50px;
         div.content {
             row-gap: 40px;
+            & > div {
+                gap: 12px;
+            }
         }
     }
     @media screen and (max-width: 768px) {

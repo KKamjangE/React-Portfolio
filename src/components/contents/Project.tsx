@@ -126,7 +126,6 @@ const ProjectLayout = styled.div`
         }
     }
     @media screen and (max-width: 1024px) {
-        gap: 12px;
         .title {
             flex-direction: column;
             align-items: baseline;

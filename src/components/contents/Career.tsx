@@ -120,7 +120,4 @@ const CareerLayout = styled.div`
         flex-wrap: wrap;
         gap: 8px;
     }
-    @media screen and (max-width: 1024px) {
-        gap: 12px;
-    }
 `
