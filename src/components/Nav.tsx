@@ -67,7 +67,7 @@ const NavLayout = styled.nav<{ $isOpen: boolean }>`
     justify-content: space-between;
     align-items: center;
     width: 20vw;
-    height: 80vh;
+    height: 100vh;
     padding: 10vh 0;
     background-color: var(--bg-dark-gray);
     @media screen and (max-width: 1024px) {
@@ -75,7 +75,7 @@ const NavLayout = styled.nav<{ $isOpen: boolean }>`
         left: 0;
         z-index: 300;
         width: 100%;
-        height: 90vh;
+        height: 100vh;
         padding: 5vh 0;
         backdrop-filter: blur(10px);
         background-color: var(--bg-dark-gray-tablet);

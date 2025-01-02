@@ -14,11 +14,14 @@ const GlobalStyle = createGlobalStyle`
         --bg-light-gray:#f5f5f5;
 
         /** 스타일 변수 */
+        * {
+            box-sizing: border-box;
+        }
         font-family: 'Roboto','Noto Sans KR', sans-serif;
         font-size: 24px;
+        line-height: 20px;
         background-color: var(--bg-light-gray);
         color: var(--text-black);
-        box-sizing: border-box;
         a {
             color: var(--text-black);
             text-decoration: none;
