@@ -1,4 +1,4 @@
-import ContentsContainer from '@/components/contents/ContentsContainer'
+import Content from '@/components/contents/Content'
 import Footer from '@/components/Footer'
 import Intro from '@/components/Intro'
 import Layout from '@/pages/Layout'
@@ -26,7 +26,7 @@ export default function Home() {
             <ProgressBar />
             <Layout>
                 <Intro />
-                <ContentsContainer />
+                <Content />
                 <Footer />
             </Layout>
             <ScrollTopBtn />
