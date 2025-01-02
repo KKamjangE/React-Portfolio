@@ -5,7 +5,7 @@ import useGetRefOffsetList from '@/hooks/useGetRefOffsetList'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import styled from 'styled-components'
 
-const navList = ['Career', 'Project', 'Education']
+const navList = ['Career', 'Project', 'Education', 'Certificate']
 
 interface NavProps {
     isOpen: boolean
@@ -21,7 +21,7 @@ export default function Nav({ isOpen, onCloseToggle }: NavProps) {
         onCloseToggle()
         requestAnimationFrame(() => {
             window.scrollTo({
-                top: refOffsetList[index].top + 1,
+                top: refOffsetList[index].top + 1 - (isTablet ? 60 : 0),
                 behavior: isTablet ? 'auto' : 'smooth',
             })
         })

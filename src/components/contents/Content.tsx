@@ -33,6 +33,11 @@ export default function Content() {
                     <Education />
                 </ContentLayout>
             </SectionStyled>
+            <SectionStyled ref={(ref) => (ref ? (elementRefs.current[3] = ref) : null)}>
+                <ContentLayout title="Certificate">
+                    <Education />
+                </ContentLayout>
+            </SectionStyled>
         </>
     )
 }
