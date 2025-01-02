@@ -58,15 +58,13 @@ export default function Project() {
                             ))}
                         </div>
                     ) : null}
-                    <FadeIn>
-                        <div className="skills">
-                            {project.skills.map((skill, index) => (
-                                <Badge key={index} $text={skill}>
-                                    {skill}
-                                </Badge>
-                            ))}
-                        </div>
-                    </FadeIn>
+                    <div className="skills">
+                        {project.skills.map((skill, index) => (
+                            <FadeIn key={index}>
+                                <Badge $text={skill}>{skill}</Badge>
+                            </FadeIn>
+                        ))}
+                    </div>
                 </ProjectLayout>
             ))}
         </ContentLayout>

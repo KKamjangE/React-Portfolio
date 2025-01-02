@@ -47,15 +47,13 @@ export default function Career() {
                             </div>
                         ))}
                     </div>
-                    <FadeIn>
-                        <div className="skills">
-                            {career.skills.map((skill, index) => (
-                                <Badge key={index} $text={skill}>
-                                    {skill}
-                                </Badge>
-                            ))}
-                        </div>
-                    </FadeIn>
+                    <div className="skills">
+                        {career.skills.map((skill, index) => (
+                            <FadeIn key={index}>
+                                <Badge $text={skill}>{skill}</Badge>
+                            </FadeIn>
+                        ))}
+                    </div>
                 </CareerLayout>
             ))}
         </ContentLayout>
