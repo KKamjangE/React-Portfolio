@@ -12,9 +12,12 @@ const FooterStyled = styled.footer`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 150px 0 100px;
+    padding: 300px 0 100px;
     p {
         font-size: 0.6rem;
         opacity: 0.4;
+    }
+    @media screen and (max-width: 1024px) {
+        padding-top: 150px;
     }
 `
