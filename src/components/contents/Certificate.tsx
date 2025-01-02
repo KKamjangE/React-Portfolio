@@ -1,4 +1,3 @@
-import ContentLayout from '@/components/contents/ContentLayout'
 import FadeIn from '@/components/ui/FadeIn.motion'
 import YellowPoint from '@/components/ui/YellowPoint'
 import certificates from '@/data/certificates'
@@ -6,7 +5,7 @@ import styled from 'styled-components'
 
 export default function Certificate() {
     return (
-        <ContentLayout title="Certificate">
+        <>
             {certificates.map((certificate, idx) => (
                 <CertificateLayout key={idx}>
                     <FadeIn>
@@ -19,7 +18,7 @@ export default function Certificate() {
                     </FadeIn>
                 </CertificateLayout>
             ))}
-        </ContentLayout>
+        </>
     )
 }
 
