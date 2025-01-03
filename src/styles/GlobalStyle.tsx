@@ -16,15 +16,19 @@ const GlobalStyle = createGlobalStyle`
         /** 스타일 변수 */
         * {
             box-sizing: border-box;
+            line-height: normal;
         }
         font-family: 'Roboto','Noto Sans KR', sans-serif;
         font-size: 24px;
-        line-height: 20px;
         background-color: var(--bg-light-gray);
         color: var(--text-black);
         a {
             color: var(--text-black);
             text-decoration: none;
+        }
+        button {
+            background: none;
+            border: 0;
         }
         @media screen and (max-width: 1024px){
             font-size: 20px;
