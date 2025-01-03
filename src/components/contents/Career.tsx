@@ -26,7 +26,9 @@ export default function Career() {
                     </div>
                     <div className="summary">
                         {career.summary.map((sum, index) => (
-                            <FadeIn key={index}>{sum}</FadeIn>
+                            <FadeIn key={index}>
+                                <span>{sum}</span>
+                            </FadeIn>
                         ))}
                     </div>
                     <FadeIn>

@@ -7,7 +7,7 @@ export default [
             '팀 학습을 통해 TypeScript를 도입한 프로젝트입니다.',
         ],
         affiliation: '(주)아크로퓨처',
-        period: '2024.09. ~ 진행 중',
+        period: '2024.09. ~ 2024.12',
         features: [
             '사용자 서비스 : react-query의 cache를 이용해 서버와 클라이언트 간의 데이터 동기화',
             '사용자 서비스 : 장바구니의 메뉴 삭제 optimistic update 기능 구현',

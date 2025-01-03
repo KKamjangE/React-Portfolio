@@ -11,8 +11,8 @@ import Toggle from '@/components/toggle'
 export default function Home() {
     const [isOpen, setIsOpen] = useState(false)
 
-    const onOpenToggle = () => {
-        setIsOpen(true)
+    const onToggle = () => {
+        setIsOpen((prev) => !prev)
     }
 
     const onCloseToggle = () => {
@@ -21,7 +21,7 @@ export default function Home() {
 
     return (
         <>
-            <Toggle isOpen={isOpen} onOpenToggle={onOpenToggle} />
+            <Toggle isOpen={isOpen} onToggle={onToggle} />
             <Nav isOpen={isOpen} onCloseToggle={onCloseToggle} />
             <ProgressBar />
             <Layout>
