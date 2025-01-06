@@ -2,15 +2,14 @@
 
 > 2023년 5월 ~ (진행중)
 
-# 기록
-
-## [개발 위키](https://torpid-erigeron-ad1.notion.site/dc779779d36e437abd5502a088002c53?v=cfdbcd0463ba4117b57d125aefc906f9&pvs=4)
-
 # 구현
 
 - motion을 사용한 애니메이션 효과 구현
-- Vercel을 사용한 CI/CD 및 배포
-- 상태관리 Zustand에서 Redux로 변경
+- vercel을 사용한 CI/CD 및 배포
+- 상태관리 zustand에서 redux toolkit으로 변경
+- styled를 사용한 사이트 디자인
+- scroll spy 구현
+- parallax scrolling 구현
 - 반응형 웹 디자인
 
 # 기술 스택
