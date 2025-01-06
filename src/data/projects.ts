@@ -1,4 +1,16 @@
-export default [
+interface Projects {
+    title: string
+    summary: string[]
+    affiliation: string
+    period: string
+    features: string[]
+    urls: { name: string; url: string }[]
+    skills: string[]
+    contributor: string
+    contribution: string
+}
+
+const projects: Projects[] = [
     {
         title: '현대 오토에버 Pickup Service POC',
         summary: [
@@ -49,6 +61,7 @@ export default [
             '공통 컴포넌트 리팩터링',
             'JWT 기반 로그인, 회원가입 기능 구현',
             '지도 poi 검색 및 필터 기능 구현',
+            '반응형 웹 디자인',
         ],
         urls: [
             {
@@ -70,16 +83,46 @@ export default [
         affiliation: '(주)아크로퓨처',
         period: '2024.01. ~ 2024.05.',
         features: [
-            '지도 마커 클러스터링 기능 구현',
-            '지도 마커 리렌더링 최적화',
-            '공통 컴포넌트 리팩터링',
-            'JWT 기반 로그인, 회원가입 기능 구현',
+            'JWT 기반 로그인, 회원가입, OTP 인증 기능 구현',
+            'i18next 다국어 지원 적용',
+            'api 공통 error handler 구현',
             '지도 poi 검색 및 필터 기능 구현',
+            '공통 dialog 구현',
+            '통계 차트 기능 구현',
+            '반응형 웹 디자인',
         ],
         urls: [],
-        skills: ['React', 'Vite', 'MUI', 'react-query', 'zustand', 'react-google-maps', 'i18next'],
+        skills: [
+            'React',
+            'ReCharts',
+            'MUI',
+            'react-query',
+            'zustand',
+            'react-google-maps',
+            'i18next',
+        ],
         contributor: '기획 1명, 디자인 1명, 프론트엔드 개발 4명, 백엔드 개발 2명, 웹 퍼블리셔 1명',
         contribution: '33%',
+    },
+    {
+        title: '개인 포트폴리오 사이트',
+        summary: ['React로 개발한 개인 포트폴리오 사이트입니다.'],
+        affiliation: '개인 프로젝트',
+        period: '2023.05. ~ 2025.01.',
+        features: ['scroll spy 구현', 'parallax scrolling 구현', '반응형 웹 디자인'],
+        urls: [
+            {
+                name: 'Github',
+                url: 'https://github.com/KKamjangE/React-Portfolio',
+            },
+            {
+                name: 'Site',
+                url: 'https://anjemin-portfolio.vercel.app/',
+            },
+        ],
+        skills: ['React', 'TypeScript', 'Styeld Component', 'Motion', 'Vite'],
+        contributor: '개발 1명',
+        contribution: '100%',
     },
     {
         title: '인터뷰메이트',
@@ -130,3 +173,5 @@ export default [
         contribution: '50%',
     },
 ]
+
+export default projects
