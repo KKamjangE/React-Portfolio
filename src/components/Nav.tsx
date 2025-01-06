@@ -44,6 +44,9 @@ export default function Nav({ isOpen, onCloseToggle }: NavProps) {
             </FadeIn>
             <FadeIn>
                 <div className="contact">
+                    <a href="https://www.linkedin.com/in/kkamjange/" target="_blank">
+                        LinkedIn
+                    </a>
                     <a href="https://velog.io/@ajm0718/posts" target="_blank">
                         Velog
                     </a>
