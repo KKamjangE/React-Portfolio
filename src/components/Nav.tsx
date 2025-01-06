@@ -79,7 +79,7 @@ const NavLayout = styled.nav<{ $isOpen: boolean }>`
         padding: 5vh 0;
         backdrop-filter: blur(10px);
         background-color: var(--bg-dark-gray-tablet);
-        transform: translateX(${({ $isOpen }) => ($isOpen ? 0 : '-100%')});
+        transform: translateX(${({ $isOpen }) => ($isOpen ? 0 : '+100%')});
         transition: transform 0.3s ease-in-out;
     }
     .nav-list {
