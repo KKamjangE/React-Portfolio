@@ -86,7 +86,7 @@ const NavLayout = styled.nav<{ $isOpen: boolean }>`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 26vh;
+        height: 30vh;
         li {
             color: var(--text-white);
             display: block;

@@ -15,8 +15,8 @@ export default function ScrollTopBtn() {
                     onClick={scrollToTop}
                     whileHover={{ backgroundColor: '#ffffff', scale: 1.1 }}
                     transition={{
-                        type: 'spring',
-                        duration: 0.3,
+                        // type: 'spring',
+                        duration: 0.1,
                         stiffness: 800,
                         damping: 17,
                     }}
@@ -35,6 +35,9 @@ const ScrollTopBtnStyled = styled.div`
     position: fixed;
     bottom: 50px;
     right: 50px;
+    :hover {
+        cursor: pointer;
+    }
     button {
         width: 70px;
         height: 70px;
@@ -42,9 +45,6 @@ const ScrollTopBtnStyled = styled.div`
         border-radius: 28px;
         background-color: var(--bg-light-gray);
         box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.4);
-        :hover {
-            cursor: pointer;
-        }
     }
     @media screen and (max-width: 1024px) {
         bottom: 15px;
