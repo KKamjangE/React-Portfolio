@@ -28,22 +28,18 @@ const ToggleStyled = styled(motion.div)<{ $isOpen: boolean }>`
     .toggle {
         position: relative;
         margin: 10px 10px 0 auto;
+        width: 35px;
+        height: 35px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 6px;
+        gap: 5px;
         cursor: pointer;
-        padding: 10px;
-        border: 2px solid;
-        border-radius: 10px;
+        border-radius: 5px;
         transition: color 0.3s;
         background-color: ${({ $isOpen }) => ($isOpen ? 'none' : 'var(--bg-light-gray)')};
-        ${({ $isOpen }) => {
-            if ($isOpen) {
-                return { backgroundColor: 'none', borderColor: '#fff' }
-            }
-        }}
+        box-shadow: ${({ $isOpen }) => ($isOpen ? 'none' : '3px 10px 20px rgba(0, 0, 0, 0.4)')};
     }
     @media screen and (max-width: 1024px) {
         display: block;
@@ -56,20 +52,20 @@ interface LineProps {
 }
 
 const Line = styled.span<LineProps>`
-    width: 33px;
-    height: 4px;
+    width: 22px;
+    height: 2px;
     border-radius: 10px;
-    background-color: var(--text-black);
+    background-color: ${({ $isOpen }) => ($isOpen ? 'var(--text-white)' : 'var(--text-black)')};
     transition: all 0.3s ease-in-out;
     ${({ $isOpen, $position }) => {
         if ($position === 'top') {
-            return $isOpen ? 'transform: rotate(45deg) translate(7px, 7px)' : ''
+            return $isOpen ? 'transform: rotate(45deg) translate(5px, 5px)' : ''
         }
         if ($position === 'middle') {
             return $isOpen ? 'opacity: 0' : ''
         }
         if ($position === 'bottom') {
-            return $isOpen ? 'transform: rotate(-45deg) translate(7px, -7px)' : ''
+            return $isOpen ? 'transform: rotate(-45deg) translate(5px, -5px)' : ''
         }
     }};
 `
