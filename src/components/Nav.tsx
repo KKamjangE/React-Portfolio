@@ -70,18 +70,6 @@ const NavLayout = styled.nav<{ $isOpen: boolean }>`
     height: 100vh;
     padding: 10vh 0;
     background-color: var(--bg-dark-gray);
-    @media screen and (max-width: 1024px) {
-        top: 0;
-        left: 0;
-        z-index: 300;
-        width: 100%;
-        height: 100vh;
-        padding: 5vh 0;
-        backdrop-filter: blur(10px);
-        background-color: var(--bg-dark-gray-tablet);
-        transform: translateX(${({ $isOpen }) => ($isOpen ? 0 : '+100%')});
-        transition: transform 0.3s ease-in-out;
-    }
     .nav-list {
         display: flex;
         flex-direction: column;
@@ -114,6 +102,21 @@ const NavLayout = styled.nav<{ $isOpen: boolean }>`
         }
         p.update-info {
             opacity: 0.6;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        top: 0;
+        left: 0;
+        z-index: 300;
+        width: 100%;
+        height: 100vh;
+        padding: 5vh 0;
+        backdrop-filter: blur(10px);
+        background-color: var(--bg-dark-gray-tablet);
+        transform: translateX(${({ $isOpen }) => ($isOpen ? 0 : '+100%')});
+        transition: transform 0.3s ease-in-out;
+        .contact {
+            font-size: 0.8rem;
         }
     }
 `
