@@ -1,4 +1,4 @@
-export default [
+const careers = [
     {
         company: '(주)아크로퓨처',
         position: '프론트엔드 개발자',
@@ -69,3 +69,5 @@ export default [
         period: '2022.06. ~ 2022.10.',
     },
 ]
+
+export default careers
