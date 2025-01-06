@@ -78,7 +78,7 @@ const ProjectLayout = styled.div`
         justify-content: space-between;
         align-items: center;
         h2 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: bold;
         }
         span {
@@ -87,7 +87,7 @@ const ProjectLayout = styled.div`
         }
     }
     .summary {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         & > * {
             margin: 12px 0;
         }
@@ -96,7 +96,7 @@ const ProjectLayout = styled.div`
         font-weight: bold;
     }
     .features {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         & > * {
             margin: 14px 0;
             font-weight: 500;
@@ -106,7 +106,7 @@ const ProjectLayout = styled.div`
         display: flex;
         flex-direction: column;
         gap: 8px;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         font-weight: 500;
         opacity: 0.6;
     }
@@ -120,7 +120,7 @@ const ProjectLayout = styled.div`
         display: flex;
         flex-direction: column;
         gap: 12px;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         font-weight: 500;
         p {
             padding: 4px;

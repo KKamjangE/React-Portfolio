@@ -68,14 +68,14 @@ const CareerLayout = styled.div`
     flex-direction: column;
     gap: 24px;
     .title {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: bold;
     }
     .work-experience {
         display: flex;
         flex-direction: column;
         gap: 8px;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         font-weight: 500;
         opacity: 0.6;
         .team-role {
@@ -92,7 +92,7 @@ const CareerLayout = styled.div`
         }
     }
     .summary {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         white-space: normal;
         & > * {
             margin: 12px 0;
@@ -106,13 +106,13 @@ const CareerLayout = styled.div`
         flex-direction: column;
         gap: 14px;
         h3 {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 500;
         }
         span {
             display: block;
             margin: 8px 0;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             opacity: 0.6;
         }
     }

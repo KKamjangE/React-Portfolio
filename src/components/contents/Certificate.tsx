@@ -26,6 +26,12 @@ const CertificateLayout = styled.div`
     display: flex;
     flex-direction: column;
     h2 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .period {
+        font-size: 0.7rem;
+        font-weight: 500;
+        opacity: 0.6;
     }
 `
