@@ -8,6 +8,7 @@ import YellowPoint from '@/components/ui/YellowPoint'
 import FadeIn from '@/components/ui/FadeIn.motion'
 import styled from 'styled-components'
 import { debounce } from 'es-toolkit'
+import Certificate from '@/components/contents/Certificate'
 
 export default function Content() {
     const elementRefs = useRef<HTMLElement[]>([])
@@ -45,7 +46,7 @@ export default function Content() {
             </SectionStyled>
             <SectionStyled ref={(ref) => (ref ? (elementRefs.current[3] = ref) : null)}>
                 <ContentLayout title="Certificate">
-                    <Education />
+                    <Certificate />
                 </ContentLayout>
             </SectionStyled>
         </>
