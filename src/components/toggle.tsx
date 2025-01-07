@@ -21,13 +21,14 @@ export default function Toggle({ isOpen, onToggle }: ToggleProps) {
 const ToggleStyled = styled(motion.div)<{ $isOpen: boolean }>`
     display: none;
     position: fixed;
-    top: 0;
+    top: 20px;
+    right: 20px;
     z-index: 500;
-    width: 100%;
+    /* width: 100%; */
     align-content: center;
     .toggle {
         position: relative;
-        margin: 10px 10px 0 auto;
+        /* margin: 10px 10px 0 auto; */
         width: 35px;
         height: 35px;
         display: flex;

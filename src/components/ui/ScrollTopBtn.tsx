@@ -47,8 +47,8 @@ const ScrollTopBtnStyled = styled.div`
         box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.4);
     }
     @media screen and (max-width: 1024px) {
-        bottom: 15px;
-        right: 15px;
+        bottom: 20px;
+        right: 20px;
         button {
             width: 50px;
             height: 50px;
@@ -56,8 +56,6 @@ const ScrollTopBtnStyled = styled.div`
         }
     }
     @media screen and (max-width: 768px) {
-        bottom: 10px;
-        right: 10px;
         button {
             width: 40px;
             height: 40px;
