@@ -2,7 +2,6 @@ import FadeIn from '@/components/ui/FadeIn.motion'
 import { motion } from 'motion/react'
 import { Fragment } from 'react/jsx-runtime'
 import styled from 'styled-components'
-import { SiReactquery } from 'react-icons/si'
 
 export default function TechStack() {
     const skills = {
@@ -59,7 +58,6 @@ export default function TechStack() {
                     ))}
                 </Fragment>
             ))}
-            <SiReactquery />
         </SkillsLayout>
     )
 }
