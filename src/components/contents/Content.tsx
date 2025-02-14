@@ -9,6 +9,7 @@ import FadeIn from '@/components/ui/FadeIn.motion'
 import styled from 'styled-components'
 import { debounce } from 'es-toolkit'
 import Certificate from '@/components/contents/Certificate'
+import TechStack from '@/components/contents/TechStack'
 
 export default function Content() {
     const elementRefs = useRef<HTMLElement[]>([])
@@ -35,16 +36,21 @@ export default function Content() {
                 </ContentLayout>
             </SectionStyled>
             <SectionStyled ref={(ref) => (ref ? (elementRefs.current[1] = ref) : null)}>
+                <ContentLayout title="TechStack">
+                    <TechStack />
+                </ContentLayout>
+            </SectionStyled>
+            <SectionStyled ref={(ref) => (ref ? (elementRefs.current[2] = ref) : null)}>
                 <ContentLayout title="Project">
                     <Project />
                 </ContentLayout>
             </SectionStyled>
-            <SectionStyled ref={(ref) => (ref ? (elementRefs.current[2] = ref) : null)}>
+            <SectionStyled ref={(ref) => (ref ? (elementRefs.current[3] = ref) : null)}>
                 <ContentLayout title="Education">
                     <Education />
                 </ContentLayout>
             </SectionStyled>
-            <SectionStyled ref={(ref) => (ref ? (elementRefs.current[3] = ref) : null)}>
+            <SectionStyled ref={(ref) => (ref ? (elementRefs.current[4] = ref) : null)}>
                 <ContentLayout title="Certificate">
                     <Certificate />
                 </ContentLayout>

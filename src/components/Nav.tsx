@@ -5,7 +5,7 @@ import useGetRefOffsetList from '@/hooks/useGetRefOffsetList'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import styled from 'styled-components'
 
-const navList = ['Career', 'Project', 'Education', 'Certificate']
+const navList = ['Career', 'TechStack', 'Project', 'Education', 'Certificate']
 
 interface NavProps {
     isOpen: boolean
