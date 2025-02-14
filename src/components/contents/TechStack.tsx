@@ -1,3 +1,4 @@
+import { Badge } from '@/components/ui/Badge.styeld'
 import FadeIn from '@/components/ui/FadeIn.motion'
 import { motion } from 'motion/react'
 import { Fragment } from 'react/jsx-runtime'
@@ -17,20 +18,24 @@ export default function TechStack() {
         ],
     }
 
-    // const dummy = {
-    //     'FrontEnd Libraries': [
-    //         { name: 'Tanstack-Query', level: 90 },
-    //         { name: 'Zustand', level: 90 },
-    //         { name: 'React-hook-form', level: 90 },
-    //         { name: 'Zod', level: 90 },
-    //         { name: 'Tailwind CSS', level: 90 },
-    //         { name: 'MUI', level: 80 },
-    //     ],
-    //     'Testing Libraries': [
-    //         { name: 'Cypress', level: 60 },
-    //         { name: 'Jest', level: 40 },
-    //     ],
-    // }
+    const frontEndLibraries = [
+        'tanstack-Query',
+        'zustand',
+        'react-hook-form',
+        'formik',
+        'zod',
+        'yup',
+        'tailwind CSS',
+        'MUI',
+        'embla-carousel-react',
+        'i18next',
+        'es-toolkit',
+        'dayjs',
+        'google-maps',
+        'cypress',
+        'jest',
+        'vite',
+    ]
 
     return (
         <SkillsLayout>
@@ -58,6 +63,12 @@ export default function TechStack() {
                     ))}
                 </Fragment>
             ))}
+            <h2>FrontEnd Libraries</h2>
+            <div className="badges">
+                {frontEndLibraries.map((badge) => (
+                    <Badge $text={badge}>{badge}</Badge>
+                ))}
+            </div>
         </SkillsLayout>
     )
 }
@@ -83,6 +94,11 @@ const SkillsLayout = styled.div`
             background: linear-gradient(0.25turn, #3b82f6, #6366f1);
             border-radius: 16px;
         }
+    }
+    .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
     }
     @media screen and (max-width: 1024px) {
         .progress-bar {
