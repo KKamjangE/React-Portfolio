@@ -18,20 +18,20 @@ export default function TechStack() {
         ],
     }
 
-    const dummy = {
-        'FrontEnd Libraries': [
-            { name: 'Tanstack-Query', level: 90 },
-            { name: 'Zustand', level: 90 },
-            { name: 'React-hook-form', level: 90 },
-            { name: 'Zod', level: 90 },
-            { name: 'Tailwind CSS', level: 90 },
-            { name: 'MUI', level: 80 },
-        ],
-        'Testing Libraries': [
-            { name: 'Cypress', level: 60 },
-            { name: 'Jest', level: 40 },
-        ],
-    }
+    // const dummy = {
+    //     'FrontEnd Libraries': [
+    //         { name: 'Tanstack-Query', level: 90 },
+    //         { name: 'Zustand', level: 90 },
+    //         { name: 'React-hook-form', level: 90 },
+    //         { name: 'Zod', level: 90 },
+    //         { name: 'Tailwind CSS', level: 90 },
+    //         { name: 'MUI', level: 80 },
+    //     ],
+    //     'Testing Libraries': [
+    //         { name: 'Cypress', level: 60 },
+    //         { name: 'Jest', level: 40 },
+    //     ],
+    // }
 
     return (
         <SkillsLayout>
