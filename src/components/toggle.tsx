@@ -24,18 +24,16 @@ const ToggleStyled = styled(motion.div)<{ $isOpen: boolean }>`
     top: 20px;
     right: 20px;
     z-index: 500;
-    /* width: 100%; */
     align-content: center;
     .toggle {
         position: relative;
-        /* margin: 10px 10px 0 auto; */
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 5px;
+        gap: 6px;
         cursor: pointer;
         border-radius: 5px;
         transition: color 0.3s;
@@ -53,20 +51,20 @@ interface LineProps {
 }
 
 const Line = styled.span<LineProps>`
-    width: 22px;
+    width: 24px;
     height: 2px;
-    border-radius: 10px;
+    border-radius: 4px;
     background-color: ${({ $isOpen }) => ($isOpen ? 'var(--text-white)' : 'var(--text-black)')};
     transition: all 0.3s ease-in-out;
     ${({ $isOpen, $position }) => {
         if ($position === 'top') {
-            return $isOpen ? 'transform: rotate(45deg) translate(5px, 5px)' : ''
+            return $isOpen ? 'transform: rotate(45deg) translate(5px, 6px)' : ''
         }
         if ($position === 'middle') {
             return $isOpen ? 'opacity: 0' : ''
         }
         if ($position === 'bottom') {
-            return $isOpen ? 'transform: rotate(-45deg) translate(5px, -5px)' : ''
+            return $isOpen ? 'transform: rotate(-45deg) translate(5px, -6px)' : ''
         }
     }};
 `
