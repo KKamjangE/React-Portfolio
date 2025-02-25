@@ -58,6 +58,15 @@ export default function Project() {
                         </div>
                     ) : null}
                     <FadeIn>
+                        <span className="feature-title">성과</span>
+                    </FadeIn>
+                    <div className="performance">
+                        {project.performance &&
+                            project.performance.map((performance, index) => (
+                                <FadeIn key={index}>🔥{performance}</FadeIn>
+                            ))}
+                    </div>
+                    <FadeIn>
                         <div className="skills">
                             {project.skills.map((skill, index) => (
                                 <Badge key={index} $text={skill}>
@@ -95,7 +104,8 @@ const ProjectLayout = styled.div`
     .feature-title {
         font-weight: bold;
     }
-    .features {
+    .features,
+    .performance {
         font-size: 0.8rem;
         & > * {
             margin: 14px 0;
