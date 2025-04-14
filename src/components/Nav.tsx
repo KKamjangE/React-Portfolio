@@ -56,7 +56,7 @@ export default function Nav({ isOpen, onCloseToggle }: NavProps) {
                     <a href="mailto:ajm980718@gmail.com" className="email">
                         ajm980718@gmail.com
                     </a>
-                    <p className="update-info">Last Update: 2025/02</p>
+                    <p className="update-info">Last Update: 2025/04</p>
                 </div>
             </FadeIn>
         </NavLayout>
