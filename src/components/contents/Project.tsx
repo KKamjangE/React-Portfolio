@@ -58,7 +58,7 @@ export default function Project() {
                         </div>
                     ) : null}
                     <FadeIn>
-                        <span className="feature-title">성과</span>
+                        {project.performance && <span className="feature-title">성과</span>}
                     </FadeIn>
                     <div className="performance">
                         {project.performance &&
