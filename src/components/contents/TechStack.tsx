@@ -7,12 +7,7 @@ import styled from 'styled-components'
 export default function TechStack() {
     const skills = {
         'FrontEnd Core': [
-            { name: 'JavaScript', level: 90 },
             { name: 'TypeScript', level: 85 },
-            { name: 'HTML5', level: 90 },
-            { name: 'CSS3', level: 90 },
-        ],
-        'FrontEnd Frameworks': [
             { name: 'React', level: 90 },
             { name: 'Next.js', level: 60 },
         ],
@@ -27,14 +22,6 @@ export default function TechStack() {
         'yup',
         'tailwind CSS',
         'MUI',
-        'embla-carousel-react',
-        'i18next',
-        'es-toolkit',
-        'dayjs',
-        'google-maps',
-        'cypress',
-        'jest',
-        'vite',
     ]
 
     return (
