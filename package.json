@@ -9,9 +9,6 @@
     "lint": "biome check --write .",
     "format": "biome format --write ."
   },
-  "engines": {
-    "node": "22.x"
-  },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
     "@reduxjs/toolkit": "^2.8.2",
