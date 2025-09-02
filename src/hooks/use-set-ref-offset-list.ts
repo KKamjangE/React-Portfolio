@@ -1,6 +1,6 @@
 import type { MutableRefObject } from 'react'
 import { useAppDispatch } from '@/store'
-import { RefOffsetListStateAction, type RefOffsetListType } from '@/store/RefTopStateSlice'
+import { RefOffsetListStateAction, type RefOffsetListType } from '@/store/ref-top-state-slice'
 
 export default function useSetRefOffsetList() {
   // Ref 배열 받아서 offset 배열로 변환해 store에 저장하는 훅

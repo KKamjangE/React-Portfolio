@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import Content from '@/components/contents/Content'
-import Footer from '@/components/Footer'
-import Intro from '@/components/Intro'
-import Nav from '@/components/Nav'
+import Content from '@/components/contents/content'
+import Footer from '@/components/footer'
+import Intro from '@/components/intro'
+import Nav from '@/components/nav'
 import Toggle from '@/components/toggle'
-import ProgressBar from '@/components/ui/ProgressBar'
-import ScrollTopBtn from '@/components/ui/ScrollTopBtn'
-import Layout from '@/pages/Layout'
+import ProgressBar from '@/components/ui/progress-bar'
+import ScrollTopBtn from '@/components/ui/scroll-top-btn'
+import Layout from '@/pages/layout'
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)

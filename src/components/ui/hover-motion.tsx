@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import YellowPoint from './YellowPoint'
+import YellowPoint from './yellow-point'
 
 export default function HoverMotion({
   children,

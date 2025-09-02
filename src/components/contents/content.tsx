@@ -1,14 +1,14 @@
 import { debounce } from 'es-toolkit'
 import type React from 'react'
 import { useEffect, useRef } from 'react'
-import Career from '@/components/contents/Career'
-import Certificate from '@/components/contents/Certificate'
-import Education from '@/components/contents/Education'
-import Project from '@/components/contents/Project'
-import TechStack from '@/components/contents/TechStack'
-import FadeIn from '@/components/ui/FadeIn.motion'
-import YellowPoint from '@/components/ui/YellowPoint'
-import useSetRefOffsetList from '@/hooks/useSetRefOffsetList'
+import Career from '@/components/contents/career'
+import Certificate from '@/components/contents/certificate'
+import Education from '@/components/contents/education'
+import Project from '@/components/contents/project'
+import TechStack from '@/components/contents/tech-stack'
+import FadeIn from '@/components/ui/fade-in.motion'
+import YellowPoint from '@/components/ui/yellow-point'
+import useSetRefOffsetList from '@/hooks/use-set-ref-offset-list'
 
 export default function Content() {
     const elementRefs = useRef<HTMLElement[]>([])

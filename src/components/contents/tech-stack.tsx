@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { Fragment } from 'react/jsx-runtime'
 import { Badge } from '@/components/ui/badge'
-import FadeIn from '@/components/ui/FadeIn.motion'
+import FadeIn from '@/components/ui/fade-in.motion'
 
 export default function TechStack() {
   const skills = {

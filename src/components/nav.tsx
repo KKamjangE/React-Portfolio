@@ -1,9 +1,9 @@
 import clsx from 'clsx'
-import FadeIn from '@/components/ui/FadeIn.motion'
-import HoverMotion from '@/components/ui/HoverMotion'
-import useCurrViewContentNum from '@/hooks/useCurrViewContNum'
-import useGetRefOffsetList from '@/hooks/useGetRefOffsetList'
-import useMediaQuery from '@/hooks/useMediaQuery'
+import FadeIn from '@/components/ui/fade-in.motion'
+import HoverMotion from '@/components/ui/hover-motion'
+import useCurrViewContentNum from '@/hooks/use-curr-view-cont-num'
+import useGetRefOffsetList from '@/hooks/use-get-ref-offset-list'
+import useMediaQuery from '@/hooks/use-media-query'
 
 const navList = ['Career', 'TechStack', 'Project', 'Education', 'Certificate']
 

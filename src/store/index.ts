@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { type TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
-import { RefOffsetListStateReducer } from '@/store/RefTopStateSlice'
+import { RefOffsetListStateReducer } from '@/store/ref-top-state-slice'
 
 // 루트 리듀서
 const rootReducer = combineReducers({

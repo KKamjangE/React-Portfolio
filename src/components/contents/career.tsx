@@ -1,6 +1,6 @@
 import { Badge } from '@/components/ui/badge'
-import FadeIn from '@/components/ui/FadeIn.motion'
-import YellowPoint from '@/components/ui/YellowPoint'
+import FadeIn from '@/components/ui/fade-in.motion'
+import YellowPoint from '@/components/ui/yellow-point'
 import careers from '@/data/careers'
 
 export default function Career() {

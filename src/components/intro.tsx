@@ -1,6 +1,6 @@
 import downDoubleArrow from '@/assets/down-double-arrow.webp'
 import homeImage from '@/assets/home-img.webp'
-import FadeInDownContent from '@/components/ui/FadeInDown.motion'
+import FadeInDownContent from '@/components/ui/fade-in-down.motion'
 
 export default function Intro() {
     const startDate = new Date('2023-09')

@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import upArrow from '@/assets/up-arrow.svg'
-import FadeIn from '@/components/ui/FadeIn.motion'
+import FadeIn from '@/components/ui/fade-in.motion'
 
 export default function ScrollTopBtn() {
   const scrollToTop = () => {

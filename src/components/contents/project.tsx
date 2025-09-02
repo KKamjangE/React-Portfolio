@@ -1,7 +1,7 @@
 import { Badge } from '@/components/ui/badge'
-import FadeIn from '@/components/ui/FadeIn.motion'
-import HoverMotion from '@/components/ui/HoverMotion'
-import YellowPoint from '@/components/ui/YellowPoint'
+import FadeIn from '@/components/ui/fade-in.motion'
+import HoverMotion from '@/components/ui/hover-motion'
+import YellowPoint from '@/components/ui/yellow-point'
 import projects from '@/data/projects'
 
 export default function Project() {
