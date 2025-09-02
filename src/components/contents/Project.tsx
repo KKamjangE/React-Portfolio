@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-import { Badge } from '@/components/ui/Badge.styeld'
+import { Badge } from '@/components/ui/badge'
 import FadeIn from '@/components/ui/FadeIn.motion'
 import HoverMotion from '@/components/ui/HoverMotion'
 import YellowPoint from '@/components/ui/YellowPoint'
@@ -9,18 +8,18 @@ export default function Project() {
   return (
     <>
       {projects.map((project) => (
-        <ProjectLayout key={project.title}>
+        <div key={project.title}>
           <FadeIn>
-            <div className="title">
-              <h2>
+            <div className="flex justify-between items-center max-lg:flex-col max-lg:items-baseline max-lg:gap-2">
+              <h2 className="text-lg font-bold max-lg:whitespace-normal">
                 <YellowPoint>{project.title}</YellowPoint>
               </h2>
               <YellowPoint>
-                <span>{project.affiliation}</span>
+                <span className="font-medium whitespace-nowrap">{project.affiliation}</span>
               </YellowPoint>
             </div>
           </FadeIn>
-          <div className="contribute">
+          <div className="flex flex-col gap-2 text-xs font-medium opacity-60">
             <FadeIn>
               <span>{project.contributor}</span>
             </FadeIn>
@@ -28,7 +27,7 @@ export default function Project() {
               <span>{project.period}</span>
             </FadeIn>
           </div>
-          <div className="summary">
+          <div className="text-sm [&>*]:my-3">
             {project.summary.map((item, index) => (
               <FadeIn key={`${project.title}-summary-${index}`}>
                 <span>{item}</span>
@@ -36,20 +35,20 @@ export default function Project() {
             ))}
           </div>
           <FadeIn>
-            <span className="feature-title">구현 기능</span>
+            <span className="font-bold">구현 기능</span>
           </FadeIn>
-          <div className="features">
+          <div className="text-sm [&>*]:my-3.5 [&>*]:font-medium">
             {project.features.map((feature, index) => (
               <FadeIn key={`${project.title}-feature-${index}`}>📌{feature}</FadeIn>
             ))}
           </div>
           {project.urls.length > 0 ? (
-            <div className="urls">
+            <div className="flex flex-col gap-3 text-sm font-medium">
               {project.urls.map(({ name, url }, index) => (
                 <FadeIn key={`${project.title}-url-${index}`}>
                   🔗
                   <HoverMotion>
-                    <a href={url} target="_blank">
+                    <a href={url} target="_blank" className="p-1">
                       {name}
                     </a>
                   </HoverMotion>
@@ -57,91 +56,23 @@ export default function Project() {
               ))}
             </div>
           ) : null}
-          <FadeIn>{project.performance && <span className="feature-title">성과</span>}</FadeIn>
-          <div className="performance">
+          <FadeIn>{project.performance && <span className="font-bold">성과</span>}</FadeIn>
+          <div className="text-sm [&>*]:my-3.5 [&>*]:font-medium">
             {project.performance?.map((performance, index) => (
               <FadeIn key={`${project.title}-performance-${index}`}>🔥{performance}</FadeIn>
             ))}
           </div>
           <FadeIn>
-            <div className="skills">
+            <div className="flex items-center flex-wrap gap-2">
               {project.skills.map((skill, index) => (
-                <Badge key={`${project.title}-skill-${index}`} $text={skill}>
-                  {skill}
-                </Badge>
+                <Badge key={`${project.title}-skill-${index}`}>
+                                    {skill}
+                                </Badge>
               ))}
             </div>
           </FadeIn>
-        </ProjectLayout>
+        </div>
       ))}
     </>
   )
 }
-
-const ProjectLayout = styled.div`
-    .title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        h2 {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-        span {
-            font-weight: 500;
-            white-space: nowrap;
-        }
-    }
-    .summary {
-        font-size: 0.8rem;
-        & > * {
-            margin: 12px 0;
-        }
-    }
-    .feature-title {
-        font-weight: bold;
-    }
-    .features,
-    .performance {
-        font-size: 0.8rem;
-        & > * {
-            margin: 14px 0;
-            font-weight: 500;
-        }
-    }
-    .contribute {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        font-size: 0.7rem;
-        font-weight: 500;
-        opacity: 0.6;
-    }
-    .skills {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-    .urls {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        font-size: 0.8rem;
-        font-weight: 500;
-        p {
-            padding: 4px;
-        }
-    }
-    @media screen and (max-width: 1024px) {
-        .title {
-            flex-direction: column;
-            align-items: baseline;
-            gap: 8px;
-            flex-wrap: warp;
-            h2 {
-                white-space: normal;
-            }
-        }
-    }
-`

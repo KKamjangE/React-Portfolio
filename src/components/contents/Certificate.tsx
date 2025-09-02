@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import FadeIn from '@/components/ui/FadeIn.motion'
 import YellowPoint from '@/components/ui/YellowPoint'
 import certificates from '@/data/certificates'
@@ -7,31 +6,17 @@ export default function Certificate() {
   return (
     <>
       {certificates.map((certificate) => (
-        <CertificateLayout key={certificate.name}>
+        <div key={certificate.name} className="flex flex-col">
           <FadeIn>
-            <h2>
+            <h2 className="text-lg font-medium">
               <YellowPoint>{certificate.name}</YellowPoint>
             </h2>
           </FadeIn>
           <FadeIn>
-            <div className="period">{certificate.period}</div>
+            <div className="text-xs font-medium opacity-60">{certificate.period}</div>
           </FadeIn>
-        </CertificateLayout>
+        </div>
       ))}
     </>
   )
 }
-
-const CertificateLayout = styled.div`
-    display: flex;
-    flex-direction: column;
-    h2 {
-        font-size: 1.2rem;
-        font-weight: 500;
-    }
-    .period {
-        font-size: 0.7rem;
-        font-weight: 500;
-        opacity: 0.6;
-    }
-`

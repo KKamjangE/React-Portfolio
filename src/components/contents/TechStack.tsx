@@ -1,7 +1,6 @@
 import { motion } from 'motion/react'
 import { Fragment } from 'react/jsx-runtime'
-import styled from 'styled-components'
-import { Badge } from '@/components/ui/Badge.styeld'
+import { Badge } from '@/components/ui/badge'
 import FadeIn from '@/components/ui/FadeIn.motion'
 
 export default function TechStack() {
@@ -25,81 +24,37 @@ export default function TechStack() {
   ]
 
   return (
-    <SkillsLayout>
+    <div>
       {Object.entries(skills).map(([category, skills]) => (
         <Fragment key={category}>
           <FadeIn>
-            <h2>{category}</h2>
+            <h2 className="text-3xl font-bold max-lg:text-2xl">{category}</h2>
           </FadeIn>
           {skills.map(({ name, level }) => (
             <FadeIn key={name}>
-              <div className="skill">
-                <span>{name}</span>
-                <span>{level}%</span>
+              <div className="flex justify-between mb-1.5">
+                <span className="text-xl max-lg:text-base">{name}</span>
+                <span className="text-xl max-lg:text-base">{level}%</span>
               </div>
-              <div className="progress">
+              <div className="bg-gray-300 rounded-2xl">
                 <motion.div
                   initial={{ width: 0 }}
                   transition={{ duration: 1, delay: 0.3, ease: 'easeInOut' }}
                   whileInView={{ width: `${level}%` }}
                   viewport={{ once: true }}
-                  className="progress-bar"
+                  className="h-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl max-lg:h-2.5"
                 />
               </div>
             </FadeIn>
           ))}
         </Fragment>
       ))}
-      <h2>FrontEnd Libraries</h2>
-      <div className="badges">
+      <h2 className="text-3xl font-bold max-lg:text-2xl">FrontEnd Libraries</h2>
+      <div className="flex flex-wrap gap-3.5">
         {frontEndLibraries.map((badge) => (
-          <Badge key={badge} $text={badge}>
-            {badge}
-          </Badge>
+          <Badge key={badge}>{badge}</Badge>
         ))}
       </div>
-    </SkillsLayout>
+    </div>
   )
 }
-
-const SkillsLayout = styled.div`
-    h2 {
-        font-size: 32px;
-        font-weight: bold;
-    }
-    span {
-        font-size: 20px;
-    }
-    .skill {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 5px;
-    }
-    .progress {
-        background-color: #d1d5db;
-        border-radius: 16px;
-        .progress-bar {
-            height: 16px;
-            background: linear-gradient(0.25turn, #3b82f6, #6366f1);
-            border-radius: 16px;
-        }
-    }
-    .badges {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 14px;
-    }
-    @media screen and (max-width: 1024px) {
-        .progress-bar {
-            height: 10px;
-        }
-    }
-    @media screen and (max-width: 1024px) {
-        h2 {
-            font-size: 28px;
-        }
-        span {
-            font-size: 16px;
-        }
-    }
-`

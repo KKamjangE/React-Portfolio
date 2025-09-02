@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import clsx from 'clsx'
 import YellowPoint from './YellowPoint'
 
 export default function HoverMotion({
@@ -9,21 +9,14 @@ export default function HoverMotion({
   isNav?: string
 }) {
   return (
-    <HoverMotionStyled $isnav={isNav}>
+    <div className={clsx(
+      'bg-gradient-to-r from-transparent from-50% to-[var(--color-accent-yellow)] to-50% bg-[position:0%_0%] bg-[length:200%_100%] transition-all duration-200 ease-in-out hover:bg-[position:-100%_0%]',
+      {
+        'p-2.5 block no-underline': isNav === 'nav',
+        'underline inline-block p-0': isNav !== 'nav',
+      }
+    )}>
       <YellowPoint>{children}</YellowPoint>
-    </HoverMotionStyled>
+    </div>
   )
 }
-
-const HoverMotionStyled = styled.div<{ $isnav?: string }>`
-    padding: ${(props) => (props.$isnav === 'nav' ? '10px' : '0')};
-    text-decoration: ${(props) => (props.$isnav === 'nav' ? 'none' : 'underline')};
-    display: ${(props) => (props.$isnav === 'nav' ? 'block' : 'inline-block')};
-    background: linear-gradient(to right, transparent 50%, var(--accent-yellow) 50%);
-    background-position: 0, 0;
-    background-size: 200%;
-    transition: 0.25s ease;
-    &:hover {
-        background-position: -100% 0;
-    }
-`

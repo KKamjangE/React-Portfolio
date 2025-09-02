@@ -1,14 +1,8 @@
-import styled from 'styled-components'
-
 export default function YellowPoint({ children }: { children: React.ReactNode }) {
   return (
-    <div>
+    <span>
       {children}
-      <YellowPointStyled>.</YellowPointStyled>
-    </div>
+      <span style={{ color: 'var(--color-accent-yellow)' }}>.</span>
+    </span>
   )
 }
-
-const YellowPointStyled = styled.span`
-    color: var(--accent-yellow);
-`

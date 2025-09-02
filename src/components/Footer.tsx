@@ -1,23 +1,7 @@
-import styled from 'styled-components'
-
 export default function Footer() {
-  return (
-    <FooterStyled>
-      <p>Copyright 2023. Anjemin all rights reserved.</p>
-    </FooterStyled>
-  )
+    return (
+        <footer className="flex flex-col items-center justify-center gap-4 bg-light-gray py-8 pt-[300px] pb-[100px] text-center text-sm text-gray-500 dark:bg-gray-950 dark:text-gray-400 md:pt-[150px]">
+            <p className="text-[0.6rem] opacity-40">Copyright 2023. Anjemin all rights reserved.</p>
+        </footer>
+    )
 }
-
-const FooterStyled = styled.footer`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 300px 0 100px;
-    p {
-        font-size: 0.6rem;
-        opacity: 0.4;
-    }
-    @media screen and (max-width: 1024px) {
-        padding-top: 150px;
-    }
-`

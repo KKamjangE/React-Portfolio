@@ -1,5 +1,4 @@
 import { motion } from 'motion/react'
-import styled from 'styled-components'
 import upArrow from '@/assets/up-arrow.svg'
 import FadeIn from '@/components/ui/FadeIn.motion'
 
@@ -9,60 +8,21 @@ export default function ScrollTopBtn() {
   }
 
   return (
-    <ScrollTopBtnStyled>
+    <div className="flex justify-center items-center fixed bottom-[50px] right-[50px] max-lg:bottom-[20px] max-lg:right-[20px] cursor-pointer">
       <FadeIn>
         <motion.button
           onClick={scrollToTop}
           whileHover={{ backgroundColor: '#ffffff', scale: 1.1 }}
           transition={{
-            // type: 'spring',
             duration: 0.1,
             stiffness: 800,
             damping: 17,
           }}
+          className="w-[70px] h-[70px] border-0 rounded-[28px] bg-[var(--color-light-gray)] shadow-[3px_10px_20px_rgba(0,0,0,0.4)] max-lg:w-[50px] max-lg:h-[50px] max-lg:rounded-[20px] max-md:w-[40px] max-md:h-[40px] max-md:rounded-[16px]"
         >
-          <img src={upArrow} alt="위쪽 화살표" />
+          <img src={upArrow} alt="위쪽 화살표" className="max-md:w-[20px]" />
         </motion.button>
       </FadeIn>
-    </ScrollTopBtnStyled>
+    </div>
   )
 }
-
-const ScrollTopBtnStyled = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    :hover {
-        cursor: pointer;
-    }
-    button {
-        width: 70px;
-        height: 70px;
-        border: 0;
-        border-radius: 28px;
-        background-color: var(--bg-light-gray);
-        box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.4);
-    }
-    @media screen and (max-width: 1024px) {
-        bottom: 20px;
-        right: 20px;
-        button {
-            width: 50px;
-            height: 50px;
-            border-radius: 20px;
-        }
-    }
-    @media screen and (max-width: 768px) {
-        button {
-            width: 40px;
-            height: 40px;
-            border-radius: 16px;
-            img {
-                width: 20px;
-            }
-        }
-    }
-`

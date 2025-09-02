@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-import { Badge } from '@/components/ui/Badge.styeld'
+import { Badge } from '@/components/ui/badge'
 import FadeIn from '@/components/ui/FadeIn.motion'
 import YellowPoint from '@/components/ui/YellowPoint'
 import careers from '@/data/careers'
@@ -8,23 +7,23 @@ export default function Career() {
   return (
     <>
       {careers.map((career) => (
-        <CareerLayout key={career.company}>
+        <div key={career.company} className="flex flex-col gap-6">
           <FadeIn>
-            <h2 className="title">
+            <h2 className="text-lg font-bold">
               <YellowPoint>{career.company}</YellowPoint>
             </h2>
           </FadeIn>
-          <div className="work-experience">
+          <div className="flex flex-col gap-2 text-xs font-medium opacity-60">
             <FadeIn>
-              <div className="team-role">
+              <div className="flex items-center gap-3">
                 <span>{career.team}</span>
-                <span className="circle" />
+                <span className="block w-[6px] h-[6px] bg-black rounded-full" />
                 <span>{career.position}</span>
               </div>
             </FadeIn>
             <FadeIn>{career.period}</FadeIn>
           </div>
-          <div className="summary">
+          <div className="text-sm whitespace-normal [&>*]:my-3">
             {career.summary.map((sum, index) => (
               <FadeIn key={`${career.company}-summary-${index}`}>
                 <span>{sum}</span>
@@ -32,94 +31,33 @@ export default function Career() {
             ))}
           </div>
           <FadeIn>
-            <span className="project-title">진행 프로젝트</span>
+            <span className="font-bold">진행 프로젝트</span>
           </FadeIn>
-          <div className="project">
+          <div className="flex flex-col gap-3.5">
             {career.projects.map((project) => (
               <div key={project.title}>
                 <FadeIn>
-                  <h3>🌐{project.title}</h3>
+                  <h3 className="text-sm font-medium">🌐{project.title}</h3>
                 </FadeIn>
                 {project.summary.map((sum, sumIndex) => (
                   <FadeIn key={`${project.title}-summary-${sumIndex}`}>
-                    <span>{sum}</span>
+                    <span className="block my-2 text-xs opacity-60">{sum}</span>
                   </FadeIn>
                 ))}
               </div>
             ))}
           </div>
           <FadeIn>
-            <div className="skills">
+            <div className="flex items-center flex-wrap gap-2">
               {career.skills.map((skill) => (
-                <Badge key={`${career.company}-skill-${skill}`} $text={skill}>
-                  {skill}
-                </Badge>
+                <Badge key={`${career.company}-skill-${skill}`}>
+                                    {skill}
+                                </Badge>
               ))}
             </div>
           </FadeIn>
-        </CareerLayout>
+        </div>
       ))}
     </>
   )
 }
-
-const CareerLayout = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    .title {
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
-    .work-experience {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        font-size: 0.7rem;
-        font-weight: 500;
-        opacity: 0.6;
-        .team-role {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            .circle {
-                display: block;
-                border-radius: 50px;
-                background-color: #000;
-                width: 6px;
-                height: 6px;
-            }
-        }
-    }
-    .summary {
-        font-size: 0.8rem;
-        white-space: normal;
-        & > * {
-            margin: 12px 0;
-        }
-    }
-    .project-title {
-        font-weight: bold;
-    }
-    .project {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        h3 {
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-        span {
-            display: block;
-            margin: 8px 0;
-            font-size: 0.7rem;
-            opacity: 0.6;
-        }
-    }
-    .skills {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-`
