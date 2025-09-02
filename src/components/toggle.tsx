@@ -1,21 +1,21 @@
-import styled from 'styled-components'
 import { motion } from 'motion/react'
+import styled from 'styled-components'
 
 interface ToggleProps {
-    isOpen: boolean
-    onToggle: () => void
+  isOpen: boolean
+  onToggle: () => void
 }
 
 export default function Toggle({ isOpen, onToggle }: ToggleProps) {
-    return (
-        <ToggleStyled $isOpen={isOpen}>
-            <button className="toggle" onClick={onToggle}>
-                <Line $isOpen={isOpen} $position="top" />
-                <Line $isOpen={isOpen} $position="middle" />
-                <Line $isOpen={isOpen} $position="bottom" />
-            </button>
-        </ToggleStyled>
-    )
+  return (
+    <ToggleStyled $isOpen={isOpen}>
+      <button className="toggle" onClick={onToggle} type="button">
+        <Line $isOpen={isOpen} $position="top" />
+        <Line $isOpen={isOpen} $position="middle" />
+        <Line $isOpen={isOpen} $position="bottom" />
+      </button>
+    </ToggleStyled>
+  )
 }
 
 const ToggleStyled = styled(motion.div)<{ $isOpen: boolean }>`
@@ -46,8 +46,8 @@ const ToggleStyled = styled(motion.div)<{ $isOpen: boolean }>`
 `
 
 interface LineProps {
-    $isOpen: boolean
-    $position: 'top' | 'middle' | 'bottom'
+  $isOpen: boolean
+  $position: 'top' | 'middle' | 'bottom'
 }
 
 const Line = styled.span<LineProps>`
@@ -57,14 +57,14 @@ const Line = styled.span<LineProps>`
     background-color: ${({ $isOpen }) => ($isOpen ? 'var(--text-white)' : 'var(--text-black)')};
     transition: all 0.3s ease-in-out;
     ${({ $isOpen, $position }) => {
-        if ($position === 'top') {
-            return $isOpen ? 'transform: rotate(45deg) translate(5px, 6px)' : ''
-        }
-        if ($position === 'middle') {
-            return $isOpen ? 'opacity: 0' : ''
-        }
-        if ($position === 'bottom') {
-            return $isOpen ? 'transform: rotate(-45deg) translate(5px, -6px)' : ''
-        }
+      if ($position === 'top') {
+        return $isOpen ? 'transform: rotate(45deg) translate(5px, 6px)' : ''
+      }
+      if ($position === 'middle') {
+        return $isOpen ? 'opacity: 0' : ''
+      }
+      if ($position === 'bottom') {
+        return $isOpen ? 'transform: rotate(-45deg) translate(5px, -6px)' : ''
+      }
     }};
 `

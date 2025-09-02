@@ -1,63 +1,65 @@
-import { Badge } from '@/components/ui/Badge.styeld'
-import FadeIn from '@/components/ui/FadeIn.motion'
 import { motion } from 'motion/react'
 import { Fragment } from 'react/jsx-runtime'
 import styled from 'styled-components'
+import { Badge } from '@/components/ui/Badge.styeld'
+import FadeIn from '@/components/ui/FadeIn.motion'
 
 export default function TechStack() {
-    const skills = {
-        'FrontEnd Core': [
-            { name: 'TypeScript', level: 85 },
-            { name: 'React', level: 90 },
-            { name: 'Next.js', level: 60 },
-        ],
-    }
+  const skills = {
+    'FrontEnd Core': [
+      { name: 'TypeScript', level: 85 },
+      { name: 'React', level: 90 },
+      { name: 'Next.js', level: 60 },
+    ],
+  }
 
-    const frontEndLibraries = [
-        'tanstack-Query',
-        'zustand',
-        'react-hook-form',
-        'formik',
-        'zod',
-        'yup',
-        'tailwind CSS',
-        'MUI',
-    ]
+  const frontEndLibraries = [
+    'tanstack-Query',
+    'zustand',
+    'react-hook-form',
+    'formik',
+    'zod',
+    'yup',
+    'tailwind CSS',
+    'MUI',
+  ]
 
-    return (
-        <SkillsLayout>
-            {Object.entries(skills).map(([category, skills]) => (
-                <Fragment key={category}>
-                    <FadeIn>
-                        <h2>{category}</h2>
-                    </FadeIn>
-                    {skills.map(({ name, level }, index) => (
-                        <FadeIn key={index}>
-                            <div className="skill">
-                                <span>{name}</span>
-                                <span>{level}%</span>
-                            </div>
-                            <div className="progress">
-                                <motion.div
-                                    initial={{ width: 0 }}
-                                    transition={{ duration: 1, delay: 0.3, ease: 'easeInOut' }}
-                                    whileInView={{ width: `${level}%` }}
-                                    viewport={{ once: true }}
-                                    className="progress-bar"
-                                />
-                            </div>
-                        </FadeIn>
-                    ))}
-                </Fragment>
-            ))}
-            <h2>FrontEnd Libraries</h2>
-            <div className="badges">
-                {frontEndLibraries.map((badge) => (
-                    <Badge $text={badge}>{badge}</Badge>
-                ))}
-            </div>
-        </SkillsLayout>
-    )
+  return (
+    <SkillsLayout>
+      {Object.entries(skills).map(([category, skills]) => (
+        <Fragment key={category}>
+          <FadeIn>
+            <h2>{category}</h2>
+          </FadeIn>
+          {skills.map(({ name, level }) => (
+            <FadeIn key={name}>
+              <div className="skill">
+                <span>{name}</span>
+                <span>{level}%</span>
+              </div>
+              <div className="progress">
+                <motion.div
+                  initial={{ width: 0 }}
+                  transition={{ duration: 1, delay: 0.3, ease: 'easeInOut' }}
+                  whileInView={{ width: `${level}%` }}
+                  viewport={{ once: true }}
+                  className="progress-bar"
+                />
+              </div>
+            </FadeIn>
+          ))}
+        </Fragment>
+      ))}
+      <h2>FrontEnd Libraries</h2>
+      <div className="badges">
+        {frontEndLibraries.map((badge) => (
+          <Badge key={badge} $text={badge}>
+            {badge}
+          </Badge>
+        ))}
+      </div>
+    </SkillsLayout>
+  )
 }
 
 const SkillsLayout = styled.div`

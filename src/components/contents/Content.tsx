@@ -1,78 +1,98 @@
-import { useEffect, useRef } from 'react'
-import Project from '@/components/contents/Project'
-import Career from '@/components/contents/Career'
-import Education from '@/components/contents/Education'
-import useSetRefOffsetList from '@/hooks/useSetRefOffsetList'
-import React from 'react'
-import YellowPoint from '@/components/ui/YellowPoint'
-import FadeIn from '@/components/ui/FadeIn.motion'
-import styled from 'styled-components'
 import { debounce } from 'es-toolkit'
+import type React from 'react'
+import { useEffect, useRef } from 'react'
+import styled from 'styled-components'
+import Career from '@/components/contents/Career'
 import Certificate from '@/components/contents/Certificate'
+import Education from '@/components/contents/Education'
+import Project from '@/components/contents/Project'
 import TechStack from '@/components/contents/TechStack'
+import FadeIn from '@/components/ui/FadeIn.motion'
+import YellowPoint from '@/components/ui/YellowPoint'
+import useSetRefOffsetList from '@/hooks/useSetRefOffsetList'
 
 export default function Content() {
-    const elementRefs = useRef<HTMLElement[]>([])
-    const { setRefOffsetList } = useSetRefOffsetList()
+  const elementRefs = useRef<HTMLElement[]>([])
+  const { setRefOffsetList } = useSetRefOffsetList()
 
-    useEffect(() => {
-        setRefOffsetList(elementRefs)
+  useEffect(() => {
+    setRefOffsetList(elementRefs)
 
-        const onResize = debounce(() => setRefOffsetList(elementRefs), 500)
+    const onResize = debounce(() => setRefOffsetList(elementRefs), 500)
 
-        window.addEventListener('resize', onResize)
+    window.addEventListener('resize', onResize)
 
-        return () => {
-            window.removeEventListener('resize', onResize)
-            onResize.cancel()
-        }
-    }, [setRefOffsetList])
+    return () => {
+      window.removeEventListener('resize', onResize)
+      onResize.cancel()
+    }
+  }, [setRefOffsetList])
 
-    return (
-        <>
-            <SectionStyled ref={(ref) => (ref ? (elementRefs.current[0] = ref) : null)}>
-                <ContentLayout title="Career">
-                    <Career />
-                </ContentLayout>
-            </SectionStyled>
-            <SectionStyled ref={(ref) => (ref ? (elementRefs.current[1] = ref) : null)}>
-                <ContentLayout title="TechStack">
-                    <TechStack />
-                </ContentLayout>
-            </SectionStyled>
-            <SectionStyled ref={(ref) => (ref ? (elementRefs.current[2] = ref) : null)}>
-                <ContentLayout title="Project">
-                    <Project />
-                </ContentLayout>
-            </SectionStyled>
-            <SectionStyled ref={(ref) => (ref ? (elementRefs.current[3] = ref) : null)}>
-                <ContentLayout title="Education">
-                    <Education />
-                </ContentLayout>
-            </SectionStyled>
-            <SectionStyled ref={(ref) => (ref ? (elementRefs.current[4] = ref) : null)}>
-                <ContentLayout title="Certificate">
-                    <Certificate />
-                </ContentLayout>
-            </SectionStyled>
-        </>
-    )
+  return (
+    <>
+      <SectionStyled
+        ref={(ref) => {
+          if (ref) elementRefs.current[0] = ref
+        }}
+      >
+        <ContentLayout title="Career">
+          <Career />
+        </ContentLayout>
+      </SectionStyled>
+      <SectionStyled
+        ref={(ref) => {
+          if (ref) elementRefs.current[1] = ref
+        }}
+      >
+        <ContentLayout title="TechStack">
+          <TechStack />
+        </ContentLayout>
+      </SectionStyled>
+      <SectionStyled
+        ref={(ref) => {
+          if (ref) elementRefs.current[2] = ref
+        }}
+      >
+        <ContentLayout title="Project">
+          <Project />
+        </ContentLayout>
+      </SectionStyled>
+      <SectionStyled
+        ref={(ref) => {
+          if (ref) elementRefs.current[3] = ref
+        }}
+      >
+        <ContentLayout title="Education">
+          <Education />
+        </ContentLayout>
+      </SectionStyled>
+      <SectionStyled
+        ref={(ref) => {
+          if (ref) elementRefs.current[4] = ref
+        }}
+      >
+        <ContentLayout title="Certificate">
+          <Certificate />
+        </ContentLayout>
+      </SectionStyled>
+    </>
+  )
 }
 
 function ContentLayout({ children, title }: { children: React.ReactNode; title: string }) {
-    return (
-        <>
-            <FadeIn>
-                <h1>
-                    <YellowPoint>{title}</YellowPoint>
-                </h1>
-            </FadeIn>
-            <FadeIn>
-                <hr />
-            </FadeIn>
-            <div className="content">{children}</div>
-        </>
-    )
+  return (
+    <>
+      <FadeIn>
+        <h1>
+          <YellowPoint>{title}</YellowPoint>
+        </h1>
+      </FadeIn>
+      <FadeIn>
+        <hr />
+      </FadeIn>
+      <div className="content">{children}</div>
+    </>
+  )
 }
 
 const SectionStyled = styled.section`

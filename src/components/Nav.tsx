@@ -1,66 +1,64 @@
+import styled from 'styled-components'
 import FadeIn from '@/components/ui/FadeIn.motion'
 import HoverMotion from '@/components/ui/HoverMotion'
 import useCurrViewContentNum from '@/hooks/useCurrViewContNum'
 import useGetRefOffsetList from '@/hooks/useGetRefOffsetList'
 import useMediaQuery from '@/hooks/useMediaQuery'
-import styled from 'styled-components'
 
 const navList = ['Career', 'TechStack', 'Project', 'Education', 'Certificate']
 
 interface NavProps {
-    isOpen: boolean
-    onCloseToggle: () => void
+  isOpen: boolean
+  onCloseToggle: () => void
 }
 
 export default function Nav({ isOpen, onCloseToggle }: NavProps) {
-    const refOffsetList = useGetRefOffsetList()
-    const { currViewContentNum } = useCurrViewContentNum()
-    const isTablet = useMediaQuery('(max-width: 1024px)')
+  const refOffsetList = useGetRefOffsetList()
+  const { currViewContentNum } = useCurrViewContentNum()
+  const isTablet = useMediaQuery('(max-width: 1024px)')
 
-    const moveToElement = (index: number) => {
-        onCloseToggle()
-        requestAnimationFrame(() => {
-            window.scrollTo({
-                top: refOffsetList[index].top + 1,
-                behavior: isTablet ? 'auto' : 'smooth',
-            })
-        })
-    }
+  const moveToElement = (index: number) => {
+    onCloseToggle()
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: refOffsetList[index].top + 1,
+        behavior: isTablet ? 'auto' : 'smooth',
+      })
+    })
+  }
 
-    return (
-        <NavLayout $isOpen={isOpen}>
-            <FadeIn>
-                <ul className="nav-list">
-                    {navList.map((nav, index) => (
-                        <li
-                            key={index}
-                            data-view={index === currViewContentNum}
-                            onClick={() => moveToElement(index)}
-                        >
-                            <HoverMotion isNav={'nav'}>{nav}</HoverMotion>
-                        </li>
-                    ))}
-                </ul>
-            </FadeIn>
-            <FadeIn>
-                <div className="contact">
-                    <a href="https://www.linkedin.com/in/kkamjange/" target="_blank">
-                        LinkedIn
-                    </a>
-                    <a href="https://velog.io/@ajm0718/posts" target="_blank">
-                        Velog
-                    </a>
-                    <a href="https://github.com/KKamjangE" target="_blank">
-                        Github
-                    </a>
-                    <a href="mailto:ajm980718@gmail.com" className="email">
-                        ajm980718@gmail.com
-                    </a>
-                    <p className="update-info">Last Update: 2025/04</p>
-                </div>
-            </FadeIn>
-        </NavLayout>
-    )
+  return (
+    <NavLayout $isOpen={isOpen}>
+      <FadeIn>
+        <ul className="nav-list">
+          {navList.map((nav, index) => (
+            <li key={nav} data-view={index === currViewContentNum}>
+              <button type="button" onClick={() => moveToElement(index)}>
+                <HoverMotion isNav={'nav'}>{nav}</HoverMotion>
+              </button>
+            </li>
+          ))}
+        </ul>
+      </FadeIn>
+      <FadeIn>
+        <div className="contact">
+          <a href="https://www.linkedin.com/in/kkamjange/" target="_blank" rel="noopener">
+            LinkedIn
+          </a>
+          <a href="https://velog.io/@ajm0718/posts" target="_blank" rel="noopener">
+            Velog
+          </a>
+          <a href="https://github.com/KKamjangE" target="_blank" rel="noopener">
+            Github
+          </a>
+          <a href="mailto:ajm980718@gmail.com" className="email">
+            ajm980718@gmail.com
+          </a>
+          <p className="update-info">Last Update: 2025/04</p>
+        </div>
+      </FadeIn>
+    </NavLayout>
+  )
 }
 
 const NavLayout = styled.nav<{ $isOpen: boolean }>`
@@ -84,6 +82,9 @@ const NavLayout = styled.nav<{ $isOpen: boolean }>`
             font-size: 1.4rem;
             font-weight: 500;
             cursor: pointer;
+            button {
+                all: unset; // reset button style
+            }
         }
         li[data-view='true'] {
             color: rgba(255, 255, 255, 0.5);

@@ -1,66 +1,66 @@
-import FadeIn from '@/components/ui/FadeIn.motion'
+import styled from 'styled-components'
 import { Badge } from '@/components/ui/Badge.styeld'
+import FadeIn from '@/components/ui/FadeIn.motion'
 import YellowPoint from '@/components/ui/YellowPoint'
 import careers from '@/data/careers'
-import styled from 'styled-components'
 
 export default function Career() {
-    return (
-        <>
-            {careers.map((career, idx) => (
-                <CareerLayout key={idx}>
-                    <FadeIn>
-                        <h2 className="title">
-                            <YellowPoint>{career.company}</YellowPoint>
-                        </h2>
-                    </FadeIn>
-                    <div className="work-experience">
-                        <FadeIn>
-                            <div className="team-role">
-                                <span>{career.team}</span>
-                                <span className="circle" />
-                                <span>{career.position}</span>
-                            </div>
-                        </FadeIn>
-                        <FadeIn>{career.period}</FadeIn>
-                    </div>
-                    <div className="summary">
-                        {career.summary.map((sum, index) => (
-                            <FadeIn key={index}>
-                                <span>{sum}</span>
-                            </FadeIn>
-                        ))}
-                    </div>
-                    <FadeIn>
-                        <span className="project-title">진행 프로젝트</span>
-                    </FadeIn>
-                    <div className="project">
-                        {career.projects.map((project, index) => (
-                            <div key={index}>
-                                <FadeIn>
-                                    <h3>🌐{project.title}</h3>
-                                </FadeIn>
-                                {project.summary.map((sum, sumIndex) => (
-                                    <FadeIn key={sumIndex}>
-                                        <span>{sum}</span>
-                                    </FadeIn>
-                                ))}
-                            </div>
-                        ))}
-                    </div>
-                    <FadeIn>
-                        <div className="skills">
-                            {career.skills.map((skill, index) => (
-                                <Badge key={index} $text={skill}>
-                                    {skill}
-                                </Badge>
-                            ))}
-                        </div>
-                    </FadeIn>
-                </CareerLayout>
+  return (
+    <>
+      {careers.map((career) => (
+        <CareerLayout key={career.company}>
+          <FadeIn>
+            <h2 className="title">
+              <YellowPoint>{career.company}</YellowPoint>
+            </h2>
+          </FadeIn>
+          <div className="work-experience">
+            <FadeIn>
+              <div className="team-role">
+                <span>{career.team}</span>
+                <span className="circle" />
+                <span>{career.position}</span>
+              </div>
+            </FadeIn>
+            <FadeIn>{career.period}</FadeIn>
+          </div>
+          <div className="summary">
+            {career.summary.map((sum, index) => (
+              <FadeIn key={`${career.company}-summary-${index}`}>
+                <span>{sum}</span>
+              </FadeIn>
             ))}
-        </>
-    )
+          </div>
+          <FadeIn>
+            <span className="project-title">진행 프로젝트</span>
+          </FadeIn>
+          <div className="project">
+            {career.projects.map((project) => (
+              <div key={project.title}>
+                <FadeIn>
+                  <h3>🌐{project.title}</h3>
+                </FadeIn>
+                {project.summary.map((sum, sumIndex) => (
+                  <FadeIn key={`${project.title}-summary-${sumIndex}`}>
+                    <span>{sum}</span>
+                  </FadeIn>
+                ))}
+              </div>
+            ))}
+          </div>
+          <FadeIn>
+            <div className="skills">
+              {career.skills.map((skill) => (
+                <Badge key={`${career.company}-skill-${skill}`} $text={skill}>
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </FadeIn>
+        </CareerLayout>
+      ))}
+    </>
+  )
 }
 
 const CareerLayout = styled.div`

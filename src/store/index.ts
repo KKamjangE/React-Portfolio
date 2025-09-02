@@ -1,15 +1,15 @@
-import { configureStore, combineReducers } from '@reduxjs/toolkit'
-import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux'
+import { combineReducers, configureStore } from '@reduxjs/toolkit'
+import { type TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 import { RefOffsetListStateReducer } from '@/store/RefTopStateSlice'
 
 // 루트 리듀서
 const rootReducer = combineReducers({
-    RefOffsetListStateReducer,
+  RefOffsetListStateReducer,
 })
 
 // 스토어
 export const store = configureStore({
-    reducer: rootReducer,
+  reducer: rootReducer,
 })
 
 export type RootState = ReturnType<typeof store.getState> // 스토어의 루트 상태 타입

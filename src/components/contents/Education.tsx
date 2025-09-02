@@ -1,32 +1,32 @@
+import styled from 'styled-components'
 import FadeIn from '@/components/ui/FadeIn.motion'
 import YellowPoint from '@/components/ui/YellowPoint'
 import educations from '@/data/educations'
-import styled from 'styled-components'
 
 export default function Education() {
-    return (
-        <>
-            {educations.map((education, idx) => (
-                <EducationLayout key={idx}>
-                    <FadeIn>
-                        <h2>
-                            <YellowPoint>{education.organization}</YellowPoint>
-                        </h2>
-                    </FadeIn>
-                    <FadeIn>
-                        <span className="period">{education.period}</span>
-                    </FadeIn>
-                    <FadeIn>
-                        <div className="summary">
-                            {education.summary.map((sum, index) => (
-                                <span key={index}>{sum}</span>
-                            ))}
-                        </div>
-                    </FadeIn>
-                </EducationLayout>
-            ))}
-        </>
-    )
+  return (
+    <>
+      {educations.map((education) => (
+        <EducationLayout key={education.organization}>
+          <FadeIn>
+            <h2>
+              <YellowPoint>{education.organization}</YellowPoint>
+            </h2>
+          </FadeIn>
+          <FadeIn>
+            <span className="period">{education.period}</span>
+          </FadeIn>
+          <FadeIn>
+            <div className="summary">
+              {education.summary.map((sum, index) => (
+                <span key={`${education.organization}-${index}`}>{sum}</span>
+              ))}
+            </div>
+          </FadeIn>
+        </EducationLayout>
+      ))}
+    </>
+  )
 }
 
 const EducationLayout = styled.div`

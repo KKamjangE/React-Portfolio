@@ -1,31 +1,31 @@
+import { motion } from 'motion/react'
 import styled from 'styled-components'
 import upArrow from '@/assets/up-arrow.svg'
-import { motion } from 'motion/react'
 import FadeIn from '@/components/ui/FadeIn.motion'
 
 export default function ScrollTopBtn() {
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-    }
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
-    return (
-        <ScrollTopBtnStyled>
-            <FadeIn>
-                <motion.button
-                    onClick={scrollToTop}
-                    whileHover={{ backgroundColor: '#ffffff', scale: 1.1 }}
-                    transition={{
-                        // type: 'spring',
-                        duration: 0.1,
-                        stiffness: 800,
-                        damping: 17,
-                    }}
-                >
-                    <img src={upArrow} alt="위쪽 화살표" />
-                </motion.button>
-            </FadeIn>
-        </ScrollTopBtnStyled>
-    )
+  return (
+    <ScrollTopBtnStyled>
+      <FadeIn>
+        <motion.button
+          onClick={scrollToTop}
+          whileHover={{ backgroundColor: '#ffffff', scale: 1.1 }}
+          transition={{
+            // type: 'spring',
+            duration: 0.1,
+            stiffness: 800,
+            damping: 17,
+          }}
+        >
+          <img src={upArrow} alt="위쪽 화살표" />
+        </motion.button>
+      </FadeIn>
+    </ScrollTopBtnStyled>
+  )
 }
 
 const ScrollTopBtnStyled = styled.div`

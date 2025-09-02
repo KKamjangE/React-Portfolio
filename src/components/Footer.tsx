@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 export default function Footer() {
-    return (
-        <FooterStyled>
-            <p>Copyright 2023. Anjemin all rights reserved.</p>
-        </FooterStyled>
-    )
+  return (
+    <FooterStyled>
+      <p>Copyright 2023. Anjemin all rights reserved.</p>
+    </FooterStyled>
+  )
 }
 
 const FooterStyled = styled.footer`

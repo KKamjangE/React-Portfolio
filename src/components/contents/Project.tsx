@@ -1,84 +1,81 @@
-import HoverMotion from '@/components/ui/HoverMotion'
+import styled from 'styled-components'
 import { Badge } from '@/components/ui/Badge.styeld'
+import FadeIn from '@/components/ui/FadeIn.motion'
+import HoverMotion from '@/components/ui/HoverMotion'
 import YellowPoint from '@/components/ui/YellowPoint'
 import projects from '@/data/projects'
-import styled from 'styled-components'
-import FadeIn from '@/components/ui/FadeIn.motion'
 
 export default function Project() {
-    return (
-        <>
-            {projects.map((project, idx) => (
-                <ProjectLayout key={idx}>
-                    <FadeIn>
-                        <div className="title">
-                            <h2>
-                                <YellowPoint>{project.title}</YellowPoint>
-                            </h2>
-                            <YellowPoint>
-                                <span>{project.affiliation}</span>
-                            </YellowPoint>
-                        </div>
-                    </FadeIn>
-                    <div className="contribute">
-                        <FadeIn>
-                            <span>{project.contributor}</span>
-                        </FadeIn>
-                        <FadeIn>
-                            <span>{project.period}</span>
-                        </FadeIn>
-                    </div>
-                    <div className="summary">
-                        {project.summary.map((item, index) => (
-                            <FadeIn key={index}>
-                                <span>{item}</span>
-                            </FadeIn>
-                        ))}
-                    </div>
-                    <FadeIn>
-                        <span className="feature-title">구현 기능</span>
-                    </FadeIn>
-                    <div className="features">
-                        {project.features.map((feature, index) => (
-                            <FadeIn key={index}>📌{feature}</FadeIn>
-                        ))}
-                    </div>
-                    {project.urls.length > 0 ? (
-                        <div className="urls">
-                            {project.urls.map(({ name, url }, index) => (
-                                <FadeIn key={index}>
-                                    🔗
-                                    <HoverMotion>
-                                        <a href={url} target="_blank">
-                                            {name}
-                                        </a>
-                                    </HoverMotion>
-                                </FadeIn>
-                            ))}
-                        </div>
-                    ) : null}
-                    <FadeIn>
-                        {project.performance && <span className="feature-title">성과</span>}
-                    </FadeIn>
-                    <div className="performance">
-                        {project.performance &&
-                            project.performance.map((performance, index) => (
-                                <FadeIn key={index}>🔥{performance}</FadeIn>
-                            ))}
-                    </div>
-                    <FadeIn>
-                        <div className="skills">
-                            {project.skills.map((skill, index) => (
-                                <Badge key={index} $text={skill}>
-                                    {skill}
-                                </Badge>
-                            ))}
-                        </div>
-                    </FadeIn>
-                </ProjectLayout>
+  return (
+    <>
+      {projects.map((project) => (
+        <ProjectLayout key={project.title}>
+          <FadeIn>
+            <div className="title">
+              <h2>
+                <YellowPoint>{project.title}</YellowPoint>
+              </h2>
+              <YellowPoint>
+                <span>{project.affiliation}</span>
+              </YellowPoint>
+            </div>
+          </FadeIn>
+          <div className="contribute">
+            <FadeIn>
+              <span>{project.contributor}</span>
+            </FadeIn>
+            <FadeIn>
+              <span>{project.period}</span>
+            </FadeIn>
+          </div>
+          <div className="summary">
+            {project.summary.map((item, index) => (
+              <FadeIn key={`${project.title}-summary-${index}`}>
+                <span>{item}</span>
+              </FadeIn>
             ))}
-        </>
-    )
+          </div>
+          <FadeIn>
+            <span className="feature-title">구현 기능</span>
+          </FadeIn>
+          <div className="features">
+            {project.features.map((feature, index) => (
+              <FadeIn key={`${project.title}-feature-${index}`}>📌{feature}</FadeIn>
+            ))}
+          </div>
+          {project.urls.length > 0 ? (
+            <div className="urls">
+              {project.urls.map(({ name, url }, index) => (
+                <FadeIn key={`${project.title}-url-${index}`}>
+                  🔗
+                  <HoverMotion>
+                    <a href={url} target="_blank">
+                      {name}
+                    </a>
+                  </HoverMotion>
+                </FadeIn>
+              ))}
+            </div>
+          ) : null}
+          <FadeIn>{project.performance && <span className="feature-title">성과</span>}</FadeIn>
+          <div className="performance">
+            {project.performance?.map((performance, index) => (
+              <FadeIn key={`${project.title}-performance-${index}`}>🔥{performance}</FadeIn>
+            ))}
+          </div>
+          <FadeIn>
+            <div className="skills">
+              {project.skills.map((skill, index) => (
+                <Badge key={`${project.title}-skill-${index}`} $text={skill}>
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </FadeIn>
+        </ProjectLayout>
+      ))}
+    </>
+  )
 }
 
 const ProjectLayout = styled.div`

@@ -1,9 +1,9 @@
-import styled from 'styled-components'
 import { motion, useScroll } from 'motion/react'
+import styled from 'styled-components'
 
 export default function ProgressBar() {
-    const { scrollYProgress } = useScroll()
-    return <ProgressBarStyled className="progress-bar" style={{ scaleX: scrollYProgress }} />
+  const { scrollYProgress } = useScroll()
+  return <ProgressBarStyled className="progress-bar" style={{ scaleX: scrollYProgress }} />
 }
 
 const ProgressBarStyled = styled(motion.div)`

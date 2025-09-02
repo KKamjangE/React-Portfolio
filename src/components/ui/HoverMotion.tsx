@@ -2,17 +2,17 @@ import styled from 'styled-components'
 import YellowPoint from './YellowPoint'
 
 export default function HoverMotion({
-    children,
-    isNav,
+  children,
+  isNav,
 }: {
-    children: React.ReactNode
-    isNav?: string
+  children: React.ReactNode
+  isNav?: string
 }) {
-    return (
-        <HoverMotionStyled $isnav={isNav}>
-            <YellowPoint>{children}</YellowPoint>
-        </HoverMotionStyled>
-    )
+  return (
+    <HoverMotionStyled $isnav={isNav}>
+      <YellowPoint>{children}</YellowPoint>
+    </HoverMotionStyled>
+  )
 }
 
 const HoverMotionStyled = styled.div<{ $isnav?: string }>`
