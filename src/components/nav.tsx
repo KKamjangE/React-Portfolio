@@ -1,8 +1,6 @@
 import clsx from "clsx";
 import FadeIn from "@/components/ui/fade-in.motion";
 import HoverMotion from "@/components/ui/hover-motion";
-import useCurrViewContentNum from "@/hooks/use-curr-view-cont-num";
-import useGetRefOffsetList from "@/hooks/use-get-ref-offset-list";
 import useMediaQuery from "@/hooks/use-media-query";
 
 const navList = ["Career", "TechStack", "Project", "Education", "Certificate"];
@@ -13,19 +11,7 @@ interface NavProps {
 }
 
 export default function Nav({ isOpen, onCloseToggle }: NavProps) {
-  const refOffsetList = useGetRefOffsetList();
-  const { currViewContentNum } = useCurrViewContentNum();
   const isTablet = useMediaQuery("(max-width: 1024px)");
-
-  const moveToElement = (index: number) => {
-    onCloseToggle();
-    requestAnimationFrame(() => {
-      window.scrollTo({
-        top: refOffsetList[index].top + 1,
-        behavior: isTablet ? "auto" : "smooth",
-      });
-    });
-  };
 
   return (
     <nav
@@ -41,9 +27,8 @@ export default function Nav({ isOpen, onCloseToggle }: NavProps) {
             <li
               key={nav}
               className="block text-white text-xl font-medium cursor-pointer data-[view=true]:text-white/50"
-              data-view={index === currViewContentNum}
             >
-              <button type="button" onClick={() => moveToElement(index)} className="unset-all">
+              <button type="button" className="unset-all">
                 <HoverMotion isNav={"nav"}>{nav}</HoverMotion>
               </button>
             </li>

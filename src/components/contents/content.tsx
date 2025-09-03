@@ -1,6 +1,5 @@
-import { debounce } from "es-toolkit";
 import type React from "react";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Career from "@/components/contents/career";
 import Certificate from "@/components/contents/certificate";
 import Education from "@/components/contents/education";
@@ -8,24 +7,9 @@ import Project from "@/components/contents/project";
 import TechStack from "@/components/contents/tech-stack";
 import FadeIn from "@/components/ui/fade-in.motion";
 import YellowPoint from "@/components/ui/yellow-point";
-import useSetRefOffsetList from "@/hooks/use-set-ref-offset-list";
 
 export default function Content() {
   const elementRefs = useRef<HTMLElement[]>([]);
-  const { setRefOffsetList } = useSetRefOffsetList();
-
-  useEffect(() => {
-    setRefOffsetList(elementRefs);
-
-    const onResize = debounce(() => setRefOffsetList(elementRefs), 500);
-
-    window.addEventListener("resize", onResize);
-
-    return () => {
-      window.removeEventListener("resize", onResize);
-      onResize.cancel();
-    };
-  }, [setRefOffsetList]);
 
   const sections = [
     { title: "Career", component: <Career /> },
@@ -45,14 +29,22 @@ export default function Content() {
           }}
           className="px-4 py-12 sm:px-8 md:px-12 lg:px-24"
         >
-          <ContentLayout title={section.title}>{section.component}</ContentLayout>
+          <ContentLayout title={section.title}>
+            {section.component}
+          </ContentLayout>
         </section>
       ))}
     </>
   );
 }
 
-function ContentLayout({ children, title }: { children: React.ReactNode; title: string }) {
+function ContentLayout({
+  children,
+  title,
+}: {
+  children: React.ReactNode;
+  title: string;
+}) {
   return (
     <>
       <FadeIn>
