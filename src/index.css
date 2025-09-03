@@ -11,11 +11,11 @@
   body {
     font-family: "Roboto", "Noto Sans KR", sans-serif;
     font-size: 24px;
-    background-color: theme(colors.light-gray);
-    color: theme(colors.black);
+    background-color: var(--color-light-gray);
+    color: var(--color-black);
   }
   a {
-    color: theme(colors.black);
+    color: var(--color-black);
     text-decoration: none;
   }
   button {

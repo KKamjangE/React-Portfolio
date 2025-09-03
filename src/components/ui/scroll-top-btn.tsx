@@ -1,18 +1,18 @@
-import { motion } from 'motion/react'
-import upArrow from '@/assets/up-arrow.svg'
-import FadeIn from '@/components/ui/fade-in.motion'
+import { motion } from "motion/react";
+import upArrow from "@/assets/up-arrow.svg";
+import FadeIn from "@/components/ui/fade-in.motion";
 
 export default function ScrollTopBtn() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div className="flex justify-center items-center fixed bottom-[50px] right-[50px] max-lg:bottom-[20px] max-lg:right-[20px] cursor-pointer">
       <FadeIn>
         <motion.button
           onClick={scrollToTop}
-          whileHover={{ backgroundColor: '#ffffff', scale: 1.1 }}
+          whileHover={{ backgroundColor: "#ffffff", scale: 1.1 }}
           transition={{
             duration: 0.1,
             stiffness: 800,
@@ -24,5 +24,5 @@ export default function ScrollTopBtn() {
         </motion.button>
       </FadeIn>
     </div>
-  )
+  );
 }

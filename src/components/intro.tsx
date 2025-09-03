@@ -1,46 +1,44 @@
-import downDoubleArrow from '@/assets/down-double-arrow.webp'
-import homeImage from '@/assets/home-img.webp'
-import FadeInDownContent from '@/components/ui/fade-in-down.motion'
+import downDoubleArrow from "@/assets/down-double-arrow.webp";
+import homeImage from "@/assets/home-img.webp";
+import FadeInDownContent from "@/components/ui/fade-in-down.motion";
 
 export default function Intro() {
-    const startDate = new Date('2023-09')
-    const today = new Date()
-    let years = today.getFullYear() - startDate.getFullYear()
-    if (startDate.getMonth() <= today.getMonth()) years++
-    return (
-        <section
-            className="h-screen bg-cover bg-center bg-fixed md:bg-scroll flex justify-center items-center"
-            style={{ backgroundImage: `url(${homeImage})` }}
-        >
-            <article className="relative text-white text-center">
-                <FadeInDownContent delayTime={0.5}>
-                    <p className="text-2xl font-semibold">기록과 소통을 좋아하는</p>
-                </FadeInDownContent>
-                <FadeInDownContent delayTime={0.8}>
-                    <p className="text-5xl font-bold my-16">
-                        <span className="underline decoration-accent-yellow underline-offset-8">
-                            안제민
-                        </span>
-                        입니다.
-                    </p>
-                </FadeInDownContent>
-                <FadeInDownContent delayTime={1.5}>
-                    <p className="text-xl font-medium leading-7 md:text-base">
-                        {years}년차 프론트엔드 개발자입니다.
-                        <br />
-                        경험을 기록하고 공유하는 것을 좋아합니다.
-                        <br />
-                        항상 원활한 커뮤니케이션을 위해 노력합니다.
-                    </p>
-                </FadeInDownContent>
-                <FadeInDownContent delayTime={2.1}>
-                    <img
-                        className="block absolute left-1/2 w-12 mt-24 -ml-6 animate-bounce"
-                        src={downDoubleArrow}
-                        alt="down arrow"
-                    />
-                </FadeInDownContent>
-            </article>
-        </section>
-    )
+  const startDate = new Date("2023-09");
+  const today = new Date();
+  let years = today.getFullYear() - startDate.getFullYear();
+  if (startDate.getMonth() <= today.getMonth()) years++;
+  return (
+    <section
+      className="h-screen bg-cover bg-center bg-fixed md:bg-scroll flex justify-center items-center"
+      style={{ backgroundImage: `url(${homeImage})` }}
+    >
+      <article className="relative text-white text-center">
+        <FadeInDownContent delayTime={0.5}>
+          <p className="text-2xl font-semibold">기록과 소통을 좋아하는</p>
+        </FadeInDownContent>
+        <FadeInDownContent delayTime={0.8}>
+          <p className="text-5xl font-bold my-16">
+            <span className="underline decoration-accent-yellow underline-offset-8">안제민</span>
+            입니다.
+          </p>
+        </FadeInDownContent>
+        <FadeInDownContent delayTime={1.5}>
+          <p className="text-xl font-medium leading-7 md:text-base">
+            {years}년차 프론트엔드 개발자입니다.
+            <br />
+            경험을 기록하고 공유하는 것을 좋아합니다.
+            <br />
+            항상 원활한 커뮤니케이션을 위해 노력합니다.
+          </p>
+        </FadeInDownContent>
+        <FadeInDownContent delayTime={2.1}>
+          <img
+            className="block absolute left-1/2 w-12 mt-24 -ml-6 animate-bounce"
+            src={downDoubleArrow}
+            alt="down arrow"
+          />
+        </FadeInDownContent>
+      </article>
+    </section>
+  );
 }

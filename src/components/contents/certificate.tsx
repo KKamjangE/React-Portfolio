@@ -1,6 +1,6 @@
-import FadeIn from '@/components/ui/fade-in.motion'
-import YellowPoint from '@/components/ui/yellow-point'
-import certificates from '@/data/certificates'
+import FadeIn from "@/components/ui/fade-in.motion";
+import YellowPoint from "@/components/ui/yellow-point";
+import certificates from "@/data/certificates";
 
 export default function Certificate() {
   return (
@@ -18,5 +18,5 @@ export default function Certificate() {
         </div>
       ))}
     </>
-  )
+  );
 }

@@ -21,8 +21,8 @@
     "formatter": {
       "arrowParentheses": "always",
       "bracketSpacing": true,
-      "quoteStyle": "single",
-      "semicolons": "asNeeded",
+      "quoteStyle": "double",
+      "semicolons": "always",
       "trailingCommas": "es5"
     }
   },

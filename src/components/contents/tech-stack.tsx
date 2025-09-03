@@ -1,27 +1,27 @@
-import { motion } from 'motion/react'
-import { Fragment } from 'react/jsx-runtime'
-import { Badge } from '@/components/ui/badge'
-import FadeIn from '@/components/ui/fade-in.motion'
+import { motion } from "motion/react";
+import { Fragment } from "react/jsx-runtime";
+import { Badge } from "@/components/ui/badge";
+import FadeIn from "@/components/ui/fade-in.motion";
 
 export default function TechStack() {
   const skills = {
-    'FrontEnd Core': [
-      { name: 'TypeScript', level: 85 },
-      { name: 'React', level: 90 },
-      { name: 'Next.js', level: 60 },
+    "FrontEnd Core": [
+      { name: "TypeScript", level: 85 },
+      { name: "React", level: 90 },
+      { name: "Next.js", level: 60 },
     ],
-  }
+  };
 
   const frontEndLibraries = [
-    'tanstack-Query',
-    'zustand',
-    'react-hook-form',
-    'formik',
-    'zod',
-    'yup',
-    'tailwind CSS',
-    'MUI',
-  ]
+    "tanstack-Query",
+    "zustand",
+    "react-hook-form",
+    "formik",
+    "zod",
+    "yup",
+    "tailwind CSS",
+    "MUI",
+  ];
 
   return (
     <div>
@@ -39,7 +39,7 @@ export default function TechStack() {
               <div className="bg-gray-300 rounded-2xl">
                 <motion.div
                   initial={{ width: 0 }}
-                  transition={{ duration: 1, delay: 0.3, ease: 'easeInOut' }}
+                  transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
                   whileInView={{ width: `${level}%` }}
                   viewport={{ once: true }}
                   className="h-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl max-lg:h-2.5"
@@ -56,5 +56,5 @@ export default function TechStack() {
         ))}
       </div>
     </div>
-  )
+  );
 }

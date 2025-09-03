@@ -1,8 +1,8 @@
-import { Badge } from '@/components/ui/badge'
-import FadeIn from '@/components/ui/fade-in.motion'
-import HoverMotion from '@/components/ui/hover-motion'
-import YellowPoint from '@/components/ui/yellow-point'
-import projects from '@/data/projects'
+import { Badge } from "@/components/ui/badge";
+import FadeIn from "@/components/ui/fade-in.motion";
+import HoverMotion from "@/components/ui/hover-motion";
+import YellowPoint from "@/components/ui/yellow-point";
+import projects from "@/data/projects";
 
 export default function Project() {
   return (
@@ -65,14 +65,12 @@ export default function Project() {
           <FadeIn>
             <div className="flex items-center flex-wrap gap-2">
               {project.skills.map((skill, index) => (
-                <Badge key={`${project.title}-skill-${index}`}>
-                                    {skill}
-                                </Badge>
+                <Badge key={`${project.title}-skill-${index}`}>{skill}</Badge>
               ))}
             </div>
           </FadeIn>
         </div>
       ))}
     </>
-  )
+  );
 }

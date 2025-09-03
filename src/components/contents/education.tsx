@@ -1,6 +1,6 @@
-import FadeIn from '@/components/ui/fade-in.motion'
-import YellowPoint from '@/components/ui/yellow-point'
-import educations from '@/data/educations'
+import FadeIn from "@/components/ui/fade-in.motion";
+import YellowPoint from "@/components/ui/yellow-point";
+import educations from "@/data/educations";
 
 export default function Education() {
   return (
@@ -25,5 +25,5 @@ export default function Education() {
         </div>
       ))}
     </>
-  )
+  );
 }

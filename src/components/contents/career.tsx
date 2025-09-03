@@ -1,7 +1,7 @@
-import { Badge } from '@/components/ui/badge'
-import FadeIn from '@/components/ui/fade-in.motion'
-import YellowPoint from '@/components/ui/yellow-point'
-import careers from '@/data/careers'
+import { Badge } from "@/components/ui/badge";
+import FadeIn from "@/components/ui/fade-in.motion";
+import YellowPoint from "@/components/ui/yellow-point";
+import careers from "@/data/careers";
 
 export default function Career() {
   return (
@@ -50,14 +50,12 @@ export default function Career() {
           <FadeIn>
             <div className="flex items-center flex-wrap gap-2">
               {career.skills.map((skill) => (
-                <Badge key={`${career.company}-skill-${skill}`}>
-                                    {skill}
-                                </Badge>
+                <Badge key={`${career.company}-skill-${skill}`}>{skill}</Badge>
               ))}
             </div>
           </FadeIn>
         </div>
       ))}
     </>
-  )
+  );
 }
