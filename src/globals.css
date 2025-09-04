@@ -3,39 +3,19 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "Pretendard Variable";
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  src: url(assets/fonts/PretendardVariable.woff2) format("woff2-variations");
+}
+
 @theme {
   --color-accent-yellow: #f8cd07;
   --color-dark-gray: #202224;
   --color-dark-gray-tablet: #202224d5;
   --color-light-gray: #f5f5f5;
-}
-
-@layer base {
-  body {
-    font-family: "Roboto", "Noto Sans KR", sans-serif;
-    font-size: 24px;
-    background-color: var(--color-light-gray);
-    color: var(--color-black);
-  }
-  a {
-    color: var(--color-black);
-    text-decoration: none;
-  }
-  button {
-    background: none;
-    border: 0;
-    cursor: pointer;
-  }
-  @media screen and (max-width: 1024px) {
-    body {
-      font-size: 20px;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    body {
-      font-size: 16px;
-    }
-  }
 }
 
 @theme inline {
@@ -151,5 +131,6 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "Pretendard Variable", sans-serif;
   }
 }

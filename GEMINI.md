@@ -7,5 +7,5 @@
 
 3. 기술 스택
 
-   - 스타일링: Tailwind CSS
+   - 스타일링: Tailwind CSS v4.1
    - UI 컴포넌트: Shadcn/ui
