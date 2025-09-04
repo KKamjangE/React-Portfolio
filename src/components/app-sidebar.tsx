@@ -7,6 +7,7 @@ import {
   SidebarSeparator,
   SidebarMenuItem,
   SidebarMenuButton,
+  SidebarGroup,
 } from "@/components/ui/sidebar";
 import {
   Home,
@@ -43,41 +44,47 @@ export default function AppSidebar() {
   return (
     <Sidebar side="left" collapsible="icon">
       <SidebarHeader className="p-4">
-        <h1 className="text-2xl font-bold">Portfolio</h1>
+        <h1 className="text-3xl text-muted font-bold">Portfolio</h1>
       </SidebarHeader>
-      <SidebarSeparator />
-      <SidebarContent className="flex-1 flex flex-col justify-between p-4">
-        <SidebarMenu>
-          {navItems.map((item) => (
-            <SidebarMenuItem key={item.label}>
-              <SidebarMenuButton
-                size="lg"
-                className="space-x-2 hover:cursor-pointer [&>svg]:size-5"
-              >
-                <>
-                  <item.icon />
-                  <span className="text-lg font-semibold">{item.label}</span>
-                </>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          ))}
-        </SidebarMenu>
+      <SidebarContent>
+        <SidebarGroup>
+          <SidebarMenu>
+            {navItems.map((item) => (
+              <SidebarMenuItem key={item.label}>
+                <SidebarMenuButton
+                  size="lg"
+                  className="space-x-2 hover:cursor-pointer [&>svg]:size-5 transition-colors"
+                >
+                  <>
+                    <item.icon />
+                    <span className="text-lg font-semibold">{item.label}</span>
+                  </>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            ))}
+          </SidebarMenu>
+        </SidebarGroup>
       </SidebarContent>
-      <SidebarSeparator />
-      <SidebarFooter className="p-4">
-        {socialLinks.map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:underline"
-          >
-            <link.icon className="size-4" />{" "}
-            <span className="font-semibold text-foreground">{link.label}</span>
-          </a>
-        ))}
-        <p className="text-muted-foreground text-sm">Last Update: 2025.09</p>
+      <SidebarFooter>
+        <SidebarGroup>
+          <SidebarMenu>
+            {socialLinks.map((link) => (
+              <SidebarMenuItem key={link.label}>
+                <a href={link.href} target="_blank" rel="noopener noreferrer">
+                  <span className="flex items-center gap-2 text-muted transition-all hover:underline hover:text-accent">
+                    <link.icon className="size-4" />
+                    {link.label}
+                  </span>
+                </a>
+              </SidebarMenuItem>
+            ))}
+            <SidebarMenuItem>
+              <p className="text-muted-foreground font-semibold text-sm">
+                Last Update: 2025.09
+              </p>
+            </SidebarMenuItem>
+          </SidebarMenu>
+        </SidebarGroup>
       </SidebarFooter>
     </Sidebar>
   );
