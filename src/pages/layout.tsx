@@ -1,3 +1,11 @@
+import { SidebarProvider } from "@/components/ui/sidebar";
+import AppSidebar from "@/components/app-sidebar";
+
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <div className="pl-[20vw] max-lg:pl-0">{children}</div>;
+  return (
+    <SidebarProvider defaultOpen={true}>
+      <AppSidebar />
+      <main className="flex-1">{children}</main>
+    </SidebarProvider>
+  );
 }
