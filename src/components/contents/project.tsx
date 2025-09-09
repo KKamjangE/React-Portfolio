@@ -15,7 +15,9 @@ export default function Project() {
                 <YellowPoint>{project.title}</YellowPoint>
               </h2>
               <YellowPoint>
-                <span className="font-medium whitespace-nowrap">{project.affiliation}</span>
+                <span className="font-medium whitespace-nowrap">
+                  {project.affiliation}
+                </span>
               </YellowPoint>
             </div>
           </FadeIn>
@@ -39,14 +41,15 @@ export default function Project() {
           </FadeIn>
           <div className="text-sm [&>*]:my-3.5 [&>*]:font-medium">
             {project.features.map((feature, index) => (
-              <FadeIn key={`${project.title}-feature-${index}`}>📌{feature}</FadeIn>
+              <FadeIn key={`${project.title}-feature-${index}`}>
+                {feature}
+              </FadeIn>
             ))}
           </div>
           {project.urls.length > 0 ? (
             <div className="flex flex-col gap-3 text-sm font-medium">
               {project.urls.map(({ name, url }, index) => (
                 <FadeIn key={`${project.title}-url-${index}`}>
-                  🔗
                   <HoverMotion>
                     <a href={url} target="_blank" className="p-1">
                       {name}
@@ -56,10 +59,14 @@ export default function Project() {
               ))}
             </div>
           ) : null}
-          <FadeIn>{project.performance && <span className="font-bold">성과</span>}</FadeIn>
+          <FadeIn>
+            {project.performance && <span className="font-bold">성과</span>}
+          </FadeIn>
           <div className="text-sm [&>*]:my-3.5 [&>*]:font-medium">
             {project.performance?.map((performance, index) => (
-              <FadeIn key={`${project.title}-performance-${index}`}>🔥{performance}</FadeIn>
+              <FadeIn key={`${project.title}-performance-${index}`}>
+                {performance}
+              </FadeIn>
             ))}
           </div>
           <FadeIn>

@@ -4,7 +4,7 @@ export default function ProgressBar() {
   const { scrollYProgress } = useScroll();
   return (
     <motion.div
-      className="fixed top-0 left-0 right-0 h-[5px] bg-[var(--color-accent-yellow)] origin-left"
+      className="fixed top-0 left-0 right-0 h-[5px] bg-accent origin-left"
       style={{ scaleX: scrollYProgress }}
     />
   );

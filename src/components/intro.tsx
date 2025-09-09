@@ -1,4 +1,4 @@
-import downDoubleArrow from "@/assets/down-double-arrow.webp";
+﻿import downDoubleArrow from "@/assets/down-double-arrow.webp";
 import homeImage from "@/assets/home-img.webp";
 import FadeInDownContent from "@/components/ui/fade-in-down.motion";
 
@@ -18,7 +18,9 @@ export default function Intro() {
         </FadeInDownContent>
         <FadeInDownContent delayTime={0.8}>
           <p className="text-5xl font-bold my-16">
-            <span className="underline decoration-accent-yellow underline-offset-8">안제민</span>
+            <span className="underline decoration-accent underline-offset-8">
+              안제민
+            </span>
             입니다.
           </p>
         </FadeInDownContent>

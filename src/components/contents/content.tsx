@@ -23,6 +23,7 @@ export default function Content() {
     <>
       {sections.map((section, index) => (
         <section
+          id={section.title.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase()}
           key={section.title}
           ref={(ref) => {
             if (ref) elementRefs.current[index] = ref;
@@ -53,7 +54,7 @@ function ContentLayout({
         </h1>
       </FadeIn>
       <FadeIn>
-        <hr className="my-8 h-1 border-0 bg-accent-yellow" />
+        <hr className="my-8 h-1 border-0 bg-accent" />
       </FadeIn>
       <div className="grid gap-10 md:gap-20">{children}</div>
     </>

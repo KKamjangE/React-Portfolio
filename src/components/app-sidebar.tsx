@@ -4,13 +4,11 @@ import {
   SidebarMenu,
   SidebarHeader,
   SidebarFooter,
-  SidebarSeparator,
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarGroup,
 } from "@/components/ui/sidebar";
 import {
-  Home,
   Briefcase,
   Code,
   BookOpen,
@@ -22,7 +20,6 @@ import {
 } from "lucide-react";
 
 const navItems = [
-  { label: "Home", href: "#home", icon: Home },
   { label: "Career", href: "#career", icon: Briefcase },
   { label: "TechStack", href: "#tech-stack", icon: Code },
   { label: "Project", href: "#project", icon: BookOpen },
@@ -54,11 +51,15 @@ export default function AppSidebar() {
                 <SidebarMenuButton
                   size="lg"
                   className="space-x-2 hover:cursor-pointer [&>svg]:size-5 transition-colors"
+                  onClick={() => {
+                    const element = document.querySelector(item.href);
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                 >
-                  <>
-                    <item.icon />
-                    <span className="text-lg font-semibold">{item.label}</span>
-                  </>
+                  <item.icon />
+                  <span className="text-lg font-semibold">{item.label}</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             ))}
