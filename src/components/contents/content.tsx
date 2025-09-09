@@ -10,18 +10,18 @@ export default function Content() {
   const elementRefs = useRef<HTMLElement[]>([]);
 
   const sections = [
-    { title: "Career", component: <Career /> },
-    { title: "Project", component: <Project /> },
-    { title: "Education", component: <Education /> },
-    { title: "Certificate", component: <Certificate /> },
+    { id: "career", title: "Career", component: <Career /> },
+    { id: "project", title: "Project", component: <Project /> },
+    { id: "education", title: "Education", component: <Education /> },
+    { id: "certificate", title: "Certificate", component: <Certificate /> },
   ];
 
   return (
     <>
       {sections.map((section, index) => (
         <section
-          id={section.title.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase()}
-          key={section.title}
+          id={section.id}
+          key={section.id}
           ref={(ref) => {
             if (ref) elementRefs.current[index] = ref;
           }}

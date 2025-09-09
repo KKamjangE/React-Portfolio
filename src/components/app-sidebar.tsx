@@ -40,11 +40,17 @@ export default function AppSidebar() {
               <SidebarMenuItem key={item.label}>
                 <SidebarMenuButton
                   size="lg"
+                  type="button"
                   className="space-x-2 hover:cursor-pointer [&>svg]:size-5 transition-colors"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
                     const element = document.querySelector(item.href);
                     if (element) {
-                      element.scrollIntoView({ behavior: "smooth" });
+                      (element as HTMLElement).scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                      window.history.pushState(null, "", item.href);
                     }
                   }}
                 >
