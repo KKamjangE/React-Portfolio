@@ -8,20 +8,10 @@ import {
   SidebarMenuButton,
   SidebarGroup,
 } from "@/components/ui/sidebar";
-import {
-  Briefcase,
-  Code,
-  BookOpen,
-  Award,
-  GraduationCap,
-  Github,
-  Linkedin,
-  Mail,
-} from "lucide-react";
+import { Briefcase, BookOpen, Award, GraduationCap, Github, Linkedin, Mail } from "lucide-react";
 
 const navItems = [
   { label: "Career", href: "#career", icon: Briefcase },
-  { label: "TechStack", href: "#tech-stack", icon: Code },
   { label: "Project", href: "#project", icon: BookOpen },
   { label: "Education", href: "#education", icon: GraduationCap },
   { label: "Certificate", href: "#certificate", icon: Award },

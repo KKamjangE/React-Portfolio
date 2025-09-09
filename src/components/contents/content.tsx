@@ -4,7 +4,6 @@ import Career from "@/components/contents/career";
 import Certificate from "@/components/contents/certificate";
 import Education from "@/components/contents/education";
 import Project from "@/components/contents/project";
-import TechStack from "@/components/contents/tech-stack";
  
 
 export default function Content() {
@@ -12,7 +11,6 @@ export default function Content() {
 
   const sections = [
     { title: "Career", component: <Career /> },
-    { title: "TechStack", component: <TechStack /> },
     { title: "Project", component: <Project /> },
     { title: "Education", component: <Education /> },
     { title: "Certificate", component: <Certificate /> },
