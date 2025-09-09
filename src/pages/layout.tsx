@@ -5,7 +5,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider defaultOpen={true}>
       <AppSidebar />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 bg-background">{children}</main>
     </SidebarProvider>
   );
 }

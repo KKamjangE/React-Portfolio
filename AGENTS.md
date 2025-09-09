@@ -35,8 +35,8 @@
 
 ## Commit & Pull Request Guidelines
 
-- 커밋 메시지: Conventional Commits 권장
-  - 예: `feat: add scroll-top button`, `fix: tooltip z-index`
+- 커밋 메시지: Conventional Commits 권장 (내용 한글로 작성)
+  - 예: `feat: scroll-top button 추가`, `fix: tooltip z-index`
 - 브랜치: `feature/…`, `fix/…`, `chore/…`.
 - PR 포함: 변경 요약, 동기, 관련 이슈, 스크린샷(UI 변경 시), 체크(`pnpm lint && pnpm build`).
 

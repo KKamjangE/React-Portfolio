@@ -5,8 +5,7 @@ import Certificate from "@/components/contents/certificate";
 import Education from "@/components/contents/education";
 import Project from "@/components/contents/project";
 import TechStack from "@/components/contents/tech-stack";
-import FadeIn from "@/components/ui/fade-in.motion";
-import YellowPoint from "@/components/ui/yellow-point";
+ 
 
 export default function Content() {
   const elementRefs = useRef<HTMLElement[]>([]);
@@ -48,14 +47,8 @@ function ContentLayout({
 }) {
   return (
     <>
-      <FadeIn>
-        <h1 className="text-3xl font-bold">
-          <YellowPoint>{title}</YellowPoint>
-        </h1>
-      </FadeIn>
-      <FadeIn>
-        <hr className="my-8 h-1 border-0 bg-accent" />
-      </FadeIn>
+      <h1 className="text-3xl font-bold">{title}</h1>
+      <hr className="my-8 h-1 border-0 bg-primary" />
       <div className="grid gap-10 md:gap-20">{children}</div>
     </>
   );

@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Fragment } from "react/jsx-runtime";
 import { Badge } from "@/components/ui/badge";
-import FadeIn from "@/components/ui/fade-in.motion";
+ 
 
 export default function TechStack() {
   const skills = {
@@ -27,11 +27,9 @@ export default function TechStack() {
     <div>
       {Object.entries(skills).map(([category, skills]) => (
         <Fragment key={category}>
-          <FadeIn>
-            <h2 className="text-3xl font-bold max-lg:text-2xl">{category}</h2>
-          </FadeIn>
+          <h2 className="text-3xl font-bold max-lg:text-2xl">{category}</h2>
           {skills.map(({ name, level }) => (
-            <FadeIn key={name}>
+            <Fragment key={name}>
               <div className="flex justify-between mb-1.5">
                 <span className="text-xl max-lg:text-base">{name}</span>
                 <span className="text-xl max-lg:text-base">{level}%</span>
@@ -45,14 +43,16 @@ export default function TechStack() {
                   className="h-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl max-lg:h-2.5"
                 />
               </div>
-            </FadeIn>
+            </Fragment>
           ))}
         </Fragment>
       ))}
       <h2 className="text-3xl font-bold max-lg:text-2xl">FrontEnd Libraries</h2>
       <div className="flex flex-wrap gap-3.5">
         {frontEndLibraries.map((badge) => (
-          <Badge key={badge}>{badge}</Badge>
+          <Badge key={badge} className="bg-black text-white border-transparent">
+            {badge}
+          </Badge>
         ))}
       </div>
     </div>

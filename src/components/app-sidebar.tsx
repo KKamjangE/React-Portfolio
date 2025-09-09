@@ -72,7 +72,7 @@ export default function AppSidebar() {
             {socialLinks.map((link) => (
               <SidebarMenuItem key={link.label}>
                 <a href={link.href} target="_blank" rel="noopener noreferrer">
-                  <span className="flex items-center gap-2 text-muted transition-all hover:underline hover:text-accent">
+                  <span className="flex items-center gap-2 text-muted transition-all hover:underline hover:text-primary">
                     <link.icon className="size-4" />
                     {link.label}
                   </span>
