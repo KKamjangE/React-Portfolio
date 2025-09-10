@@ -7,7 +7,7 @@ export default function Career() {
         <div key={career.company} className="flex flex-col gap-6">
           <h2 className="text-2xl font-bold">{career.company}</h2>
           <div className="flex flex-col gap-2 opacity-60">
-            <div className="flex items-center gap-3 text-base">
+            <div className="flex items-center gap-3">
               <span>{career.team}</span>
               <span className="block size-1 bg-black rounded-full" />
               <span>{career.position}</span>
