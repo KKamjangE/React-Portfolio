@@ -8,7 +8,15 @@ import {
   SidebarMenuButton,
   SidebarGroup,
 } from "@/components/ui/sidebar";
-import { Briefcase, BookOpen, Award, GraduationCap, Github, Linkedin, Mail } from "lucide-react";
+import {
+  Briefcase,
+  BookOpen,
+  Award,
+  GraduationCap,
+  Github,
+  Linkedin,
+  Mail,
+} from "lucide-react";
 
 const navItems = [
   { label: "Career", href: "#career", icon: Briefcase },
@@ -30,7 +38,7 @@ const socialLinks = [
 export default function AppSidebar() {
   return (
     <Sidebar side="left" collapsible="icon">
-      <SidebarHeader className="p-4">
+      <SidebarHeader className="px-4 pt-6">
         <h1 className="text-3xl text-muted font-bold">Portfolio</h1>
       </SidebarHeader>
       <SidebarContent>
