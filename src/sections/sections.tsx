@@ -1,10 +1,10 @@
 import type React from "react";
 import { useRef } from "react";
-import Career from "@/components/contents/career";
-import Certificate from "@/components/contents/certificate";
-import Education from "@/components/contents/education";
-import Project from "@/components/contents/project";
- 
+import Career from "@/sections/career";
+import Certificate from "@/sections/certificate";
+import Education from "@/sections/education";
+import Project from "@/sections/project";
+
 
 export default function Content() {
   const elementRefs = useRef<HTMLElement[]>([]);

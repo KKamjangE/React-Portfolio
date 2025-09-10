@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Content from "@/components/contents/content";
-import Footer from "@/components/footer";
-import Intro from "@/components/intro";
-import Toggle from "@/components/toggle";
+import Sections from "@/sections/sections";
+import Footer from "@/components/layout/footer";
+import Hero from "@/sections/hero";
+import Toggle from "@/components/layout/hamburger-toggle";
 import Layout from "@/pages/layout";
 
 export default function Home() {
@@ -15,9 +15,11 @@ export default function Home() {
   return (
     <Layout>
       <Toggle isOpen={isOpen} onToggle={onToggle} />
-      <Intro />
-      <Content />
+      <Hero />
+      <Sections />
       <Footer />
     </Layout>
   );
 }
+
+

@@ -43,7 +43,7 @@ export default function Project() {
               ))}
             </div>
           ) : null}
-          {project.performance && <span className="font-bold">성과</span>}
+          {project.performance && <span className="font-bold">?�과</span>}
           <div className="text-sm [&>*]:my-3.5 [&>*]:font-medium">
             {project.performance?.map((performance, index) => (
               <span key={`${project.title}-performance-${index}`}>{performance}</span>
@@ -64,3 +64,4 @@ export default function Project() {
     </>
   );
 }
+
