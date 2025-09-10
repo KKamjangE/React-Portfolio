@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+﻿import { Badge } from "@/components/ui/badge";
 import careers from "@/data/careers";
 
 export default function Career() {
@@ -20,11 +20,11 @@ export default function Career() {
               <span key={`${career.company}-summary-${index}`}>{sum}</span>
             ))}
           </div>
-          <span className="font-bold">진행 ?�로?�트</span>
+          <span className="font-bold">진행 프로젝트</span>
           <div className="flex flex-col gap-3.5">
             {career.projects.map((project) => (
               <div key={project.title}>
-                <h3 className="text-sm font-medium">?��{project.title}</h3>
+                <h3 className="text-sm font-medium">🌐{project.title}</h3>
                 {project.summary.map((sum, sumIndex) => (
                   <span
                     key={`${project.title}-summary-${sumIndex}`}
@@ -51,4 +51,3 @@ export default function Career() {
     </>
   );
 }
-

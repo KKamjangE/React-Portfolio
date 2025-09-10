@@ -1,6 +1,5 @@
-import downDoubleArrow from "@/assets/down-double-arrow.webp";
+ï»¿import downDoubleArrow from "@/assets/down-double-arrow.webp";
 import homeImage from "@/assets/home-img.webp";
- 
 
 export default function Intro() {
   const startDate = new Date("2023-09");
@@ -13,19 +12,19 @@ export default function Intro() {
       style={{ backgroundImage: `url(${homeImage})` }}
     >
       <article className="relative text-white text-center">
-        <p className="text-2xl font-semibold">±â·Ï°ú ¼ÒÅëÀ» ÁÁ¾ÆÇÏ´Â</p>
+        <p className="text-2xl font-semibold">ê¸°ë¡ê³¼ ì†Œí†µì„ ì¢‹ì•„í•˜ëŠ”</p>
         <p className="text-5xl font-bold my-16">
           <span className="underline decoration-primary underline-offset-8">
-            ¾ÈÁ¦¹Î
+            ì•ˆì œë¯¼
           </span>
-          ÀÔ´Ï´Ù.
+          ìž…ë‹ˆë‹¤.
         </p>
         <p className="text-xl font-medium leading-7 md:text-base">
-          {years}³âÂ÷ ÇÁ·ÐÆ®¿£µå °³¹ßÀÚÀÔ´Ï´Ù.
+          {years}ë…„ì°¨ í”„ë¡ íŠ¸ì—”ë“œ ê°œë°œìžìž…ë‹ˆë‹¤.
           <br />
-          °æÇèÀ» ±â·ÏÇÏ°í °øÀ¯ÇÏ´Â °ÍÀ» ÁÁ¾ÆÇÕ´Ï´Ù.
+          ê²½í—˜ì„ ê¸°ë¡í•˜ê³  ê³µìœ í•˜ëŠ” ê²ƒì„ ì¢‹ì•„í•©ë‹ˆë‹¤.
           <br />
-          Ç×»ó ¿øÈ°ÇÑ Ä¿¹Â´ÏÄÉÀÌ¼ÇÀ» À§ÇØ ³ë·ÂÇÕ´Ï´Ù.
+          í•­ìƒ ì›í™œí•œ ì»¤ë®¤ë‹ˆì¼€ì´ì…˜ì„ ìœ„í•´ ë…¸ë ¥í•©ë‹ˆë‹¤.
         </p>
         <img
           className="block absolute left-1/2 w-12 mt-24 -ml-6 animate-bounce"
@@ -36,4 +35,3 @@ export default function Intro() {
     </section>
   );
 }
-
