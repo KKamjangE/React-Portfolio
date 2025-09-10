@@ -194,7 +194,7 @@ const projects: Projects[] = [
     period: "2022.07. ~ 2022.09.",
     features: [
       "사용자의 관심과 몰입도를 높이기 위해 Parallax Scrolling, Swiper 등 다양한 인터렉티브 디자인 기법 적용",
-      "Main, About, Exhibition, Project, News 페이지 개",
+      "Main, About, Exhibition, Project, News 페이지 개선",
       "반응형 디자인(데스크톱, 태블릿, 모바일) 개발",
     ],
     urls: [

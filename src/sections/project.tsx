@@ -1,7 +1,7 @@
 ﻿import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import projects from "@/data/projects";
-
+import { getSkillBadgeClasses } from "@/lib/skill-colors";
 export default function Project() {
   return (
     <>
@@ -45,7 +45,7 @@ export default function Project() {
                 key={`${project.title}-url-${index}`}
                 variant={"link"}
                 size={"lg"}
-                className="text-lg p-0 text-secondary"
+                className="text-lg p-0 text-secondary font-bold"
                 asChild
               >
                 <a href={url} target="_blank">
@@ -58,7 +58,7 @@ export default function Project() {
             {project.skills.map((skill, index) => (
               <Badge
                 key={`${project.title}-skill-${index}`}
-                className="text-sm font-semibold"
+                className={"text-sm font-semibold " + getSkillBadgeClasses(skill)}
               >
                 {skill}
               </Badge>
