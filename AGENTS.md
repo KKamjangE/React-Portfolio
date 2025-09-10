@@ -5,10 +5,13 @@
 - 루트 설정: `vite.config.ts`, `tsconfig.json`, `components.json`, `biome.json`.
 - 소스: `src/` (엔트리 `main.tsx` → `app.tsx`).
 - 페이지: `src/pages/` (`home.tsx`, `layout.tsx`).
-- 컴포넌트: `src/components/` (공통 UI는 `ui/`, 도메인은 `contents/`).
+- 섹션(도메인): `src/sections/` (예: `hero.tsx`, `career.tsx`, `project.tsx`, `education.tsx`, `certificate.tsx`, `sections.tsx`).
+- 컴포넌트: `src/components/`
+  - 레이아웃: `components/layout/` (예: `app-sidebar.tsx`, `footer.tsx`, `hamburger-toggle.tsx`)
+  - 공통 UI 프리미티브: `components/ui/` (예: `button.tsx`, `badge.tsx`, `sidebar.tsx`)
 - 자산: `src/assets/`(이미지·폰트), 정적: `public/`.
 - 데이터/훅/유틸: `src/data/`, `src/hooks/`, `src/lib/`.
-- 경로 별칭: `@/` 사용(예: `@/pages/home`).
+- 경로 별칭: `@/` 사용(예: `@/sections/hero`, `@/components/layout/app-sidebar`).
 
 ## Build, Test, and Development Commands
 
@@ -25,6 +28,11 @@
 - 컴포넌트: PascalCase, 훅: `useXxx` 접두사.
 - 스타일: Tailwind CSS(전역 `src/globals.css`).
 - Lint/Format: `biome.json` 규칙 준수, `pnpm lint/format` 사용.
+
+추가 규칙
+
+- 섹션 id는 사이드바 해시와 1:1 매핑(`career`, `project`, `education`, `certificate`).
+- 부드러운 스크롤: `html { scroll-behavior: smooth; }` + 사이드바 `scrollIntoView({ behavior: "smooth" })` 사용.
 
 ## Testing Guidelines
 
@@ -49,4 +57,9 @@
 ## Architecture Overview
 
 - 스택: Vite + React 19 + TypeScript + Tailwind v4, Radix UI, Zustand.
-- 흐름: `src/main.tsx` → `src/app.tsx` → 페이지/컴포넌트.
+- 흐름: `src/main.tsx` → `src/app.tsx` → `src/pages/` → `src/sections/` 및 `src/components/`.
+
+UI 컬러 토큰
+
+- Primary: `oklch(0.76 0.16 56)` (`--primary`, 대비 텍스트 `--primary-foreground: #0a0a0a`)
+- Sidebar: 다크 배경(`--sidebar: #1d1f21`), 전경/액센트/보더 토큰은 `src/globals.css` 참조
