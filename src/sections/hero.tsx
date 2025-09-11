@@ -12,14 +12,14 @@ export default function Intro() {
       style={{ backgroundImage: `url(${homeImage})` }}
     >
       <article className="relative text-white text-center">
-        <p className="text-2xl font-semibold">기록과 소통을 좋아하는</p>
-        <p className="text-5xl font-bold my-16">
+        <p className="text-3xl font-semibold">기록과 소통을 좋아하는</p>
+        <p className="text-6xl font-bold my-16">
           <span className="underline decoration-primary underline-offset-8">
             안제민
           </span>
           입니다.
         </p>
-        <p className="text-xl font-medium leading-7 md:text-base">
+        <p className="text-xl font-medium leading-7 md:text-2xl">
           {years}년차 프론트엔드 개발자입니다.
           <br />
           경험을 기록하고 공유하는 것을 좋아합니다.
