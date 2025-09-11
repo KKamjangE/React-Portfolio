@@ -15,19 +15,40 @@ jobs:
         with:
           node-version: "20"
 
-      - run: npm ci
-      - run: npm run build # Vite 빌드 -> dist/ 생성
+      # pnpm 활성화
+      - name: Enable pnpm (Corepack)
+        run: |
+          corepack enable
+          corepack prepare pnpm@9 --activate
+          pnpm -v
 
+      # 캐시 (선택이지만 추천)
+      - name: Get pnpm store path
+        id: pnpm-store
+        run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-pnpm-
+
+      # 의존성 설치 & 빌드
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build # Vite -> dist/
+
+      # Lighthouse CI 실행
       - name: Run Lighthouse CI
         id: lhci
         uses: treosh/lighthouse-ci-action@v12
         with:
           configPath: ./.lighthouserc.json
-          uploadArtifacts: true # HTML/JSON 리포트 아티팩트 보관
-          temporaryPublicStorage: true # 7일 링크 생성(코멘트에 첨부)
+          uploadArtifacts: true
+          temporaryPublicStorage: true
           runs: 3
 
-      - name: Comment report links on PR
+      # PR에 링크 코멘트
+      - name: Comment report links
         if: always()
         uses: marocchino/sticky-pull-request-comment@v2
         with:
