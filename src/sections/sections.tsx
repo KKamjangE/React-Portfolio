@@ -18,7 +18,7 @@ export default function Content() {
         <>
           {index !== 0 && <Separator className="my-8 bg-primary" />}
           <section id={section.id} key={section.id} className="">
-            <h1 className="text-4xl font-bold text-sky-400">{section.title}</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-sky-400">{section.title}</h1>
             <div className="grid gap-8 md:gap-14 px-4 py-6">
               {section.component}
             </div>

@@ -8,14 +8,14 @@ export default function Project() {
       {projects.map((project) => (
         <div key={project.title} className="space-y-6">
           <div className="flex justify-between items-center max-lg:flex-col max-lg:items-baseline max-lg:gap-2">
-            <h2 className="text-2xl font-bold whitespace-nowrap">
+            <h2 className="text-xl md:text-2xl font-bold whitespace-nowrap">
               {project.title}
             </h2>
-            <span className="text-lg font-semibold whitespace-nowrap">
+            <span className="text-base md:text-lg font-semibold whitespace-nowrap">
               {project.affiliation}
             </span>
           </div>
-          <div className="flex flex-col gap-2 text-base font-medium opacity-60">
+          <div className="flex flex-col gap-2 text-sm md:text-base font-medium opacity-60">
             <span>{project.contributor}</span>
             <span>{project.period}</span>
           </div>
@@ -45,7 +45,7 @@ export default function Project() {
                 key={`${project.title}-url-${index}`}
                 variant={"link"}
                 size={"lg"}
-                className="text-lg p-0 text-secondary font-bold"
+                className="text-base md:text-lg p-0 text-secondary font-bold"
                 asChild
               >
                 <a href={url} target="_blank">
@@ -58,7 +58,7 @@ export default function Project() {
             {project.skills.map((skill, index) => (
               <Badge
                 key={`${project.title}-skill-${index}`}
-                className={"text-sm font-semibold " + getSkillBadgeClasses(skill)}
+                className={"text-xs md:text-sm font-semibold " + getSkillBadgeClasses(skill)}
               >
                 {skill}
               </Badge>

@@ -5,7 +5,7 @@ export default function Career() {
     <>
       {careers.map((career) => (
         <div key={career.company} className="flex flex-col gap-6">
-          <h2 className="text-2xl font-bold">{career.company}</h2>
+          <h2 className="text-xl md:text-2xl font-bold">{career.company}</h2>
           <div className="flex flex-col gap-2 opacity-60">
             <div className="flex items-center gap-3">
               <span>{career.team}</span>
