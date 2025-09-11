@@ -1,3 +1,4 @@
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Sidebar,
   SidebarContent,
@@ -7,6 +8,8 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarGroup,
+  useSidebar,
+  SidebarGroupContent,
 } from "@/components/ui/sidebar";
 import {
   Briefcase,
@@ -36,60 +39,64 @@ const socialLinks = [
 ];
 
 export default function AppSidebar() {
+  const { isMobile } = useSidebar();
   return (
-    <Sidebar side="left" collapsible="icon">
-      <SidebarHeader className="px-4 pt-6">
-        <h1 className="text-3xl text-muted font-bold">Portfolio</h1>
+    <Sidebar side="left" collapsible="icon" mobileBehavior="icon">
+      <SidebarHeader className="md:px-4 pt-6">
+        {isMobile ? (
+          <Avatar>
+            <AvatarImage src="/favicon.ico" />
+            <AvatarFallback>App Logo</AvatarFallback>
+          </Avatar>
+        ) : (
+          <h1 className="text-3xl text-muted font-bold">Portfolio</h1>
+        )}
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarMenu>
-            {navItems.map((item) => (
-              <SidebarMenuItem key={item.label}>
-                <SidebarMenuButton
-                  size="lg"
-                  type="button"
-                  className="space-x-2 hover:cursor-pointer [&>svg]:size-5 transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const element = document.querySelector(item.href);
-                    if (element) {
-                      (element as HTMLElement).scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                      });
-                      window.history.pushState(null, "", item.href);
-                    }
-                  }}
-                >
-                  <item.icon />
-                  <span className="text-lg font-semibold">{item.label}</span>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            ))}
-          </SidebarMenu>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {navItems.map((item) => (
+                <SidebarMenuItem key={item.label}>
+                  <SidebarMenuButton
+                    type="button"
+                    className="space-x-2 hover:cursor-pointer transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.querySelector(item.href);
+                      if (element) {
+                        (element as HTMLElement).scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                        window.history.pushState(null, "", item.href);
+                      }
+                    }}
+                  >
+                    <item.icon />
+                    <span className="text-xl font-semibold">{item.label}</span>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter>
-        <SidebarGroup>
-          <SidebarMenu>
-            {socialLinks.map((link) => (
-              <SidebarMenuItem key={link.label}>
+      <SidebarFooter className="mb-4">
+        <SidebarMenu>
+          {socialLinks.map((link) => (
+            <SidebarMenuItem key={link.label}>
+              <SidebarMenuButton asChild>
                 <a href={link.href} target="_blank" rel="noopener noreferrer">
-                  <span className="flex items-center gap-2 text-muted transition-all hover:underline hover:text-primary">
-                    <link.icon className="size-4" />
+                  <link.icon className="size-4" />
+                  <span className="text-muted transition-all hover:underline hover:text-primary">
                     {link.label}
                   </span>
                 </a>
-              </SidebarMenuItem>
-            ))}
-            <SidebarMenuItem>
-              <p className="text-muted-foreground font-semibold text-sm">
-                Last Update: 2025.09
-              </p>
+              </SidebarMenuButton>
             </SidebarMenuItem>
-          </SidebarMenu>
-        </SidebarGroup>
+          ))}
+        </SidebarMenu>
       </SidebarFooter>
     </Sidebar>
   );
