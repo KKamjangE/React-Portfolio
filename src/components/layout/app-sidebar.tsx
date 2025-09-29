@@ -22,10 +22,10 @@ import {
 } from "lucide-react";
 
 const navItems = [
-  { label: "Career", href: "#career", icon: Briefcase },
-  { label: "Project", href: "#project", icon: BookOpen },
-  { label: "Education", href: "#education", icon: GraduationCap },
-  { label: "Certificate", href: "#certificate", icon: Award },
+  { label: "경력", href: "#career", icon: Briefcase },
+  { label: "프로젝트", href: "#project", icon: BookOpen },
+  { label: "학력", href: "#education", icon: GraduationCap },
+  { label: "자격증", href: "#certificate", icon: Award },
 ];
 
 const socialLinks = [
@@ -55,7 +55,7 @@ export default function AppSidebar() {
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupContent>
-            <SidebarMenu>
+            <SidebarMenu className="space-y-3 mt-4">
               {navItems.map((item) => (
                 <SidebarMenuItem key={item.label}>
                   <SidebarMenuButton
